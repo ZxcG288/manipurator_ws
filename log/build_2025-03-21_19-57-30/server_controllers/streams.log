@@ -1,0 +1,26 @@
+[1.452s] Invoking command in '/home/golf1234_pc/manipurator_ws/build/server_controllers': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/golf1234_pc/manipurator_ws/build/server_controllers/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/golf1234_pc/manipurator_ws/install/server_controllers/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/golf1234_pc/manipurator_ws/build/server_controllers/build --no-deps symlink_data
+[1.851s] running develop
+[2.118s] running egg_info
+[2.118s] creating server_controllers.egg-info
+[2.144s] writing server_controllers.egg-info/PKG-INFO
+[2.144s] writing dependency_links to server_controllers.egg-info/dependency_links.txt
+[2.144s] writing entry points to server_controllers.egg-info/entry_points.txt
+[2.145s] writing requirements to server_controllers.egg-info/requires.txt
+[2.145s] writing top-level names to server_controllers.egg-info/top_level.txt
+[2.145s] writing manifest file 'server_controllers.egg-info/SOURCES.txt'
+[2.202s] reading manifest file 'server_controllers.egg-info/SOURCES.txt'
+[2.202s] writing manifest file 'server_controllers.egg-info/SOURCES.txt'
+[2.233s] running build_ext
+[2.233s] Creating /home/golf1234_pc/manipurator_ws/install/server_controllers/lib/python3.12/site-packages/server-controllers.egg-link (link to .)
+[2.233s] Installing node1 script to /home/golf1234_pc/manipurator_ws/install/server_controllers/lib/server_controllers
+[2.234s] Installing node2 script to /home/golf1234_pc/manipurator_ws/install/server_controllers/lib/server_controllers
+[2.234s] Installing node_manager script to /home/golf1234_pc/manipurator_ws/install/server_controllers/lib/server_controllers
+[2.234s] 
+[2.234s] Installed /home/golf1234_pc/manipurator_ws/build/server_controllers
+[2.234s] running symlink_data
+[2.234s] creating /home/golf1234_pc/manipurator_ws/install/server_controllers/share/ament_index
+[2.234s] creating /home/golf1234_pc/manipurator_ws/install/server_controllers/share/ament_index/resource_index
+[2.235s] creating /home/golf1234_pc/manipurator_ws/install/server_controllers/share/ament_index/resource_index/packages
+[2.235s] symbolically linking /home/golf1234_pc/manipurator_ws/build/server_controllers/resource/server_controllers -> /home/golf1234_pc/manipurator_ws/install/server_controllers/share/ament_index/resource_index/packages
+[2.235s] symbolically linking /home/golf1234_pc/manipurator_ws/build/server_controllers/package.xml -> /home/golf1234_pc/manipurator_ws/install/server_controllers/share/server_controllers
+[2.294s] Invoked command in '/home/golf1234_pc/manipurator_ws/build/server_controllers' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/golf1234_pc/manipurator_ws/build/server_controllers/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/golf1234_pc/manipurator_ws/install/server_controllers/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/golf1234_pc/manipurator_ws/build/server_controllers/build --no-deps symlink_data

@@ -1,0 +1,26 @@
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/car_urdf/share/car_urdf/launch/display.launch.py
+-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/car_urdf/share/car_urdf/urdf/car_urdf.urdf
+-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/car_urdf/share/car_urdf/meshes/back_left_wheel.STL
+-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/car_urdf/share/car_urdf/meshes/back_right_wheel.STL
+-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/car_urdf/share/car_urdf/meshes/base_link.STL
+-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/car_urdf/share/car_urdf/meshes/front_left_wheel.STL
+-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/car_urdf/share/car_urdf/meshes/front_right_wheel.STL
+-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/car_urdf/share/car_urdf/meshes/turn_left_wheel.STL
+-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/car_urdf/share/car_urdf/meshes/turn_right_wheel.STL
+-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/car_urdf/share/ament_index/resource_index/package_run_dependencies/car_urdf
+-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/car_urdf/share/ament_index/resource_index/parent_prefix_path/car_urdf
+-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/car_urdf/share/car_urdf/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/car_urdf/share/car_urdf/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/car_urdf/share/car_urdf/environment/path.sh
+-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/car_urdf/share/car_urdf/environment/path.dsv
+-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/car_urdf/share/car_urdf/local_setup.bash
+-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/car_urdf/share/car_urdf/local_setup.sh
+-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/car_urdf/share/car_urdf/local_setup.zsh
+-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/car_urdf/share/car_urdf/local_setup.dsv
+-- Symlinking: /home/golf1234_pc/manipurator_ws/install/car_urdf/share/car_urdf/package.dsv
+-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/car_urdf/share/ament_index/resource_index/packages/car_urdf
+-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/car_urdf/share/car_urdf/cmake/car_urdfConfig.cmake
+-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/car_urdf/share/car_urdf/cmake/car_urdfConfig-version.cmake
+-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/car_urdf/share/car_urdf/package.xml

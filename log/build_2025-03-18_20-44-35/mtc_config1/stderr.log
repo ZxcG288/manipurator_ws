@@ -1,0 +1,7 @@
+/usr/bin/ld: CMakeFiles/mtc_node_test.dir/src/mtc_node_test.cpp.o: in function `main::{lambda()#1}::operator()() const':
+mtc_node_test.cpp:(.text+0x45e5): undefined reference to `MTCTaskNode::getNodeBaseInterface()'
+/usr/bin/ld: mtc_node_test.cpp:(.text+0x465c): undefined reference to `MTCTaskNode::getNodeBaseInterface()'
+collect2: error: ld returned 1 exit status
+gmake[2]: *** [CMakeFiles/mtc_node_test.dir/build.make:379: mtc_node_test] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/mtc_node_test.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

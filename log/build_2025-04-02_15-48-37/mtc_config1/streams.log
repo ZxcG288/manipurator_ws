@@ -1,0 +1,45 @@
+[0.880s] Invoking command in '/home/golf1234_pc/manipurator_ws/build/mtc_config1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/golf1234_pc/install/moveit_configs_utils:/home/golf1234_pc/manipurator_ws/install/server_controllers:/home/golf1234_pc/manipurator_ws/install/mobile_manipurator:/home/golf1234_pc/manipurator_ws/install/camera2_ros:/home/golf1234_pc/ws_moveit/install/moveit_configs_utils:/home/golf1234_pc/project1_ws/install/server_controllers:/home/golf1234_pc/project1_ws/install/mobile_manipurator:/home/golf1234_pc/project1_ws/install/camera2_ros:/home/golf1234_pc/test1_ws/install/test1:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/golf1234_pc/manipurator_ws/build/mtc_config1 -- -j16 -l16
+[0.997s] [ 28%] Built target moveit_controller
+[0.998s] [ 28%] Built target mtc_pub
+[1.006s] [ 85%] Built target mtc_place
+[1.006s] [ 85%] Built target place_node
+[1.006s] [ 85%] Built target start_mtc
+[1.006s] [ 85%] Built target mtc_node
+[1.028s] [ 92%] [32mBuilding CXX object CMakeFiles/mtc_node_test.dir/src/mtc_node_test.cpp.o[0m
+[21.781s] [100%] [32m[1mLinking CXX executable mtc_node_test[0m
+[22.960s] [100%] Built target mtc_node_test
+[22.982s] Invoked command in '/home/golf1234_pc/manipurator_ws/build/mtc_config1' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/golf1234_pc/install/moveit_configs_utils:/home/golf1234_pc/manipurator_ws/install/server_controllers:/home/golf1234_pc/manipurator_ws/install/mobile_manipurator:/home/golf1234_pc/manipurator_ws/install/camera2_ros:/home/golf1234_pc/ws_moveit/install/moveit_configs_utils:/home/golf1234_pc/project1_ws/install/server_controllers:/home/golf1234_pc/project1_ws/install/mobile_manipurator:/home/golf1234_pc/project1_ws/install/camera2_ros:/home/golf1234_pc/test1_ws/install/test1:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/golf1234_pc/manipurator_ws/build/mtc_config1 -- -j16 -l16
+[22.985s] Invoking command in '/home/golf1234_pc/manipurator_ws/build/mtc_config1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/golf1234_pc/install/moveit_configs_utils:/home/golf1234_pc/manipurator_ws/install/server_controllers:/home/golf1234_pc/manipurator_ws/install/mobile_manipurator:/home/golf1234_pc/manipurator_ws/install/camera2_ros:/home/golf1234_pc/ws_moveit/install/moveit_configs_utils:/home/golf1234_pc/project1_ws/install/server_controllers:/home/golf1234_pc/project1_ws/install/mobile_manipurator:/home/golf1234_pc/project1_ws/install/camera2_ros:/home/golf1234_pc/test1_ws/install/test1:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/golf1234_pc/manipurator_ws/build/mtc_config1
+[22.998s] -- Install configuration: ""
+[22.998s] -- Execute custom install script
+[22.998s] -- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/lib/mtc_config1/mtc_node
+[22.999s] -- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/lib/mtc_config1/mtc_node_test
+[22.999s] -- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/lib/mtc_config1/mtc_pub
+[22.999s] -- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/lib/mtc_config1/start_mtc
+[22.999s] -- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/lib/mtc_config1/place_node
+[22.999s] -- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/lib/mtc_config1/moveit_controller
+[22.999s] -- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/lib/mtc_config1/mtc_place
+[23.000s] -- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/share/mtc_config1/launch/mtc.rviz
+[23.000s] -- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/share/mtc_config1/launch/mtc_config1.launch.py
+[23.000s] -- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/share/mtc_config1/launch/mtc_config1.rviz
+[23.000s] -- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/share/mtc_config1/launch/mtc_demo.launch.py
+[23.000s] -- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/share/mtc_config1/launch/mtc_pick.launch.py
+[23.000s] -- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/share/mtc_config1/launch/mtc_place.launch.py
+[23.000s] -- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/share/mtc_config1/launch/server.launch.py
+[23.001s] -- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/share/mtc_config1/launch/start_mtc.launch.py
+[23.001s] -- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/share/ament_index/resource_index/package_run_dependencies/mtc_config1
+[23.001s] -- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/share/ament_index/resource_index/parent_prefix_path/mtc_config1
+[23.001s] -- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/share/mtc_config1/environment/ament_prefix_path.sh
+[23.001s] -- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/share/mtc_config1/environment/ament_prefix_path.dsv
+[23.001s] -- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/share/mtc_config1/environment/path.sh
+[23.002s] -- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/share/mtc_config1/environment/path.dsv
+[23.002s] -- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/share/mtc_config1/local_setup.bash
+[23.002s] -- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/share/mtc_config1/local_setup.sh
+[23.002s] -- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/share/mtc_config1/local_setup.zsh
+[23.002s] -- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/share/mtc_config1/local_setup.dsv
+[23.002s] -- Symlinking: /home/golf1234_pc/manipurator_ws/install/mtc_config1/share/mtc_config1/package.dsv
+[23.018s] -- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/share/ament_index/resource_index/packages/mtc_config1
+[23.019s] -- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/share/mtc_config1/cmake/mtc_config1Config.cmake
+[23.019s] -- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/share/mtc_config1/cmake/mtc_config1Config-version.cmake
+[23.019s] -- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/share/mtc_config1/package.xml
+[23.021s] Invoked command in '/home/golf1234_pc/manipurator_ws/build/mtc_config1' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/golf1234_pc/install/moveit_configs_utils:/home/golf1234_pc/manipurator_ws/install/server_controllers:/home/golf1234_pc/manipurator_ws/install/mobile_manipurator:/home/golf1234_pc/manipurator_ws/install/camera2_ros:/home/golf1234_pc/ws_moveit/install/moveit_configs_utils:/home/golf1234_pc/project1_ws/install/server_controllers:/home/golf1234_pc/project1_ws/install/mobile_manipurator:/home/golf1234_pc/project1_ws/install/camera2_ros:/home/golf1234_pc/test1_ws/install/test1:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/golf1234_pc/manipurator_ws/build/mtc_config1

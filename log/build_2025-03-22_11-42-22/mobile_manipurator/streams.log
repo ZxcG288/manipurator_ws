@@ -1,0 +1,27 @@
+[1.500s] Invoking command in '/home/golf1234_pc/manipurator_ws/src/mobile_manipurator': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/golf1234_pc/manipurator_ws/build/mobile_manipurator/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/golf1234_pc/manipurator_ws/install/mobile_manipurator/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/mobile_manipurator build --build-base /home/golf1234_pc/manipurator_ws/build/mobile_manipurator/build install --record /home/golf1234_pc/manipurator_ws/build/mobile_manipurator/install.log --single-version-externally-managed install_data
+[1.804s] running egg_info
+[1.830s] writing ../../build/mobile_manipurator/mobile_manipurator.egg-info/PKG-INFO
+[1.831s] writing dependency_links to ../../build/mobile_manipurator/mobile_manipurator.egg-info/dependency_links.txt
+[1.831s] writing entry points to ../../build/mobile_manipurator/mobile_manipurator.egg-info/entry_points.txt
+[1.831s] writing requirements to ../../build/mobile_manipurator/mobile_manipurator.egg-info/requires.txt
+[1.831s] writing top-level names to ../../build/mobile_manipurator/mobile_manipurator.egg-info/top_level.txt
+[1.888s] reading manifest file '../../build/mobile_manipurator/mobile_manipurator.egg-info/SOURCES.txt'
+[1.889s] writing manifest file '../../build/mobile_manipurator/mobile_manipurator.egg-info/SOURCES.txt'
+[1.889s] running build
+[1.889s] running build_py
+[1.890s] running install
+[1.895s] running install_lib
+[1.921s] running install_data
+[1.921s] running install_egg_info
+[1.947s] removing '/home/golf1234_pc/manipurator_ws/install/mobile_manipurator/lib/python3.12/site-packages/mobile_manipurator-0.0.0-py3.12.egg-info' (and everything under it)
+[1.948s] Copying ../../build/mobile_manipurator/mobile_manipurator.egg-info to /home/golf1234_pc/manipurator_ws/install/mobile_manipurator/lib/python3.12/site-packages/mobile_manipurator-0.0.0-py3.12.egg-info
+[1.949s] running install_scripts
+[2.134s] Installing listener script to /home/golf1234_pc/manipurator_ws/install/mobile_manipurator/lib/mobile_manipurator
+[2.135s] Installing project1 script to /home/golf1234_pc/manipurator_ws/install/mobile_manipurator/lib/mobile_manipurator
+[2.135s] Installing servo_test1 script to /home/golf1234_pc/manipurator_ws/install/mobile_manipurator/lib/mobile_manipurator
+[2.135s] Installing subscriber1_node script to /home/golf1234_pc/manipurator_ws/install/mobile_manipurator/lib/mobile_manipurator
+[2.135s] Installing subscriber_node script to /home/golf1234_pc/manipurator_ws/install/mobile_manipurator/lib/mobile_manipurator
+[2.135s] Installing talker script to /home/golf1234_pc/manipurator_ws/install/mobile_manipurator/lib/mobile_manipurator
+[2.135s] Installing web_test1_node script to /home/golf1234_pc/manipurator_ws/install/mobile_manipurator/lib/mobile_manipurator
+[2.136s] writing list of installed files to '/home/golf1234_pc/manipurator_ws/build/mobile_manipurator/install.log'
+[2.173s] Invoked command in '/home/golf1234_pc/manipurator_ws/src/mobile_manipurator' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/golf1234_pc/manipurator_ws/build/mobile_manipurator/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/golf1234_pc/manipurator_ws/install/mobile_manipurator/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/mobile_manipurator build --build-base /home/golf1234_pc/manipurator_ws/build/mobile_manipurator/build install --record /home/golf1234_pc/manipurator_ws/build/mobile_manipurator/install.log --single-version-externally-managed install_data

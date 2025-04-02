@@ -1,0 +1,9 @@
+/home/golf1234_pc/manipurator_ws/build/config2/CMakeFiles/uninstall.dir
+/home/golf1234_pc/manipurator_ws/build/config2/CMakeFiles/config2_uninstall.dir
+/home/golf1234_pc/manipurator_ws/build/config2/CMakeFiles/test.dir
+/home/golf1234_pc/manipurator_ws/build/config2/CMakeFiles/edit_cache.dir
+/home/golf1234_pc/manipurator_ws/build/config2/CMakeFiles/rebuild_cache.dir
+/home/golf1234_pc/manipurator_ws/build/config2/CMakeFiles/list_install_components.dir
+/home/golf1234_pc/manipurator_ws/build/config2/CMakeFiles/install.dir
+/home/golf1234_pc/manipurator_ws/build/config2/CMakeFiles/install/local.dir
+/home/golf1234_pc/manipurator_ws/build/config2/CMakeFiles/install/strip.dir

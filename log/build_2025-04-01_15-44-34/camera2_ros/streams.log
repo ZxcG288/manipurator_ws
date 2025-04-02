@@ -1,0 +1,23 @@
+[1.894s] Invoking command in '/home/golf1234_pc/manipurator_ws/build/camera2_ros': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/golf1234_pc/manipurator_ws/build/camera2_ros/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/golf1234_pc/manipurator_ws/install/camera2_ros/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/golf1234_pc/manipurator_ws/build/camera2_ros/build --no-deps symlink_data
+[2.360s] running develop
+[2.665s] running egg_info
+[2.695s] writing camera2_ros.egg-info/PKG-INFO
+[2.695s] writing dependency_links to camera2_ros.egg-info/dependency_links.txt
+[2.695s] writing entry points to camera2_ros.egg-info/entry_points.txt
+[2.695s] writing requirements to camera2_ros.egg-info/requires.txt
+[2.696s] writing top-level names to camera2_ros.egg-info/top_level.txt
+[2.756s] reading manifest file 'camera2_ros.egg-info/SOURCES.txt'
+[2.756s] writing manifest file 'camera2_ros.egg-info/SOURCES.txt'
+[2.789s] running build_ext
+[2.789s] Creating /home/golf1234_pc/manipurator_ws/install/camera2_ros/lib/python3.12/site-packages/camera2-ros.egg-link (link to .)
+[2.789s] Installing arduino_comunication script to /home/golf1234_pc/manipurator_ws/install/camera2_ros/lib/camera2_ros
+[2.790s] Installing box_dectection_pick script to /home/golf1234_pc/manipurator_ws/install/camera2_ros/lib/camera2_ros
+[2.790s] Installing box_dectection_place script to /home/golf1234_pc/manipurator_ws/install/camera2_ros/lib/camera2_ros
+[2.790s] Installing camera2_node script to /home/golf1234_pc/manipurator_ws/install/camera2_ros/lib/camera2_ros
+[2.790s] Installing lane_detection script to /home/golf1234_pc/manipurator_ws/install/camera2_ros/lib/camera2_ros
+[2.790s] Installing pub_yolo script to /home/golf1234_pc/manipurator_ws/install/camera2_ros/lib/camera2_ros
+[2.790s] Installing sub_yolo script to /home/golf1234_pc/manipurator_ws/install/camera2_ros/lib/camera2_ros
+[2.791s] 
+[2.791s] Installed /home/golf1234_pc/manipurator_ws/build/camera2_ros
+[2.791s] running symlink_data
+[2.864s] Invoked command in '/home/golf1234_pc/manipurator_ws/build/camera2_ros' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/golf1234_pc/manipurator_ws/build/camera2_ros/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/golf1234_pc/manipurator_ws/install/camera2_ros/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/golf1234_pc/manipurator_ws/build/camera2_ros/build --no-deps symlink_data

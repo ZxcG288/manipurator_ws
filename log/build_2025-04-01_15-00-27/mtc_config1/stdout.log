@@ -1,0 +1,41 @@
+[ 28%] Built target moveit_controller
+[ 28%] Built target mtc_pub
+[ 42%] Built target mtc_node
+[ 57%] Built target start_mtc
+[ 78%] Built target place_node
+[ 85%] Built target mtc_place
+[ 92%] [32mBuilding CXX object CMakeFiles/mtc_node_test.dir/src/mtc_node_test.cpp.o[0m
+[100%] [32m[1mLinking CXX executable mtc_node_test[0m
+[100%] Built target mtc_node_test
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/lib/mtc_config1/mtc_node
+-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/lib/mtc_config1/mtc_node_test
+-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/lib/mtc_config1/mtc_pub
+-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/lib/mtc_config1/start_mtc
+-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/lib/mtc_config1/place_node
+-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/lib/mtc_config1/moveit_controller
+-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/lib/mtc_config1/mtc_place
+-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/share/mtc_config1/launch/mtc.rviz
+-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/share/mtc_config1/launch/mtc_config1.launch.py
+-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/share/mtc_config1/launch/mtc_config1.rviz
+-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/share/mtc_config1/launch/mtc_demo.launch.py
+-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/share/mtc_config1/launch/mtc_pick.launch.py
+-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/share/mtc_config1/launch/mtc_place.launch.py
+-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/share/mtc_config1/launch/server.launch.py
+-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/share/mtc_config1/launch/start_mtc.launch.py
+-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/share/ament_index/resource_index/package_run_dependencies/mtc_config1
+-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/share/ament_index/resource_index/parent_prefix_path/mtc_config1
+-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/share/mtc_config1/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/share/mtc_config1/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/share/mtc_config1/environment/path.sh
+-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/share/mtc_config1/environment/path.dsv
+-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/share/mtc_config1/local_setup.bash
+-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/share/mtc_config1/local_setup.sh
+-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/share/mtc_config1/local_setup.zsh
+-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/share/mtc_config1/local_setup.dsv
+-- Symlinking: /home/golf1234_pc/manipurator_ws/install/mtc_config1/share/mtc_config1/package.dsv
+-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/share/ament_index/resource_index/packages/mtc_config1
+-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/share/mtc_config1/cmake/mtc_config1Config.cmake
+-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/share/mtc_config1/cmake/mtc_config1Config-version.cmake
+-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/share/mtc_config1/package.xml

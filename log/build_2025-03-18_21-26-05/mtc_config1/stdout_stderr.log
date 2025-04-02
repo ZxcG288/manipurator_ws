@@ -1,0 +1,17 @@
+[ 33%] [32mBuilding CXX object CMakeFiles/mtc_node_test.dir/src/mtc_node_test.cpp.o[0m
+[ 50%] Built target mtc_node
+[ 83%] Built target mtc_pub
+[01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/mtc_node_test.cpp:[m[K In constructor ‘[01m[KMTCTaskNode::[01;32m[KMTCTaskNode[m[K(const rclcpp::NodeOptions&)[m[K’:
+[01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/mtc_node_test.cpp:55:98:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kdo[m[K’
+   55 |     "/position_topic", 10, std::bind(&MTCTaskNode::positionCallback, this, std::placeholders::_1)
+      |                                                                                                  [01;31m[K^[m[K
+      |                                                                                                  [32m[K)[m[K
+[01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/mtc_node_test.cpp:54:71:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+   54 |   position_sub_ = node_->create_subscription<geometry_msgs::msg::Pose>[01;36m[K([m[K
+      |                                                                       [01;36m[K^[m[K
+[01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/mtc_node_test.cpp:61:3:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K)[m[K’ token
+   61 |   [01;31m[K)[m[K;
+      |   [01;31m[K^[m[K
+gmake[2]: *** [CMakeFiles/mtc_node_test.dir/build.make:76: CMakeFiles/mtc_node_test.dir/src/mtc_node_test.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:167: CMakeFiles/mtc_node_test.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

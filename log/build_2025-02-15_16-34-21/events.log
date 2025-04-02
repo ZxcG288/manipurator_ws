@@ -1,0 +1,156 @@
+[0.000000] (-) TimerEvent: {}
+[0.000539] (-) JobUnselected: {'identifier': 'config1'}
+[0.000588] (-) JobUnselected: {'identifier': 'urdf1'}
+[0.000621] (mtc_config1) JobQueued: {'identifier': 'mtc_config1', 'dependencies': OrderedDict()}
+[0.000653] (mtc_config1) JobStarted: {'identifier': 'mtc_config1'}
+[0.010141] (mtc_config1) JobProgress: {'identifier': 'mtc_config1', 'progress': 'cmake'}
+[0.011151] (mtc_config1) JobProgress: {'identifier': 'mtc_config1', 'progress': 'build'}
+[0.011998] (mtc_config1) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/golf1234_pc/manipurator_ws/build/mtc_config1', '--', '-j16', '-l16'], 'cwd': '/home/golf1234_pc/manipurator_ws/build/mtc_config1', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'MESA_D3D12_DEFAULT_ADAPTER_NAME': 'NVIDIA GeForce RTX 3050 Ti Laptop GPU', 'USER': 'golf1234_pc', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/usr/local/cuda-12.6/lib64:/usr/local/cuda-12.6/lib64:/usr/local/cuda-12.6/lib64:/usr/local/cuda-12.6/lib64:/home/golf1234_pc/ws_moveit/install/robotiq_driver/lib:/home/golf1234_pc/ws_moveit/install/serial/lib:/home/golf1234_pc/ws_moveit/install/moveit_visual_tools/lib:/home/golf1234_pc/ws_moveit/install/rviz_visual_tools/lib:/home/golf1234_pc/ws_moveit/install/moveit_task_constructor_visualization/lib:/home/golf1234_pc/ws_moveit/install/moveit_task_constructor_demo/lib:/home/golf1234_pc/ws_moveit/install/moveit_task_constructor_capabilities/lib:/home/golf1234_pc/ws_moveit/install/moveit_task_constructor_core/lib:/home/golf1234_pc/ws_moveit/install/rviz_marker_tools/lib:/home/golf1234_pc/ws_moveit/install/robotiq_controllers/lib:/home/golf1234_pc/ws_moveit/install/pilz_industrial_motion_planner_testutils/lib:/home/golf1234_pc/ws_moveit/install/pilz_industrial_motion_planner/lib:/home/golf1234_pc/ws_moveit/install/picknik_twist_controller/lib:/home/golf1234_pc/ws_moveit/install/picknik_reset_fault_controller/lib:/home/golf1234_pc/ws_moveit/install/moveit_task_constructor_msgs/lib:/home/golf1234_pc/ws_moveit/install/moveit_ros_control_interface/lib:/home/golf1234_pc/ws_moveit/install/moveit_simple_controller_manager/lib:/home/golf1234_pc/ws_moveit/install/moveit_setup_assistant/lib:/home/golf1234_pc/ws_moveit/install/moveit_setup_srdf_plugins/lib:/home/golf1234_pc/ws_moveit/install/moveit_setup_core_plugins/lib:/home/golf1234_pc/ws_moveit/install/moveit_setup_controllers/lib:/home/golf1234_pc/ws_moveit/install/moveit_setup_app_plugins/lib:/home/golf1234_pc/ws_moveit/install/moveit_setup_framework/lib:/home/golf1234_pc/ws_moveit/install/moveit_servo/lib:/home/golf1234_pc/ws_moveit/install/moveit_ros_trajectory_cache/lib:/home/golf1234_pc/ws_moveit/install/moveit_ros_visualization/lib:/home/golf1234_pc/ws_moveit/install/moveit_py/lib:/home/golf1234_pc/ws_moveit/install/moveit_hybrid_planning/lib:/home/golf1234_pc/ws_moveit/install/moveit_ros_planning_interface/lib:/home/golf1234_pc/ws_moveit/install/moveit_ros_benchmarks/lib:/home/golf1234_pc/ws_moveit/install/moveit_ros_warehouse/lib:/home/golf1234_pc/ws_moveit/install/moveit_ros_robot_interaction/lib:/home/golf1234_pc/ws_moveit/install/moveit_ros_perception/lib:/home/golf1234_pc/ws_moveit/install/moveit_ros_move_group/lib:/home/golf1234_pc/ws_moveit/install/moveit_planners_ompl/lib:/home/golf1234_pc/ws_moveit/install/moveit_kinematics/lib:/home/golf1234_pc/ws_moveit/install/moveit_ros_planning/lib:/home/golf1234_pc/ws_moveit/install/moveit_ros_occupancy_map_monitor/lib:/home/golf1234_pc/ws_moveit/install/moveit_resources_prbt_ikfast_manipulator_plugin/lib:/home/golf1234_pc/ws_moveit/install/moveit_planners_stomp/lib:/home/golf1234_pc/ws_moveit/install/moveit_planners_chomp/lib:/home/golf1234_pc/ws_moveit/install/chomp_motion_planner/lib:/home/golf1234_pc/ws_moveit/install/moveit_core/lib:/home/golf1234_pc/ws_moveit/install/moveit_msgs/lib:/home/golf1234_pc/ws_moveit/install/kortex_driver/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib:/usr/local/cuda-12.6/lib64', 'HOME': '/home/golf1234_pc', 'OLDPWD': '/home/golf1234_pc/manipurator_ws', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'WSL_DISTRO_NAME': 'Ubuntu-24.04', 'TERMINATOR_DBUS_NAME': 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/golf1234_pc/manipurator_ws/install:/home/golf1234_pc/project1_ws/install:/home/golf1234_pc/ws_moveit/install:/home/golf1234_pc/test1_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'golf1234_pc', 'NAME': 'G288', 'WSL_INTEROP': '/run/WSL/428_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'PATH': '/usr/local/cuda-12.6/bin:/usr/local/cuda-12.6/bin:/usr/local/cuda-12.6/bin:/usr/local/cuda-12.6/bin:/home/golf1234_pc/.local/bin:/home/golf1234_pc/ws_moveit/install/moveit_core/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/cuda-12.6/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/java8path:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/PuTTY/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/MATLAB/R2018b/runtime/win64:/mnt/c/Program Files/MATLAB/R2018b/bin:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files (x86)/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/150/DTS/Binn/:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR:/mnt/c/Users/golfr/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/golfr/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000/', 'DISPLAY': ':0', 'TERMINATOR_DBUS_PATH': '/net/tenshu/Terminator2', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'ROS_DOMAIN_ID': '1', 'SHELL': '/bin/bash', 'TERMINATOR_UUID': 'urn:uuid:7cfbfb4d-5fd5-4c9d-9390-e34ee820b7ec', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'CMAKE_MODULE_PATH': '/home/golf1234_pc/ws_moveit/install/moveit_task_constructor_core/share/moveit_task_constructor_core/cmake', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/golf1234_pc/manipurator_ws/build/mtc_config1', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/golf1234_pc/ws_moveit/install/moveit_task_constructor_core/lib/python3.12/site-packages:/home/golf1234_pc/ws_moveit/install/moveit_task_constructor_msgs/lib/python3.12/site-packages:/home/golf1234_pc/ws_moveit/install/moveit_py/lib/python3.12/site-packages:/home/golf1234_pc/ws_moveit/install/moveit_msgs/lib/python3.12/site-packages:/home/golf1234_pc/ws_moveit/install/moveit_configs_utils/lib/python3.12/site-packages:/home/golf1234_pc/project1_ws/build/server_controllers:/home/golf1234_pc/project1_ws/install/server_controllers/lib/python3.12/site-packages:/home/golf1234_pc/project1_ws/build/mobile_manipurator:/home/golf1234_pc/project1_ws/install/mobile_manipurator/lib/python3.12/site-packages:/home/golf1234_pc/project1_ws/build/camera2_ros:/home/golf1234_pc/project1_ws/install/camera2_ros/lib/python3.12/site-packages:/home/golf1234_pc/test1_ws/install/test1/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'VTE_VERSION': '7600', 'HOSTTYPE': 'x86_64', 'WSLENV': ''}), 'shell': False}
+[0.099441] (-) TimerEvent: {}
+[0.133984] (mtc_config1) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/mtc_node.dir/src/mtc_node.cpp.o\x1b[0m\n'}
+[0.199597] (-) TimerEvent: {}
+[0.300060] (-) TimerEvent: {}
+[0.400416] (-) TimerEvent: {}
+[0.500853] (-) TimerEvent: {}
+[0.601333] (-) TimerEvent: {}
+[0.701886] (-) TimerEvent: {}
+[0.802489] (-) TimerEvent: {}
+[0.902999] (-) TimerEvent: {}
+[1.003485] (-) TimerEvent: {}
+[1.103859] (-) TimerEvent: {}
+[1.204218] (-) TimerEvent: {}
+[1.304546] (-) TimerEvent: {}
+[1.404865] (-) TimerEvent: {}
+[1.505150] (-) TimerEvent: {}
+[1.605418] (-) TimerEvent: {}
+[1.705738] (-) TimerEvent: {}
+[1.806101] (-) TimerEvent: {}
+[1.906395] (-) TimerEvent: {}
+[2.006712] (-) TimerEvent: {}
+[2.107076] (-) TimerEvent: {}
+[2.207388] (-) TimerEvent: {}
+[2.307738] (-) TimerEvent: {}
+[2.408101] (-) TimerEvent: {}
+[2.508430] (-) TimerEvent: {}
+[2.608802] (-) TimerEvent: {}
+[2.709198] (-) TimerEvent: {}
+[2.809498] (-) TimerEvent: {}
+[2.909791] (-) TimerEvent: {}
+[3.010201] (-) TimerEvent: {}
+[3.110500] (-) TimerEvent: {}
+[3.210876] (-) TimerEvent: {}
+[3.311385] (-) TimerEvent: {}
+[3.411717] (-) TimerEvent: {}
+[3.512087] (-) TimerEvent: {}
+[3.612326] (-) TimerEvent: {}
+[3.712571] (-) TimerEvent: {}
+[3.812807] (-) TimerEvent: {}
+[3.913129] (-) TimerEvent: {}
+[4.013450] (-) TimerEvent: {}
+[4.113742] (-) TimerEvent: {}
+[4.214028] (-) TimerEvent: {}
+[4.314304] (-) TimerEvent: {}
+[4.414568] (-) TimerEvent: {}
+[4.514847] (-) TimerEvent: {}
+[4.615138] (-) TimerEvent: {}
+[4.715391] (-) TimerEvent: {}
+[4.815758] (-) TimerEvent: {}
+[4.916169] (-) TimerEvent: {}
+[5.016421] (-) TimerEvent: {}
+[5.116694] (-) TimerEvent: {}
+[5.216982] (-) TimerEvent: {}
+[5.317308] (-) TimerEvent: {}
+[5.417657] (-) TimerEvent: {}
+[5.517973] (-) TimerEvent: {}
+[5.618294] (-) TimerEvent: {}
+[5.718567] (-) TimerEvent: {}
+[5.818855] (-) TimerEvent: {}
+[5.919232] (-) TimerEvent: {}
+[6.019554] (-) TimerEvent: {}
+[6.119806] (-) TimerEvent: {}
+[6.220084] (-) TimerEvent: {}
+[6.320487] (-) TimerEvent: {}
+[6.420818] (-) TimerEvent: {}
+[6.521200] (-) TimerEvent: {}
+[6.621634] (-) TimerEvent: {}
+[6.721902] (-) TimerEvent: {}
+[6.822167] (-) TimerEvent: {}
+[6.922458] (-) TimerEvent: {}
+[7.022737] (-) TimerEvent: {}
+[7.123032] (-) TimerEvent: {}
+[7.223323] (-) TimerEvent: {}
+[7.323636] (-) TimerEvent: {}
+[7.423970] (-) TimerEvent: {}
+[7.524288] (-) TimerEvent: {}
+[7.624545] (-) TimerEvent: {}
+[7.724921] (-) TimerEvent: {}
+[7.825271] (-) TimerEvent: {}
+[7.925540] (-) TimerEvent: {}
+[8.025811] (-) TimerEvent: {}
+[8.126150] (-) TimerEvent: {}
+[8.226433] (-) TimerEvent: {}
+[8.326704] (-) TimerEvent: {}
+[8.427022] (-) TimerEvent: {}
+[8.527357] (-) TimerEvent: {}
+[8.627690] (-) TimerEvent: {}
+[8.727963] (-) TimerEvent: {}
+[8.828251] (-) TimerEvent: {}
+[8.928553] (-) TimerEvent: {}
+[9.028827] (-) TimerEvent: {}
+[9.129069] (-) TimerEvent: {}
+[9.229346] (-) TimerEvent: {}
+[9.329712] (-) TimerEvent: {}
+[9.430014] (-) TimerEvent: {}
+[9.530288] (-) TimerEvent: {}
+[9.630589] (-) TimerEvent: {}
+[9.730867] (-) TimerEvent: {}
+[9.831129] (-) TimerEvent: {}
+[9.931422] (-) TimerEvent: {}
+[10.031704] (-) TimerEvent: {}
+[10.131981] (-) TimerEvent: {}
+[10.232254] (-) TimerEvent: {}
+[10.332546] (-) TimerEvent: {}
+[10.432844] (-) TimerEvent: {}
+[10.533123] (-) TimerEvent: {}
+[10.633383] (-) TimerEvent: {}
+[10.733693] (-) TimerEvent: {}
+[10.834080] (-) TimerEvent: {}
+[10.934541] (-) TimerEvent: {}
+[11.034903] (-) TimerEvent: {}
+[11.135157] (-) TimerEvent: {}
+[11.235410] (-) TimerEvent: {}
+[11.335687] (-) TimerEvent: {}
+[11.395899] (mtc_config1) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable mtc_node\x1b[0m\n'}
+[11.435812] (-) TimerEvent: {}
+[11.536146] (-) TimerEvent: {}
+[11.636452] (-) TimerEvent: {}
+[11.736771] (-) TimerEvent: {}
+[11.837086] (-) TimerEvent: {}
+[11.866400] (mtc_config1) StdoutLine: {'line': b'[100%] Built target mtc_node\n'}
+[11.882062] (mtc_config1) CommandEnded: {'returncode': 0}
+[11.882843] (mtc_config1) JobProgress: {'identifier': 'mtc_config1', 'progress': 'install'}
+[11.895075] (mtc_config1) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/golf1234_pc/manipurator_ws/build/mtc_config1'], 'cwd': '/home/golf1234_pc/manipurator_ws/build/mtc_config1', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'MESA_D3D12_DEFAULT_ADAPTER_NAME': 'NVIDIA GeForce RTX 3050 Ti Laptop GPU', 'USER': 'golf1234_pc', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/usr/local/cuda-12.6/lib64:/usr/local/cuda-12.6/lib64:/usr/local/cuda-12.6/lib64:/usr/local/cuda-12.6/lib64:/home/golf1234_pc/ws_moveit/install/robotiq_driver/lib:/home/golf1234_pc/ws_moveit/install/serial/lib:/home/golf1234_pc/ws_moveit/install/moveit_visual_tools/lib:/home/golf1234_pc/ws_moveit/install/rviz_visual_tools/lib:/home/golf1234_pc/ws_moveit/install/moveit_task_constructor_visualization/lib:/home/golf1234_pc/ws_moveit/install/moveit_task_constructor_demo/lib:/home/golf1234_pc/ws_moveit/install/moveit_task_constructor_capabilities/lib:/home/golf1234_pc/ws_moveit/install/moveit_task_constructor_core/lib:/home/golf1234_pc/ws_moveit/install/rviz_marker_tools/lib:/home/golf1234_pc/ws_moveit/install/robotiq_controllers/lib:/home/golf1234_pc/ws_moveit/install/pilz_industrial_motion_planner_testutils/lib:/home/golf1234_pc/ws_moveit/install/pilz_industrial_motion_planner/lib:/home/golf1234_pc/ws_moveit/install/picknik_twist_controller/lib:/home/golf1234_pc/ws_moveit/install/picknik_reset_fault_controller/lib:/home/golf1234_pc/ws_moveit/install/moveit_task_constructor_msgs/lib:/home/golf1234_pc/ws_moveit/install/moveit_ros_control_interface/lib:/home/golf1234_pc/ws_moveit/install/moveit_simple_controller_manager/lib:/home/golf1234_pc/ws_moveit/install/moveit_setup_assistant/lib:/home/golf1234_pc/ws_moveit/install/moveit_setup_srdf_plugins/lib:/home/golf1234_pc/ws_moveit/install/moveit_setup_core_plugins/lib:/home/golf1234_pc/ws_moveit/install/moveit_setup_controllers/lib:/home/golf1234_pc/ws_moveit/install/moveit_setup_app_plugins/lib:/home/golf1234_pc/ws_moveit/install/moveit_setup_framework/lib:/home/golf1234_pc/ws_moveit/install/moveit_servo/lib:/home/golf1234_pc/ws_moveit/install/moveit_ros_trajectory_cache/lib:/home/golf1234_pc/ws_moveit/install/moveit_ros_visualization/lib:/home/golf1234_pc/ws_moveit/install/moveit_py/lib:/home/golf1234_pc/ws_moveit/install/moveit_hybrid_planning/lib:/home/golf1234_pc/ws_moveit/install/moveit_ros_planning_interface/lib:/home/golf1234_pc/ws_moveit/install/moveit_ros_benchmarks/lib:/home/golf1234_pc/ws_moveit/install/moveit_ros_warehouse/lib:/home/golf1234_pc/ws_moveit/install/moveit_ros_robot_interaction/lib:/home/golf1234_pc/ws_moveit/install/moveit_ros_perception/lib:/home/golf1234_pc/ws_moveit/install/moveit_ros_move_group/lib:/home/golf1234_pc/ws_moveit/install/moveit_planners_ompl/lib:/home/golf1234_pc/ws_moveit/install/moveit_kinematics/lib:/home/golf1234_pc/ws_moveit/install/moveit_ros_planning/lib:/home/golf1234_pc/ws_moveit/install/moveit_ros_occupancy_map_monitor/lib:/home/golf1234_pc/ws_moveit/install/moveit_resources_prbt_ikfast_manipulator_plugin/lib:/home/golf1234_pc/ws_moveit/install/moveit_planners_stomp/lib:/home/golf1234_pc/ws_moveit/install/moveit_planners_chomp/lib:/home/golf1234_pc/ws_moveit/install/chomp_motion_planner/lib:/home/golf1234_pc/ws_moveit/install/moveit_core/lib:/home/golf1234_pc/ws_moveit/install/moveit_msgs/lib:/home/golf1234_pc/ws_moveit/install/kortex_driver/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib:/usr/local/cuda-12.6/lib64', 'HOME': '/home/golf1234_pc', 'OLDPWD': '/home/golf1234_pc/manipurator_ws', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'WSL_DISTRO_NAME': 'Ubuntu-24.04', 'TERMINATOR_DBUS_NAME': 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/golf1234_pc/manipurator_ws/install:/home/golf1234_pc/project1_ws/install:/home/golf1234_pc/ws_moveit/install:/home/golf1234_pc/test1_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'golf1234_pc', 'NAME': 'G288', 'WSL_INTEROP': '/run/WSL/428_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'PATH': '/usr/local/cuda-12.6/bin:/usr/local/cuda-12.6/bin:/usr/local/cuda-12.6/bin:/usr/local/cuda-12.6/bin:/home/golf1234_pc/.local/bin:/home/golf1234_pc/ws_moveit/install/moveit_core/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/cuda-12.6/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/java8path:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/PuTTY/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/MATLAB/R2018b/runtime/win64:/mnt/c/Program Files/MATLAB/R2018b/bin:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files (x86)/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/150/DTS/Binn/:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR:/mnt/c/Users/golfr/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/golfr/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000/', 'DISPLAY': ':0', 'TERMINATOR_DBUS_PATH': '/net/tenshu/Terminator2', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'ROS_DOMAIN_ID': '1', 'SHELL': '/bin/bash', 'TERMINATOR_UUID': 'urn:uuid:7cfbfb4d-5fd5-4c9d-9390-e34ee820b7ec', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'CMAKE_MODULE_PATH': '/home/golf1234_pc/ws_moveit/install/moveit_task_constructor_core/share/moveit_task_constructor_core/cmake', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/golf1234_pc/manipurator_ws/build/mtc_config1', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/golf1234_pc/ws_moveit/install/moveit_task_constructor_core/lib/python3.12/site-packages:/home/golf1234_pc/ws_moveit/install/moveit_task_constructor_msgs/lib/python3.12/site-packages:/home/golf1234_pc/ws_moveit/install/moveit_py/lib/python3.12/site-packages:/home/golf1234_pc/ws_moveit/install/moveit_msgs/lib/python3.12/site-packages:/home/golf1234_pc/ws_moveit/install/moveit_configs_utils/lib/python3.12/site-packages:/home/golf1234_pc/project1_ws/build/server_controllers:/home/golf1234_pc/project1_ws/install/server_controllers/lib/python3.12/site-packages:/home/golf1234_pc/project1_ws/build/mobile_manipurator:/home/golf1234_pc/project1_ws/install/mobile_manipurator/lib/python3.12/site-packages:/home/golf1234_pc/project1_ws/build/camera2_ros:/home/golf1234_pc/project1_ws/install/camera2_ros/lib/python3.12/site-packages:/home/golf1234_pc/test1_ws/install/test1/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'VTE_VERSION': '7600', 'HOSTTYPE': 'x86_64', 'WSLENV': ''}), 'shell': False}
+[11.905954] (mtc_config1) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[11.906273] (mtc_config1) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[11.906586] (mtc_config1) StdoutLine: {'line': b'-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/share/mtc_config1/launch/mtc_config1.launch.py\n'}
+[11.906809] (mtc_config1) StdoutLine: {'line': b'-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/share/mtc_config1/launch/mtc_config1.rviz\n'}
+[11.907008] (mtc_config1) StdoutLine: {'line': b'-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/lib/mtc_config1/mtc_node\n'}
+[11.907186] (mtc_config1) StdoutLine: {'line': b'-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/share/ament_index/resource_index/package_run_dependencies/mtc_config1\n'}
+[11.907397] (mtc_config1) StdoutLine: {'line': b'-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/share/ament_index/resource_index/parent_prefix_path/mtc_config1\n'}
+[11.907478] (mtc_config1) StdoutLine: {'line': b'-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/share/mtc_config1/environment/ament_prefix_path.sh\n'}
+[11.907690] (mtc_config1) StdoutLine: {'line': b'-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/share/mtc_config1/environment/ament_prefix_path.dsv\n'}
+[11.907806] (mtc_config1) StdoutLine: {'line': b'-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/share/mtc_config1/environment/path.sh\n'}
+[11.908007] (mtc_config1) StdoutLine: {'line': b'-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/share/mtc_config1/environment/path.dsv\n'}
+[11.908075] (mtc_config1) StdoutLine: {'line': b'-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/share/mtc_config1/local_setup.bash\n'}
+[11.908184] (mtc_config1) StdoutLine: {'line': b'-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/share/mtc_config1/local_setup.sh\n'}
+[11.908355] (mtc_config1) StdoutLine: {'line': b'-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/share/mtc_config1/local_setup.zsh\n'}
+[11.908526] (mtc_config1) StdoutLine: {'line': b'-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/share/mtc_config1/local_setup.dsv\n'}
+[11.908593] (mtc_config1) StdoutLine: {'line': b'-- Symlinking: /home/golf1234_pc/manipurator_ws/install/mtc_config1/share/mtc_config1/package.dsv\n'}
+[11.921398] (mtc_config1) StdoutLine: {'line': b'-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/share/ament_index/resource_index/packages/mtc_config1\n'}
+[11.921738] (mtc_config1) StdoutLine: {'line': b'-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/share/mtc_config1/cmake/mtc_config1Config.cmake\n'}
+[11.921869] (mtc_config1) StdoutLine: {'line': b'-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/share/mtc_config1/cmake/mtc_config1Config-version.cmake\n'}
+[11.922039] (mtc_config1) StdoutLine: {'line': b'-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/share/mtc_config1/package.xml\n'}
+[11.923959] (mtc_config1) CommandEnded: {'returncode': 0}
+[11.936805] (mtc_config1) JobEnded: {'identifier': 'mtc_config1', 'rc': 0}
+[11.937750] (-) TimerEvent: {}
+[11.937820] (-) EventReactorShutdown: {}

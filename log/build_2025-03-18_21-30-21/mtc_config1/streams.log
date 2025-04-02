@@ -1,0 +1,39 @@
+[0.021s] Invoking command in '/home/golf1234_pc/manipurator_ws/build/mtc_config1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/golf1234_pc/ws_moveit/install/moveit_configs_utils:/home/golf1234_pc/project1_ws/install/server_controllers:/home/golf1234_pc/project1_ws/install/mobile_manipurator:/home/golf1234_pc/project1_ws/install/camera2_ros:/home/golf1234_pc/test1_ws/install/test1:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/golf1234_pc/manipurator_ws/build/mtc_config1 -- -j16 -l16
+[0.118s] [ 66%] Built target mtc_node
+[0.118s] [ 66%] Built target mtc_pub
+[0.134s] [ 83%] [32mBuilding CXX object CMakeFiles/mtc_node_test.dir/src/mtc_node_test.cpp.o[0m
+[5.771s] In file included from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/copy_all_parameter_values.hpp:27[m[K,
+[5.771s]                  from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/rclcpp.hpp:171[m[K,
+[5.772s]                  from [01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/mtc_node_test.cpp:1[m[K:
+[5.772s] [01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/mtc_node_test.cpp:[m[K In member function ‘[01m[Kvoid MTCTaskNode::[01;32m[KpositionCallback[m[K(geometry_msgs::msg::Pose_<std::allocator<void> >::SharedPtr)[m[K’:
+[5.772s] [01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/mtc_node_test.cpp:42:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass MTCTaskNode[m[K’ has no member named ‘[01m[Kget_logger[m[K’
+[5.772s]    42 |     RCLCPP_INFO(this->[01;31m[Kget_logger[m[K(), "Updated Position: [%f, %f, %f]", msg->position.x, msg->position.y, msg->position.z);
+[5.772s]       |                       [01;31m[K^~~~~~~~~~[m[K
+[5.772s] [01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/mtc_node_test.cpp:42:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass MTCTaskNode[m[K’ has no member named ‘[01m[Kget_logger[m[K’
+[5.772s] [01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/mtc_node_test.cpp:42:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[5.772s]    42 |     [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "Updated Position: [%f, %f, %f]", msg->position.x, msg->position.y, msg->position.z);
+[5.772s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[5.773s] [01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/mtc_node_test.cpp:42:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[5.773s]    42 |     [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "Updated Position: [%f, %f, %f]", msg->position.x, msg->position.y, msg->position.z);
+[5.773s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[5.773s] [01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/mtc_node_test.cpp:42:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[5.773s]    42 |     [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "Updated Position: [%f, %f, %f]", msg->position.x, msg->position.y, msg->position.z);
+[5.773s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[5.773s] In file included from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/logging.hpp:24[m[K:
+[5.773s] [01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/mtc_node_test.cpp:42:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass MTCTaskNode[m[K’ has no member named ‘[01m[Kget_logger[m[K’
+[5.773s]    42 |     RCLCPP_INFO(this->[01;31m[Kget_logger[m[K(), "Updated Position: [%f, %f, %f]", msg->position.x, msg->position.y, msg->position.z);
+[5.773s]       |                       [01;31m[K^~~~~~~~~~[m[K
+[5.773s] [01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/mtc_node_test.cpp:42:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass MTCTaskNode[m[K’ has no member named ‘[01m[Kget_logger[m[K’
+[5.773s]    42 |     RCLCPP_INFO(this->[01;31m[Kget_logger[m[K(), "Updated Position: [%f, %f, %f]", msg->position.x, msg->position.y, msg->position.z);
+[5.773s]       |                       [01;31m[K^~~~~~~~~~[m[K
+[5.780s] [01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/mtc_node_test.cpp:[m[K At global scope:
+[5.780s] [01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/mtc_node_test.cpp:70:6:[m[K [01;31m[Kerror: [m[Kredefinition of ‘[01m[Kvoid MTCTaskNode::[01;32m[KpositionCallback[m[K(geometry_msgs::msg::Pose_<std::allocator<void> >::SharedPtr)[m[K’
+[5.780s]    70 | void [01;31m[KMTCTaskNode[m[K::positionCallback(const geometry_msgs::msg::Pose::SharedPtr msg)
+[5.780s]       |      [01;31m[K^~~~~~~~~~~[m[K
+[5.780s] [01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/mtc_node_test.cpp:40:8:[m[K [01;36m[Knote: [m[K‘[01m[Kvoid MTCTaskNode::[01;32m[KpositionCallback[m[K(geometry_msgs::msg::Pose_<std::allocator<void> >::SharedPtr)[m[K’ previously defined here
+[5.780s]    40 |   void [01;36m[KpositionCallback[m[K(const geometry_msgs::msg::Pose::SharedPtr msg){
+[5.780s]       |        [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[11.218s] gmake[2]: *** [CMakeFiles/mtc_node_test.dir/build.make:76: CMakeFiles/mtc_node_test.dir/src/mtc_node_test.cpp.o] Error 1
+[11.218s] gmake[1]: *** [CMakeFiles/Makefile2:167: CMakeFiles/mtc_node_test.dir/all] Error 2
+[11.218s] gmake: *** [Makefile:146: all] Error 2
+[11.221s] Invoked command in '/home/golf1234_pc/manipurator_ws/build/mtc_config1' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/golf1234_pc/ws_moveit/install/moveit_configs_utils:/home/golf1234_pc/project1_ws/install/server_controllers:/home/golf1234_pc/project1_ws/install/mobile_manipurator:/home/golf1234_pc/project1_ws/install/camera2_ros:/home/golf1234_pc/test1_ws/install/test1:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/golf1234_pc/manipurator_ws/build/mtc_config1 -- -j16 -l16

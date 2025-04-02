@@ -1,0 +1,47 @@
+[0.024s] Invoking command in '/home/golf1234_pc/manipurator_ws/build/mtc_config1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/golf1234_pc/manipurator_ws/install/camera2_ros:/home/golf1234_pc/manipurator_ws/install/server_controllers:/home/golf1234_pc/manipurator_ws/install/mobile_manipurator:/home/golf1234_pc/install/moveit_configs_utils:/home/golf1234_pc/ws_moveit/install/moveit_configs_utils:/home/golf1234_pc/project1_ws/install/server_controllers:/home/golf1234_pc/project1_ws/install/mobile_manipurator:/home/golf1234_pc/project1_ws/install/camera2_ros:/home/golf1234_pc/test1_ws/install/test1:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/golf1234_pc/manipurator_ws/build/mtc_config1 -- -j16 -l16
+[0.062s] -- Found ament_cmake: 2.5.3 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.267s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.273s] -- Found moveit_task_constructor_core: 0.1.3 (/home/golf1234_pc/ws_moveit/install/moveit_task_constructor_core/share/moveit_task_constructor_core/cmake)
+[0.415s] -- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.423s] -- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.438s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.456s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.513s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: chrono date_time filesystem iostreams program_options regex serialization system thread 
+[1.310s] -- Found parameter_traits: 0.4.0 (/opt/ros/jazzy/share/parameter_traits/cmake)
+[1.355s] -- Found rmw_implementation_cmake: 7.3.1 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[1.361s] -- Found rmw_fastrtps_cpp: 8.4.1 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[1.555s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.716s] -- Found rclcpp_lifecycle: 28.1.6 (/opt/ros/jazzy/share/rclcpp_lifecycle/cmake)
+[1.743s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: filesystem 
+[1.817s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[2.104s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: system filesystem date_time program_options thread chrono 
+[2.149s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: date_time filesystem program_options system thread 
+[2.162s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: thread system filesystem regex date_time program_options 
+[2.184s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: system filesystem date_time program_options thread 
+[2.309s] -- Found ament_lint_auto: 0.17.1 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[2.404s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[2.405s] -- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/golf1234_pc/manipurator_ws/src/mtc_config1/include>
+[2.405s] -- Configured cppcheck exclude dirs and/or files: 
+[2.405s] -- Added test 'flake8' to check Python code syntax and style conventions
+[2.405s] -- Configured 'flake8' exclude dirs and/or files: 
+[2.405s] -- Added test 'lint_cmake' to check CMake code style
+[2.405s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[2.406s] -- Added test 'uncrustify' to check C / C++ code style
+[2.406s] -- Configured uncrustify additional arguments: 
+[2.407s] -- Added test 'xmllint' to check XML markup files
+[2.408s] -- Configuring done (2.3s)
+[2.475s] -- Generating done (0.1s)
+[2.487s] -- Build files have been written to: /home/golf1234_pc/manipurator_ws/build/mtc_config1
+[2.545s] [ 12%] [32mBuilding CXX object CMakeFiles/moveit_controller.dir/src/moveit_controller.cpp.o[0m
+[2.554s] [01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/moveit_controller.cpp:1:10:[m[K [01;31m[Kfatal error: [m[Kmoveit/trajectory_execution_manager/trajectory_execution_manager.hpp: No such file or directory
+[2.555s]     1 | #include [01;31m[K<moveit/trajectory_execution_manager/trajectory_execution_manager.hpp>[m[K
+[2.555s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.555s] compilation terminated.
+[2.556s] [ 37%] Built target mtc_pub
+[2.556s] gmake[2]: *** [CMakeFiles/moveit_controller.dir/build.make:76: CMakeFiles/moveit_controller.dir/src/moveit_controller.cpp.o] Error 1
+[2.556s] gmake[1]: *** [CMakeFiles/Makefile2:221: CMakeFiles/moveit_controller.dir/all] Error 2
+[2.556s] gmake[1]: *** Waiting for unfinished jobs....
+[2.568s] [ 87%] Built target mtc_node_test
+[2.568s] [ 87%] Built target mtc_node
+[2.569s] gmake: *** [Makefile:146: all] Error 2
+[2.571s] Invoked command in '/home/golf1234_pc/manipurator_ws/build/mtc_config1' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/golf1234_pc/manipurator_ws/install/camera2_ros:/home/golf1234_pc/manipurator_ws/install/server_controllers:/home/golf1234_pc/manipurator_ws/install/mobile_manipurator:/home/golf1234_pc/install/moveit_configs_utils:/home/golf1234_pc/ws_moveit/install/moveit_configs_utils:/home/golf1234_pc/project1_ws/install/server_controllers:/home/golf1234_pc/project1_ws/install/mobile_manipurator:/home/golf1234_pc/project1_ws/install/camera2_ros:/home/golf1234_pc/test1_ws/install/test1:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/golf1234_pc/manipurator_ws/build/mtc_config1 -- -j16 -l16

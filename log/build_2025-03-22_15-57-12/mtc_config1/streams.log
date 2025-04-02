@@ -1,0 +1,46 @@
+[0.020s] Invoking command in '/home/golf1234_pc/manipurator_ws/build/mtc_config1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/golf1234_pc/manipurator_ws/install/camera2_ros:/home/golf1234_pc/manipurator_ws/install/server_controllers:/home/golf1234_pc/manipurator_ws/install/mobile_manipurator:/home/golf1234_pc/install/moveit_configs_utils:/home/golf1234_pc/ws_moveit/install/moveit_configs_utils:/home/golf1234_pc/project1_ws/install/server_controllers:/home/golf1234_pc/project1_ws/install/mobile_manipurator:/home/golf1234_pc/project1_ws/install/camera2_ros:/home/golf1234_pc/test1_ws/install/test1:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/golf1234_pc/manipurator_ws/build/mtc_config1 -- -j16 -l16
+[0.102s] [ 25%] Built target mtc_pub
+[0.110s] [ 50%] Built target mtc_node
+[0.111s] [ 75%] Built target mtc_node_test
+[0.138s] [ 87%] [32mBuilding CXX object CMakeFiles/moveit_controller.dir/src/moveit_controller.cpp.o[0m
+[6.204s] [01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/moveit_controller.cpp:44:39:[m[K [01;31m[Kerror: [m[K‘[01m[Krobot_trajectory[m[K’ is not a member of ‘[01m[Kmoveit[m[K’; did you mean ‘[01m[Krobot_trajectory[m[K’?
+[6.204s]    44 |   std::vector<std::shared_ptr<moveit::[01;31m[Krobot_trajectory[m[K::RobotTrajectory>> trajectories_;
+[6.205s]       |                                       [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[6.205s] In file included from [01m[K/home/golf1234_pc/ws_moveit/install/moveit_core/include/moveit_core/moveit/planning_scene/planning_scene.hpp:47[m[K,
+[6.205s]                  from [01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/moveit_controller.cpp:2[m[K:
+[6.205s] [01m[K/home/golf1234_pc/ws_moveit/install/moveit_core/include/moveit_core/moveit/robot_trajectory/robot_trajectory.hpp:53:11:[m[K [01;36m[Knote: [m[K‘[01m[Krobot_trajectory[m[K’ declared here
+[6.205s]    53 | namespace [01;36m[Krobot_trajectory[m[K
+[6.205s]       |           [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[6.205s] [01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/moveit_controller.cpp:44:72:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[6.205s]    44 |   std::vector<std::shared_ptr<moveit::robot_trajectory::RobotTrajectory[01;31m[K>>[m[K trajectories_;
+[6.205s]       |                                                                        [01;31m[K^~[m[K
+[6.205s] [01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/moveit_controller.cpp:44:75:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[6.205s]    44 |   std::vector<std::shared_ptr<moveit::robot_trajectory::RobotTrajectory>> [01;31m[Ktrajectories_[m[K;
+[6.205s]       |                                                                           [01;31m[K^~~~~~~~~~~~~[m[K
+[6.205s] [01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/moveit_controller.cpp:44:75:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[6.205s] [01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/moveit_controller.cpp:47:41:[m[K [01;31m[Kerror: [m[K‘[01m[Krobot_trajectory[m[K’ in namespace ‘[01m[Kmoveit[m[K’ does not name a type
+[6.205s]    47 |   void waitForRobotToStop(const moveit::[01;31m[Krobot_trajectory[m[K::RobotTrajectory &trajectory)
+[6.206s]       |                                         [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[6.206s] [01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/moveit_controller.cpp:47:75:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K&[m[K’ token
+[6.206s]    47 |   void waitForRobotToStop(const moveit::robot_trajectory::RobotTrajectory [01;31m[K&[m[Ktrajectory)
+[6.206s]       |                                                                           [01;31m[K^[m[K
+[6.206s] [01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/moveit_controller.cpp:47:74:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K&[m[K’ token
+[6.206s]    47 |   void waitForRobotToStop[34m[K([m[Kconst moveit::robot_trajectory::RobotTrajectory[01;31m[K [m[K[32m[K&[m[Ktrajectory)
+[6.206s]       |                          [34m[K~[m[K                                               [01;31m[K^[m[K[32m[K~[m[K
+[6.206s]       |                                                                          [32m[K)[m[K
+[6.206s] [01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/moveit_controller.cpp:47:75:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+[6.206s]    47 |   void waitForRobotToStop(const moveit::robot_trajectory::RobotTrajectory [01;31m[K&[m[Ktrajectory)
+[6.206s]       |                                                                           [01;31m[K^[m[K
+[6.206s]       |                                                                            [32m[K;[m[K
+[6.209s] [01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/moveit_controller.cpp:47:76:[m[K [01;31m[Kerror: [m[K‘[01m[Ktrajectory[m[K’ does not name a type
+[6.209s]    47 |   void waitForRobotToStop(const moveit::robot_trajectory::RobotTrajectory &[01;31m[Ktrajectory[m[K)
+[6.209s]       |                                                                            [01;31m[K^~~~~~~~~~[m[K
+[6.221s] [01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/moveit_controller.cpp:[m[K In member function ‘[01m[Kvoid MoveItController::[01;32m[Kexecute_trajectory[m[K()[m[K’:
+[6.221s] [01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/moveit_controller.cpp:30:14:[m[K [01;31m[Kerror: [m[K‘[01m[Ktrajectories_[m[K’ was not declared in this scope; did you mean ‘[01m[Ktrajectory_msgs[m[K’?
+[6.221s]    30 |         if (![01;31m[Ktrajectories_[m[K.empty() && i > 0 && i <= trajectories_.size())
+[6.221s]       |              [01;31m[K^~~~~~~~~~~~~[m[K
+[6.221s]       |              [32m[Ktrajectory_msgs[m[K
+[9.388s] gmake[2]: *** [CMakeFiles/moveit_controller.dir/build.make:76: CMakeFiles/moveit_controller.dir/src/moveit_controller.cpp.o] Error 1
+[9.388s] gmake[1]: *** [CMakeFiles/Makefile2:221: CMakeFiles/moveit_controller.dir/all] Error 2
+[9.389s] gmake: *** [Makefile:146: all] Error 2
+[9.392s] Invoked command in '/home/golf1234_pc/manipurator_ws/build/mtc_config1' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/golf1234_pc/manipurator_ws/install/camera2_ros:/home/golf1234_pc/manipurator_ws/install/server_controllers:/home/golf1234_pc/manipurator_ws/install/mobile_manipurator:/home/golf1234_pc/install/moveit_configs_utils:/home/golf1234_pc/ws_moveit/install/moveit_configs_utils:/home/golf1234_pc/project1_ws/install/server_controllers:/home/golf1234_pc/project1_ws/install/mobile_manipurator:/home/golf1234_pc/project1_ws/install/camera2_ros:/home/golf1234_pc/test1_ws/install/test1:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/golf1234_pc/manipurator_ws/build/mtc_config1 -- -j16 -l16

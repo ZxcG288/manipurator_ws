@@ -1,0 +1,24 @@
+[2.125s] Invoking command in '/home/golf1234_pc/manipurator_ws/build/mobile_manipurator': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/golf1234_pc/manipurator_ws/build/mobile_manipurator/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/golf1234_pc/manipurator_ws/install/mobile_manipurator/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/golf1234_pc/manipurator_ws/build/mobile_manipurator/build --no-deps symlink_data
+[2.606s] running develop
+[2.928s] running egg_info
+[2.959s] writing mobile_manipurator.egg-info/PKG-INFO
+[2.960s] writing dependency_links to mobile_manipurator.egg-info/dependency_links.txt
+[2.960s] writing entry points to mobile_manipurator.egg-info/entry_points.txt
+[2.960s] writing requirements to mobile_manipurator.egg-info/requires.txt
+[2.960s] writing top-level names to mobile_manipurator.egg-info/top_level.txt
+[3.030s] reading manifest file 'mobile_manipurator.egg-info/SOURCES.txt'
+[3.030s] writing manifest file 'mobile_manipurator.egg-info/SOURCES.txt'
+[3.066s] running build_ext
+[3.066s] Creating /home/golf1234_pc/manipurator_ws/install/mobile_manipurator/lib/python3.12/site-packages/mobile-manipurator.egg-link (link to .)
+[3.067s] Installing listener script to /home/golf1234_pc/manipurator_ws/install/mobile_manipurator/lib/mobile_manipurator
+[3.067s] Installing project1 script to /home/golf1234_pc/manipurator_ws/install/mobile_manipurator/lib/mobile_manipurator
+[3.068s] Installing real_robot script to /home/golf1234_pc/manipurator_ws/install/mobile_manipurator/lib/mobile_manipurator
+[3.068s] Installing servo_test1 script to /home/golf1234_pc/manipurator_ws/install/mobile_manipurator/lib/mobile_manipurator
+[3.068s] Installing subscriber1_node script to /home/golf1234_pc/manipurator_ws/install/mobile_manipurator/lib/mobile_manipurator
+[3.068s] Installing subscriber_node script to /home/golf1234_pc/manipurator_ws/install/mobile_manipurator/lib/mobile_manipurator
+[3.069s] Installing talker script to /home/golf1234_pc/manipurator_ws/install/mobile_manipurator/lib/mobile_manipurator
+[3.069s] Installing web_test1_node script to /home/golf1234_pc/manipurator_ws/install/mobile_manipurator/lib/mobile_manipurator
+[3.069s] 
+[3.069s] Installed /home/golf1234_pc/manipurator_ws/build/mobile_manipurator
+[3.069s] running symlink_data
+[3.195s] Invoked command in '/home/golf1234_pc/manipurator_ws/build/mobile_manipurator' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/golf1234_pc/manipurator_ws/build/mobile_manipurator/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/golf1234_pc/manipurator_ws/install/mobile_manipurator/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/golf1234_pc/manipurator_ws/build/mobile_manipurator/build --no-deps symlink_data

@@ -1,0 +1,11 @@
+[ 50%] [32mBuilding CXX object CMakeFiles/mtc_node.dir/src/mtc_node.cpp.o[0m
+[01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/mtc_node.cpp:[m[K In member function ‘[01m[Kmoveit::task_constructor::Task MTCTaskNode::[01;32m[KcreateTask[m[K()[m[K’:
+[01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/mtc_node.cpp:249:8:[m[K [01;31m[Kerror: [m[Kconflicting declaration ‘[01m[Kauto stage_open_hand[m[K’
+  249 |   auto [01;31m[Kstage_open_hand[m[K = //open the gripper
+      |        [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/mtc_node.cpp:144:8:[m[K [01;36m[Knote: [m[Kprevious declaration as ‘[01m[Kstd::unique_ptr<moveit::task_constructor::stages::MoveTo, std::default_delete<moveit::task_constructor::stages::MoveTo> > stage_open_hand[m[K’
+  144 |   auto [01;36m[Kstage_open_hand[m[K = //open the gripper
+      |        [01;36m[K^~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/mtc_node.dir/build.make:76: CMakeFiles/mtc_node.dir/src/mtc_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/mtc_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

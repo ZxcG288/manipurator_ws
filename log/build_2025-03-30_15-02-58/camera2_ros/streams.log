@@ -1,0 +1,54 @@
+[2.721s] Invoking command in '/home/golf1234_pc/manipurator_ws/build/camera2_ros': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/golf1234_pc/manipurator_ws/build/camera2_ros/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/golf1234_pc/manipurator_ws/install/camera2_ros/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/golf1234_pc/manipurator_ws/build/camera2_ros/build --no-deps symlink_data
+[2.845s] Traceback (most recent call last):
+[2.845s]   File "/home/golf1234_pc/manipurator_ws/build/camera2_ros/setup.py", line 1, in <module>
+[2.845s]     from setuptools import find_packages, setup
+[2.845s]   File "/usr/lib/python3/dist-packages/setuptools/__init__.py", line 7, in <module>
+[2.848s]     import _distutils_hack.override  # noqa: F401
+[2.848s]     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2.848s]   File "/usr/lib/python3/dist-packages/_distutils_hack/override.py", line 1, in <module>
+[2.848s]     __import__('_distutils_hack').do_override()
+[2.849s]   File "/usr/lib/python3/dist-packages/_distutils_hack/__init__.py", line 77, in do_override
+[2.850s]     ensure_local_distutils()
+[2.850s]   File "/usr/lib/python3/dist-packages/_distutils_hack/__init__.py", line 60, in ensure_local_distutils
+[2.850s]     importlib.import_module('distutils')
+[2.850s]   File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+[2.850s]     return _bootstrap._gcd_import(name[level:], package, level)
+[2.850s]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2.850s]   File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+[2.850s]   File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+[2.851s]   File "<frozen importlib._bootstrap>", line 1322, in _find_and_load_unlocked
+[2.853s]   File "<frozen importlib._bootstrap>", line 1262, in _find_spec
+[2.855s]   File "/usr/lib/python3/dist-packages/_distutils_hack/__init__.py", line 97, in find_spec
+[2.856s]     return method()
+[2.857s]            ^^^^^^^^
+[2.857s]   File "/usr/lib/python3/dist-packages/_distutils_hack/__init__.py", line 108, in spec_for_distutils
+[2.857s]     mod = importlib.import_module('setuptools._distutils')
+[2.858s]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2.859s]   File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+[2.859s]     return _bootstrap._gcd_import(name[level:], package, level)
+[2.859s]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2.859s]   File "/usr/lib/python3/dist-packages/setuptools/_distutils/__init__.py", line 12, in <module>
+[2.859s]     importlib.import_module('_distutils_system_mod')
+[2.859s]   File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
+[2.861s]     return _bootstrap._gcd_import(name[level:], package, level)
+[2.862s]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2.862s]   File "/usr/lib/python3.12/_distutils_system_mod.py", line 15, in <module>
+[2.862s]     import distutils.command.install as orig_install
+[2.863s]   File "/usr/lib/python3/dist-packages/setuptools/_distutils/command/install.py", line 12, in <module>
+[2.863s]     from ..core import Command
+[2.863s]   File "/usr/lib/python3/dist-packages/setuptools/_distutils/core.py", line 22, in <module>
+[2.864s]     from .dist import Distribution
+[2.864s]   File "/usr/lib/python3/dist-packages/setuptools/_distutils/dist.py", line 27, in <module>
+[2.864s]     from .util import check_environ, strtobool, rfc822_escape
+[2.864s]   File "/usr/lib/python3/dist-packages/setuptools/_distutils/util.py", line 11, in <module>
+[2.865s]     import subprocess
+[2.865s]   File "/usr/lib/python3.12/subprocess.py", line 49, in <module>
+[2.865s]     import signal
+[2.865s]   File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+[2.865s]   File "<frozen importlib._bootstrap>", line 1322, in _find_and_load_unlocked
+[2.866s]   File "<frozen importlib._bootstrap>", line 1262, in _find_spec
+[2.866s]   File "<frozen importlib._bootstrap_external>", line 1528, in find_spec
+[2.866s]   File "<frozen importlib._bootstrap_external>", line 1502, in _get_spec
+[2.866s]   File "<frozen importlib._bootstrap_external>", line 1632, in find_spec
+[2.867s]   File "<frozen importlib._bootstrap>", line 491, in _verbose_message
+[2.867s] KeyboardInterrupt

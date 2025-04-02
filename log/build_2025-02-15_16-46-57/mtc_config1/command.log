@@ -1,0 +1,4 @@
+Invoking command in '/home/golf1234_pc/manipurator_ws/build/mtc_config1': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/golf1234_pc/manipurator_ws/build/mtc_config1 -- -j16 -l16
+Invoked command in '/home/golf1234_pc/manipurator_ws/build/mtc_config1' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/golf1234_pc/manipurator_ws/build/mtc_config1 -- -j16 -l16
+Invoking command in '/home/golf1234_pc/manipurator_ws/build/mtc_config1': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/golf1234_pc/manipurator_ws/build/mtc_config1
+Invoked command in '/home/golf1234_pc/manipurator_ws/build/mtc_config1' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/golf1234_pc/manipurator_ws/build/mtc_config1

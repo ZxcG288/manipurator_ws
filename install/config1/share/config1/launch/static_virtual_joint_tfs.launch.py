@@ -1,0 +1,1 @@
+/home/golf1234_pc/manipurator_ws/src/config1/launch/static_virtual_joint_tfs.launch.py

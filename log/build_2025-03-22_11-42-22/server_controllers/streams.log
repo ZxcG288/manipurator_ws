@@ -1,0 +1,23 @@
+[1.526s] Invoking command in '/home/golf1234_pc/manipurator_ws/src/server_controllers': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/golf1234_pc/manipurator_ws/build/server_controllers/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/golf1234_pc/manipurator_ws/install/server_controllers/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/server_controllers build --build-base /home/golf1234_pc/manipurator_ws/build/server_controllers/build install --record /home/golf1234_pc/manipurator_ws/build/server_controllers/install.log --single-version-externally-managed install_data
+[1.836s] running egg_info
+[1.861s] writing ../../build/server_controllers/server_controllers.egg-info/PKG-INFO
+[1.862s] writing dependency_links to ../../build/server_controllers/server_controllers.egg-info/dependency_links.txt
+[1.862s] writing entry points to ../../build/server_controllers/server_controllers.egg-info/entry_points.txt
+[1.862s] writing requirements to ../../build/server_controllers/server_controllers.egg-info/requires.txt
+[1.862s] writing top-level names to ../../build/server_controllers/server_controllers.egg-info/top_level.txt
+[1.914s] reading manifest file '../../build/server_controllers/server_controllers.egg-info/SOURCES.txt'
+[1.915s] writing manifest file '../../build/server_controllers/server_controllers.egg-info/SOURCES.txt'
+[1.915s] running build
+[1.915s] running build_py
+[1.915s] running install
+[1.920s] running install_lib
+[1.947s] running install_data
+[1.947s] running install_egg_info
+[1.986s] removing '/home/golf1234_pc/manipurator_ws/install/server_controllers/lib/python3.12/site-packages/server_controllers-0.0.0-py3.12.egg-info' (and everything under it)
+[1.986s] Copying ../../build/server_controllers/server_controllers.egg-info to /home/golf1234_pc/manipurator_ws/install/server_controllers/lib/python3.12/site-packages/server_controllers-0.0.0-py3.12.egg-info
+[1.987s] running install_scripts
+[2.175s] Installing node1 script to /home/golf1234_pc/manipurator_ws/install/server_controllers/lib/server_controllers
+[2.176s] Installing node2 script to /home/golf1234_pc/manipurator_ws/install/server_controllers/lib/server_controllers
+[2.176s] Installing node_manager script to /home/golf1234_pc/manipurator_ws/install/server_controllers/lib/server_controllers
+[2.176s] writing list of installed files to '/home/golf1234_pc/manipurator_ws/build/server_controllers/install.log'
+[2.206s] Invoked command in '/home/golf1234_pc/manipurator_ws/src/server_controllers' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/golf1234_pc/manipurator_ws/build/server_controllers/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/golf1234_pc/manipurator_ws/install/server_controllers/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/server_controllers build --build-base /home/golf1234_pc/manipurator_ws/build/server_controllers/build install --record /home/golf1234_pc/manipurator_ws/build/server_controllers/install.log --single-version-externally-managed install_data

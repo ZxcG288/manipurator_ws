@@ -1,0 +1,10 @@
+[0.011s] Invoking command in '/home/golf1234_pc/manipurator_ws/build/mtc_config1': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/golf1234_pc/manipurator_ws/build/mtc_config1 -- -j16 -l16
+[0.102s] [ 50%] [32mBuilding CXX object CMakeFiles/mtc_node.dir/src/mtc_node.cpp.o[0m
+[4.943s] [01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/mtc_node.cpp:[m[K In member function ‘[01m[Kmoveit::task_constructor::Task MTCTaskNode::[01;32m[KcreateTask[m[K()[m[K’:
+[4.943s] [01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/mtc_node.cpp:277:30:[m[K [01;31m[Kerror: [m[K‘[01m[Kattach_object_stage[m[K’ was not declared in this scope
+[4.943s]   277 |     stage->setMonitoredStage([01;31m[Kattach_object_stage[m[K);  // Hook into attach_object_stage
+[4.943s]       |                              [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[8.455s] gmake[2]: *** [CMakeFiles/mtc_node.dir/build.make:76: CMakeFiles/mtc_node.dir/src/mtc_node.cpp.o] Error 1
+[8.455s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/mtc_node.dir/all] Error 2
+[8.456s] gmake: *** [Makefile:146: all] Error 2
+[8.458s] Invoked command in '/home/golf1234_pc/manipurator_ws/build/mtc_config1' returned '2': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/golf1234_pc/manipurator_ws/build/mtc_config1 -- -j16 -l16

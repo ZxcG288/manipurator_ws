@@ -1,0 +1,34 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/golf1234_pc/moveit2_obb/install/yolov8_msgs/lib/python3.12/site-packages",
+        "/home/golf1234_pc/ws_moveit/install/moveit_task_constructor_core/lib/python3.12/site-packages",
+        "/home/golf1234_pc/ws_moveit/install/moveit_task_constructor_msgs/lib/python3.12/site-packages",
+        "/home/golf1234_pc/ws_moveit/install/moveit_py/lib/python3.12/site-packages",
+        "/home/golf1234_pc/ws_moveit/install/moveit_msgs/lib/python3.12/site-packages",
+        "/home/golf1234_pc/ws_moveit/install/moveit_configs_utils/lib/python3.12/site-packages",
+        "/home/golf1234_pc/project1_ws/build/server_controllers",
+        "/home/golf1234_pc/project1_ws/install/server_controllers/lib/python3.12/site-packages",
+        "/home/golf1234_pc/project1_ws/build/mobile_manipurator",
+        "/home/golf1234_pc/project1_ws/install/mobile_manipurator/lib/python3.12/site-packages",
+        "/home/golf1234_pc/project1_ws/build/camera2_ros",
+        "/home/golf1234_pc/project1_ws/install/camera2_ros/lib/python3.12/site-packages",
+        "/home/golf1234_pc/test1_ws/install/test1/lib/python3.12/site-packages",
+        "/opt/ros/jazzy/lib/python3.12/site-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/golf1234_pc/moveit2_obb/install/yolov8_msgs/lib/python3.12/site-packages",
+        "/home/golf1234_pc/ws_moveit/install/moveit_task_constructor_core/lib/python3.12/site-packages",
+        "/home/golf1234_pc/ws_moveit/install/moveit_task_constructor_msgs/lib/python3.12/site-packages",
+        "/home/golf1234_pc/ws_moveit/install/moveit_py/lib/python3.12/site-packages",
+        "/home/golf1234_pc/ws_moveit/install/moveit_msgs/lib/python3.12/site-packages",
+        "/home/golf1234_pc/ws_moveit/install/moveit_configs_utils/lib/python3.12/site-packages",
+        "/home/golf1234_pc/project1_ws/build/server_controllers",
+        "/home/golf1234_pc/project1_ws/install/server_controllers/lib/python3.12/site-packages",
+        "/home/golf1234_pc/project1_ws/build/mobile_manipurator",
+        "/home/golf1234_pc/project1_ws/install/mobile_manipurator/lib/python3.12/site-packages",
+        "/home/golf1234_pc/project1_ws/build/camera2_ros",
+        "/home/golf1234_pc/project1_ws/install/camera2_ros/lib/python3.12/site-packages",
+        "/home/golf1234_pc/test1_ws/install/test1/lib/python3.12/site-packages",
+        "/opt/ros/jazzy/lib/python3.12/site-packages"
+    ]
+}

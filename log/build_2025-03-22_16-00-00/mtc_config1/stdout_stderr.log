@@ -1,0 +1,45 @@
+[ 25%] Built target mtc_pub
+[ 50%] Built target mtc_node
+[ 75%] Built target mtc_node_test
+[ 87%] [32mBuilding CXX object CMakeFiles/moveit_controller.dir/src/moveit_controller.cpp.o[0m
+[01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/moveit_controller.cpp:44:45:[m[K [01;31m[Kerror: [m[K‘[01m[KRobotTrajectory[m[K’ is not a member of ‘[01m[Kmoveit::core[m[K’
+   44 |   std::vector<std::shared_ptr<moveit::core::[01;31m[KRobotTrajectory[m[K>> trajectories_;  // Corrected type
+      |                                             [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/moveit_controller.cpp:44:45:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+In file included from [01m[K/home/golf1234_pc/ws_moveit/install/moveit_core/include/moveit_core/moveit/planning_scene/planning_scene.hpp:47[m[K,
+                 from [01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/moveit_controller.cpp:2[m[K:
+[01m[K/home/golf1234_pc/ws_moveit/install/moveit_core/include/moveit_core/moveit/robot_trajectory/robot_trajectory.hpp:59:7:[m[K [01;36m[Knote: [m[K  ‘[01m[Krobot_trajectory::RobotTrajectory[m[K’
+   59 | class [01;36m[KRobotTrajectory[m[K
+      |       [01;36m[K^~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/golf1234_pc/ws_moveit/install/moveit_msgs/include/moveit_msgs/moveit_msgs/msg/robot_trajectory.hpp:7[m[K,
+                 from [01m[K/home/golf1234_pc/ws_moveit/install/moveit_core/include/moveit_core/moveit/robot_trajectory/robot_trajectory.hpp:41[m[K:
+[01m[K/home/golf1234_pc/ws_moveit/install/moveit_msgs/include/moveit_msgs/moveit_msgs/msg/detail/robot_trajectory__struct.hpp:138:7:[m[K [01;36m[Knote: [m[K  ‘[01m[Kmoveit_msgs::msg::RobotTrajectory[m[K’
+  138 | using [01;36m[KRobotTrajectory[m[K =
+      |       [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/moveit_controller.cpp:44:45:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   44 |   std::vector<std::shared_ptr<moveit::core::[01;31m[KRobotTrajectory[m[K>> trajectories_;  // Corrected type
+      |                                             [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/moveit_controller.cpp:44:60:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   44 |   std::vector<std::shared_ptr<moveit::core::RobotTrajectory[01;31m[K>>[m[K trajectories_;  // Corrected type
+      |                                                            [01;31m[K^~[m[K
+[01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/moveit_controller.cpp:44:60:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/moveit_controller.cpp:47:47:[m[K [01;31m[Kerror: [m[K‘[01m[KRobotTrajectory[m[K’ in namespace ‘[01m[Kmoveit::core[m[K’ does not name a type
+   47 |   void waitForRobotToStop(const moveit::core::[01;31m[KRobotTrajectory[m[K &trajectory)  // Corrected type
+      |                                               [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/moveit_controller.cpp:[m[K In member function ‘[01m[Kvoid MoveItController::[01;32m[Kexecute_trajectory[m[K()[m[K’:
+[01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/moveit_controller.cpp:30:28:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kempty[m[K’ in ‘[01m[K((MoveItController*)this)->MoveItController::trajectories_[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+   30 |         if (!trajectories_.[01;31m[Kempty[m[K() && i > 0 && i <= trajectories_.size())
+      |                            [01;31m[K^~~~~[m[K
+[01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/moveit_controller.cpp:30:67:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Ksize[m[K’ in ‘[01m[K((MoveItController*)this)->MoveItController::trajectories_[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+   30 |         if (!trajectories_.empty() && i > 0 && i <= trajectories_.[01;31m[Ksize[m[K())
+      |                                                                   [01;31m[K^~~~[m[K
+[01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/moveit_controller.cpp:32:44:[m[K [01;31m[Kerror: [m[Kinvalid types ‘[01m[Kint[size_t {aka long unsigned int}][m[K’ for array subscript
+   32 |           waitForRobotToStop(*trajectories_[01;31m[K[[m[Ki - 1]);
+      |                                            [01;31m[K^[m[K
+[01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/moveit_controller.cpp:[m[K In member function ‘[01m[Kvoid MoveItController::[01;32m[KwaitForRobotToStop[m[K(const int&)[m[K’:
+[01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/moveit_controller.cpp:47:64:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktrajectory[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   47 |   void waitForRobotToStop([01;35m[Kconst moveit::core::RobotTrajectory &trajectory[m[K)  // Corrected type
+      |                           [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/moveit_controller.dir/build.make:76: CMakeFiles/moveit_controller.dir/src/moveit_controller.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:221: CMakeFiles/moveit_controller.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

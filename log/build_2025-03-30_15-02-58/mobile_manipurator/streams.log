@@ -1,0 +1,18 @@
+[2.661s] Invoking command in '/home/golf1234_pc/manipurator_ws/build/mobile_manipurator': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/golf1234_pc/manipurator_ws/build/mobile_manipurator/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/golf1234_pc/manipurator_ws/install/mobile_manipurator/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/golf1234_pc/manipurator_ws/build/mobile_manipurator/build --no-deps symlink_data
+[2.802s] Traceback (most recent call last):
+[2.802s]   File "/home/golf1234_pc/manipurator_ws/build/mobile_manipurator/setup.py", line 1, in <module>
+[2.803s]     from setuptools import find_packages, setup
+[2.803s]   File "/usr/lib/python3/dist-packages/setuptools/__init__.py", line 15, in <module>
+[2.804s]     import setuptools.version
+[2.806s]   File "/usr/lib/python3/dist-packages/setuptools/version.py", line 1, in <module>
+[2.807s]     from ._importlib import metadata
+[2.807s]   File "/usr/lib/python3/dist-packages/setuptools/_importlib.py", line 45, in <module>
+[2.807s]     import importlib.metadata as metadata  # noqa: F401
+[2.807s]     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2.807s]   File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+[2.807s]   File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+[2.807s]   File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+[2.807s]   File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+[2.807s]   File "<frozen importlib._bootstrap_external>", line 1124, in get_code
+[2.808s]   File "<frozen importlib._bootstrap_external>", line 757, in _compile_bytecode
+[2.808s] KeyboardInterrupt

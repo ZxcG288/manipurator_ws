@@ -1,0 +1,7 @@
+[01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/mtc_node_test.cpp:[m[K In member function ‘[01m[Kvoid MTCTaskNode::[01;32m[KdoTask[m[K()[m[K’:
+[01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/mtc_node_test.cpp:111:6:[m[K [01;35m[Kwarning: [m[Kinfinite recursion detected [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Winfinite-recursion-Winfinite-recursion]8;;[m[K]
+  111 | void [01;35m[KMTCTaskNode[m[K::doTask()
+      |      [01;35m[K^~~~~~~~~~~[m[K
+[01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/mtc_node_test.cpp:119:9:[m[K [01;36m[Knote: [m[Krecursive call
+  119 |   [01;36m[KdoTask()[m[K;
+      |   [01;36m[K~~~~~~^~[m[K

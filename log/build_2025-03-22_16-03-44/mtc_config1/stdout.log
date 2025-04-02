@@ -1,0 +1,10 @@
+[ 25%] Built target mtc_pub
+[ 50%] Built target mtc_node_test
+[ 75%] Built target mtc_node
+[ 87%] [32mBuilding CXX object CMakeFiles/moveit_controller.dir/src/moveit_controller.cpp.o[0m
+[100%] [32m[1mLinking CXX executable moveit_controller[0m
+[100%] Built target moveit_controller
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/share/mtc_config1/launch/mtc_config1.launch.py
+-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/share/mtc_config1/launch/mtc_config1.rviz

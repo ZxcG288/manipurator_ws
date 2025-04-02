@@ -1,0 +1,12 @@
+[0.825s] Invoking command in '/home/golf1234_pc/manipurator_ws/build/mtc_config1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/golf1234_pc/manipurator_ws/install/server_controllers:/home/golf1234_pc/manipurator_ws/install/mobile_manipurator:/home/golf1234_pc/manipurator_ws/install/camera2_ros:/home/golf1234_pc/install/moveit_configs_utils:/home/golf1234_pc/ws_moveit/install/moveit_configs_utils:/home/golf1234_pc/project1_ws/install/server_controllers:/home/golf1234_pc/project1_ws/install/mobile_manipurator:/home/golf1234_pc/project1_ws/install/camera2_ros:/home/golf1234_pc/test1_ws/install/test1:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/golf1234_pc/manipurator_ws/build/mtc_config1 -- -j16 -l16
+[0.940s] [ 28%] Built target moveit_controller
+[0.940s] [ 28%] Built target mtc_pub
+[0.950s] [ 71%] Built target place_node
+[0.950s] [ 71%] Built target mtc_node
+[0.951s] [ 71%] Built target start_mtc
+[0.951s] [ 85%] Built target mtc_node_test
+[0.970s] [ 92%] [32mBuilding CXX object CMakeFiles/mtc_place.dir/src/mtc_place.cpp.o[0m
+[2.779s] gmake[2]: *** [CMakeFiles/mtc_place.dir/build.make:76: CMakeFiles/mtc_place.dir/src/mtc_place.cpp.o] Interrupt
+[2.783s] gmake[1]: *** [CMakeFiles/Makefile2:305: CMakeFiles/mtc_place.dir/all] Interrupt
+[2.783s] gmake: *** [Makefile:146: all] Interrupt
+[2.802s] Invoked command in '/home/golf1234_pc/manipurator_ws/build/mtc_config1' returned '-2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/golf1234_pc/manipurator_ws/install/server_controllers:/home/golf1234_pc/manipurator_ws/install/mobile_manipurator:/home/golf1234_pc/manipurator_ws/install/camera2_ros:/home/golf1234_pc/install/moveit_configs_utils:/home/golf1234_pc/ws_moveit/install/moveit_configs_utils:/home/golf1234_pc/project1_ws/install/server_controllers:/home/golf1234_pc/project1_ws/install/mobile_manipurator:/home/golf1234_pc/project1_ws/install/camera2_ros:/home/golf1234_pc/test1_ws/install/test1:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/golf1234_pc/manipurator_ws/build/mtc_config1 -- -j16 -l16

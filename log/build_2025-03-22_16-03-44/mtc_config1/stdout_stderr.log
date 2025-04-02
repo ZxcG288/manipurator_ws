@@ -1,0 +1,22 @@
+[ 25%] Built target mtc_pub
+[ 50%] Built target mtc_node_test
+[ 75%] Built target mtc_node
+[ 87%] [32mBuilding CXX object CMakeFiles/moveit_controller.dir/src/moveit_controller.cpp.o[0m
+[01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/moveit_controller.cpp:[m[K In member function ‘[01m[Kvoid MoveItController::[01;32m[KwaitForRobotToStop[m[K(const moveit_msgs::msg::RobotTrajectory&)[m[K’:
+[01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/moveit_controller.cpp:45:68:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktrajectory[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   45 |   void waitForRobotToStop([01;35m[Kconst moveit_msgs::msg::RobotTrajectory &trajectory[m[K)
+      |                           [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~[m[K
+[100%] [32m[1mLinking CXX executable moveit_controller[0m
+[100%] Built target moveit_controller
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/share/mtc_config1/launch/mtc_config1.launch.py
+-- Up-to-date symlink: /home/golf1234_pc/manipurator_ws/install/mtc_config1/share/mtc_config1/launch/mtc_config1.rviz
+[31mCMake Error at ament_cmake_symlink_install/ament_cmake_symlink_install.cmake:100 (message):
+  ament_cmake_symlink_install_directory() can't find
+  '/home/golf1234_pc/manipurator_ws/src/mtc_config1/mtc_node'
+Call Stack (most recent call first):
+  ament_cmake_symlink_install/ament_cmake_symlink_install.cmake:314 (ament_cmake_symlink_install_directory)
+  cmake_install.cmake:46 (include)
+
+[0m

@@ -1,0 +1,9 @@
+[console_scripts]
+listener = mobile_manipurator.listener1:main
+project1 = mobile_manipurator.project1:main
+real_robot = mobile_manipurator.real_robot:main
+servo_test1 = mobile_manipurator.servo_test1:main
+subscriber1_node = mobile_manipurator.subscriber1:main
+subscriber_node = mobile_manipurator.subscriber:main
+talker = mobile_manipurator.talker1:main
+web_test1_node = mobile_manipurator.web_test1:main

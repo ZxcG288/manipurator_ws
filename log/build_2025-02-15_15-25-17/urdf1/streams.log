@@ -1,0 +1,60 @@
+[0.026s] Invoking command in '/home/golf1234_pc/manipurator_ws/build/urdf1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/golf1234_pc/ws_moveit/install/moveit_configs_utils:/home/golf1234_pc/project1_ws/install/server_controllers:/home/golf1234_pc/project1_ws/install/mobile_manipurator:/home/golf1234_pc/project1_ws/install/camera2_ros:/home/golf1234_pc/test1_ws/install/test1:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/golf1234_pc/manipurator_ws/src/urdf1 -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/golf1234_pc/manipurator_ws/install/urdf1
+[0.142s] -- The C compiler identification is GNU 13.3.0
+[0.495s] -- The CXX compiler identification is GNU 13.3.0
+[0.810s] -- Detecting C compiler ABI info
+[0.995s] -- Detecting C compiler ABI info - done
+[1.002s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.002s] -- Detecting C compile features
+[1.002s] -- Detecting C compile features - done
+[1.050s] -- Detecting CXX compiler ABI info
+[1.245s] -- Detecting CXX compiler ABI info - done
+[1.251s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.252s] -- Detecting CXX compile features
+[1.252s] -- Detecting CXX compile features - done
+[1.266s] -- Found ament_cmake: 2.5.3 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[1.536s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[1.606s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.779s] -- Found ament_lint_auto: 0.17.1 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[1.947s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.947s] -- Configured 'flake8' exclude dirs and/or files: 
+[1.950s] -- Added test 'lint_cmake' to check CMake code style
+[1.953s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.956s] -- Added test 'xmllint' to check XML markup files
+[1.963s] -- Configuring done (1.9s)
+[1.969s] -- Generating done (0.0s)
+[1.971s] -- Build files have been written to: /home/golf1234_pc/manipurator_ws/build/urdf1
+[1.978s] Invoked command in '/home/golf1234_pc/manipurator_ws/build/urdf1' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/golf1234_pc/ws_moveit/install/moveit_configs_utils:/home/golf1234_pc/project1_ws/install/server_controllers:/home/golf1234_pc/project1_ws/install/mobile_manipurator:/home/golf1234_pc/project1_ws/install/camera2_ros:/home/golf1234_pc/test1_ws/install/test1:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/golf1234_pc/manipurator_ws/src/urdf1 -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/golf1234_pc/manipurator_ws/install/urdf1
+[1.979s] Invoking command in '/home/golf1234_pc/manipurator_ws/build/urdf1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/golf1234_pc/ws_moveit/install/moveit_configs_utils:/home/golf1234_pc/project1_ws/install/server_controllers:/home/golf1234_pc/project1_ws/install/mobile_manipurator:/home/golf1234_pc/project1_ws/install/camera2_ros:/home/golf1234_pc/test1_ws/install/test1:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/golf1234_pc/manipurator_ws/build/urdf1 -- -j16 -l16
+[2.033s] Invoked command in '/home/golf1234_pc/manipurator_ws/build/urdf1' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/golf1234_pc/ws_moveit/install/moveit_configs_utils:/home/golf1234_pc/project1_ws/install/server_controllers:/home/golf1234_pc/project1_ws/install/mobile_manipurator:/home/golf1234_pc/project1_ws/install/camera2_ros:/home/golf1234_pc/test1_ws/install/test1:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/golf1234_pc/manipurator_ws/build/urdf1 -- -j16 -l16
+[2.047s] Invoking command in '/home/golf1234_pc/manipurator_ws/build/urdf1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/golf1234_pc/ws_moveit/install/moveit_configs_utils:/home/golf1234_pc/project1_ws/install/server_controllers:/home/golf1234_pc/project1_ws/install/mobile_manipurator:/home/golf1234_pc/project1_ws/install/camera2_ros:/home/golf1234_pc/test1_ws/install/test1:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/golf1234_pc/manipurator_ws/build/urdf1
+[2.058s] -- Install configuration: ""
+[2.058s] -- Execute custom install script
+[2.059s] -- Symlinking: /home/golf1234_pc/manipurator_ws/install/urdf1/share/urdf1/launch/display.launch.py
+[2.073s] -- Symlinking: /home/golf1234_pc/manipurator_ws/install/urdf1/share/urdf1/urdf/urdf1.urdf
+[2.087s] -- Symlinking: /home/golf1234_pc/manipurator_ws/install/urdf1/share/urdf1/meshes/arm1_link.STL
+[2.100s] -- Symlinking: /home/golf1234_pc/manipurator_ws/install/urdf1/share/urdf1/meshes/arm2_link.STL
+[2.112s] -- Symlinking: /home/golf1234_pc/manipurator_ws/install/urdf1/share/urdf1/meshes/base_link.STL
+[2.125s] -- Symlinking: /home/golf1234_pc/manipurator_ws/install/urdf1/share/urdf1/meshes/headbase_link.STL
+[2.139s] -- Symlinking: /home/golf1234_pc/manipurator_ws/install/urdf1/share/urdf1/meshes/left_Link.STL
+[2.152s] -- Symlinking: /home/golf1234_pc/manipurator_ws/install/urdf1/share/urdf1/meshes/left_finger.STL
+[2.164s] -- Symlinking: /home/golf1234_pc/manipurator_ws/install/urdf1/share/urdf1/meshes/left_gear.STL
+[2.179s] -- Symlinking: /home/golf1234_pc/manipurator_ws/install/urdf1/share/urdf1/meshes/right_Link.STL
+[2.192s] -- Symlinking: /home/golf1234_pc/manipurator_ws/install/urdf1/share/urdf1/meshes/right_finger.STL
+[2.206s] -- Symlinking: /home/golf1234_pc/manipurator_ws/install/urdf1/share/urdf1/meshes/right_gear.STL
+[2.219s] -- Symlinking: /home/golf1234_pc/manipurator_ws/install/urdf1/share/urdf1/meshes/rotating_base.STL
+[2.233s] -- Symlinking: /home/golf1234_pc/manipurator_ws/install/urdf1/share/ament_index/resource_index/package_run_dependencies/urdf1
+[2.246s] -- Symlinking: /home/golf1234_pc/manipurator_ws/install/urdf1/share/ament_index/resource_index/parent_prefix_path/urdf1
+[2.259s] -- Symlinking: /home/golf1234_pc/manipurator_ws/install/urdf1/share/urdf1/environment/ament_prefix_path.sh
+[2.272s] -- Symlinking: /home/golf1234_pc/manipurator_ws/install/urdf1/share/urdf1/environment/ament_prefix_path.dsv
+[2.285s] -- Symlinking: /home/golf1234_pc/manipurator_ws/install/urdf1/share/urdf1/environment/path.sh
+[2.297s] -- Symlinking: /home/golf1234_pc/manipurator_ws/install/urdf1/share/urdf1/environment/path.dsv
+[2.309s] -- Symlinking: /home/golf1234_pc/manipurator_ws/install/urdf1/share/urdf1/local_setup.bash
+[2.322s] -- Symlinking: /home/golf1234_pc/manipurator_ws/install/urdf1/share/urdf1/local_setup.sh
+[2.335s] -- Symlinking: /home/golf1234_pc/manipurator_ws/install/urdf1/share/urdf1/local_setup.zsh
+[2.348s] -- Symlinking: /home/golf1234_pc/manipurator_ws/install/urdf1/share/urdf1/local_setup.dsv
+[2.362s] -- Symlinking: /home/golf1234_pc/manipurator_ws/install/urdf1/share/urdf1/package.dsv
+[2.377s] -- Symlinking: /home/golf1234_pc/manipurator_ws/install/urdf1/share/ament_index/resource_index/packages/urdf1
+[2.390s] -- Symlinking: /home/golf1234_pc/manipurator_ws/install/urdf1/share/urdf1/cmake/urdf1Config.cmake
+[2.401s] -- Symlinking: /home/golf1234_pc/manipurator_ws/install/urdf1/share/urdf1/cmake/urdf1Config-version.cmake
+[2.414s] -- Symlinking: /home/golf1234_pc/manipurator_ws/install/urdf1/share/urdf1/package.xml
+[2.430s] Invoked command in '/home/golf1234_pc/manipurator_ws/build/urdf1' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/golf1234_pc/ws_moveit/install/moveit_configs_utils:/home/golf1234_pc/project1_ws/install/server_controllers:/home/golf1234_pc/project1_ws/install/mobile_manipurator:/home/golf1234_pc/project1_ws/install/camera2_ros:/home/golf1234_pc/test1_ws/install/test1:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/golf1234_pc/manipurator_ws/build/urdf1

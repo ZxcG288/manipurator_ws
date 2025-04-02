@@ -1,0 +1,40 @@
+[01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/moveit_controller.cpp:44:39:[m[K [01;31m[Kerror: [m[K‘[01m[Krobot_trajectory[m[K’ is not a member of ‘[01m[Kmoveit[m[K’; did you mean ‘[01m[Krobot_trajectory[m[K’?
+   44 |   std::vector<std::shared_ptr<moveit::[01;31m[Krobot_trajectory[m[K::RobotTrajectory>> trajectories_;
+      |                                       [01;31m[K^~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/golf1234_pc/ws_moveit/install/moveit_core/include/moveit_core/moveit/planning_scene/planning_scene.hpp:47[m[K,
+                 from [01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/moveit_controller.cpp:2[m[K:
+[01m[K/home/golf1234_pc/ws_moveit/install/moveit_core/include/moveit_core/moveit/robot_trajectory/robot_trajectory.hpp:53:11:[m[K [01;36m[Knote: [m[K‘[01m[Krobot_trajectory[m[K’ declared here
+   53 | namespace [01;36m[Krobot_trajectory[m[K
+      |           [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/moveit_controller.cpp:44:72:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   44 |   std::vector<std::shared_ptr<moveit::robot_trajectory::RobotTrajectory[01;31m[K>>[m[K trajectories_;
+      |                                                                        [01;31m[K^~[m[K
+[01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/moveit_controller.cpp:44:75:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   44 |   std::vector<std::shared_ptr<moveit::robot_trajectory::RobotTrajectory>> [01;31m[Ktrajectories_[m[K;
+      |                                                                           [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/moveit_controller.cpp:44:75:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/moveit_controller.cpp:47:41:[m[K [01;31m[Kerror: [m[K‘[01m[Krobot_trajectory[m[K’ in namespace ‘[01m[Kmoveit[m[K’ does not name a type
+   47 |   void waitForRobotToStop(const moveit::[01;31m[Krobot_trajectory[m[K::RobotTrajectory &trajectory)
+      |                                         [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/moveit_controller.cpp:47:75:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K&[m[K’ token
+   47 |   void waitForRobotToStop(const moveit::robot_trajectory::RobotTrajectory [01;31m[K&[m[Ktrajectory)
+      |                                                                           [01;31m[K^[m[K
+[01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/moveit_controller.cpp:47:74:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K&[m[K’ token
+   47 |   void waitForRobotToStop[34m[K([m[Kconst moveit::robot_trajectory::RobotTrajectory[01;31m[K [m[K[32m[K&[m[Ktrajectory)
+      |                          [34m[K~[m[K                                               [01;31m[K^[m[K[32m[K~[m[K
+      |                                                                          [32m[K)[m[K
+[01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/moveit_controller.cpp:47:75:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+   47 |   void waitForRobotToStop(const moveit::robot_trajectory::RobotTrajectory [01;31m[K&[m[Ktrajectory)
+      |                                                                           [01;31m[K^[m[K
+      |                                                                            [32m[K;[m[K
+[01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/moveit_controller.cpp:47:76:[m[K [01;31m[Kerror: [m[K‘[01m[Ktrajectory[m[K’ does not name a type
+   47 |   void waitForRobotToStop(const moveit::robot_trajectory::RobotTrajectory &[01;31m[Ktrajectory[m[K)
+      |                                                                            [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/moveit_controller.cpp:[m[K In member function ‘[01m[Kvoid MoveItController::[01;32m[Kexecute_trajectory[m[K()[m[K’:
+[01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/moveit_controller.cpp:30:14:[m[K [01;31m[Kerror: [m[K‘[01m[Ktrajectories_[m[K’ was not declared in this scope; did you mean ‘[01m[Ktrajectory_msgs[m[K’?
+   30 |         if (![01;31m[Ktrajectories_[m[K.empty() && i > 0 && i <= trajectories_.size())
+      |              [01;31m[K^~~~~~~~~~~~~[m[K
+      |              [32m[Ktrajectory_msgs[m[K
+gmake[2]: *** [CMakeFiles/moveit_controller.dir/build.make:76: CMakeFiles/moveit_controller.dir/src/moveit_controller.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:221: CMakeFiles/moveit_controller.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

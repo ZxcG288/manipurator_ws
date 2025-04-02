@@ -1,0 +1,13 @@
+[0.023s] Invoking command in '/home/golf1234_pc/manipurator_ws/build/mtc_config1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/golf1234_pc/manipurator_ws/install/camera2_ros:/home/golf1234_pc/manipurator_ws/install/server_controllers:/home/golf1234_pc/manipurator_ws/install/mobile_manipurator:/home/golf1234_pc/install/moveit_configs_utils:/home/golf1234_pc/ws_moveit/install/moveit_configs_utils:/home/golf1234_pc/project1_ws/install/server_controllers:/home/golf1234_pc/project1_ws/install/mobile_manipurator:/home/golf1234_pc/project1_ws/install/camera2_ros:/home/golf1234_pc/test1_ws/install/test1:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/golf1234_pc/manipurator_ws/build/mtc_config1 -- -j16 -l16
+[0.183s] [ 25%] Built target mtc_pub
+[0.194s] [ 50%] Built target mtc_node
+[0.196s] [ 75%] Built target mtc_node_test
+[0.219s] [ 87%] [32mBuilding CXX object CMakeFiles/moveit_controller.dir/src/moveit_controller.cpp.o[0m
+[7.180s] [01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/moveit_controller.cpp:[m[K In member function ‘[01m[Kvoid MoveItController::[01;32m[Kexecute_trajectory[m[K()[m[K’:
+[7.180s] [01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/moveit_controller.cpp:27:11:[m[K [01;31m[Kerror: [m[K‘[01m[KwaitForRobotToStop[m[K’ was not declared in this scope
+[7.180s]    27 |           [01;31m[KwaitForRobotToStop[m[K(*trajectories_[i - 1]);
+[7.180s]       |           [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[10.153s] gmake[2]: *** [CMakeFiles/moveit_controller.dir/build.make:76: CMakeFiles/moveit_controller.dir/src/moveit_controller.cpp.o] Error 1
+[10.154s] gmake[1]: *** [CMakeFiles/Makefile2:221: CMakeFiles/moveit_controller.dir/all] Error 2
+[10.154s] gmake: *** [Makefile:146: all] Error 2
+[10.157s] Invoked command in '/home/golf1234_pc/manipurator_ws/build/mtc_config1' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/golf1234_pc/manipurator_ws/install/camera2_ros:/home/golf1234_pc/manipurator_ws/install/server_controllers:/home/golf1234_pc/manipurator_ws/install/mobile_manipurator:/home/golf1234_pc/install/moveit_configs_utils:/home/golf1234_pc/ws_moveit/install/moveit_configs_utils:/home/golf1234_pc/project1_ws/install/server_controllers:/home/golf1234_pc/project1_ws/install/mobile_manipurator:/home/golf1234_pc/project1_ws/install/camera2_ros:/home/golf1234_pc/test1_ws/install/test1:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/golf1234_pc/manipurator_ws/build/mtc_config1 -- -j16 -l16

@@ -1,0 +1,10 @@
+[01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/mtc_node.cpp:[m[K In member function ‘[01m[Kmoveit::task_constructor::Task MTCTaskNode::[01;32m[KcreateTask[m[K()[m[K’:
+[01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/mtc_node.cpp:321:5:[m[K [01;31m[Kerror: [m[K‘[01m[KallowCollisions[m[K’ was not declared in this scope
+  321 |     [01;31m[KallowCollisions[m[K
+      |     [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/mtc_node.cpp:324:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kvec[m[K’ was not declared in this scope
+  324 |     [01;31m[Kvec[m[K.header.frame_id = "world";
+      |     [01;31m[K^~~[m[K
+gmake[2]: *** [CMakeFiles/mtc_node.dir/build.make:76: CMakeFiles/mtc_node.dir/src/mtc_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/mtc_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

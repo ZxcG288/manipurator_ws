@@ -1,0 +1,4 @@
+[ 25%] Built target mtc_pub
+[ 50%] Built target mtc_node
+[ 75%] Built target mtc_node_test
+[ 87%] [32mBuilding CXX object CMakeFiles/moveit_controller.dir/src/moveit_controller.cpp.o[0m

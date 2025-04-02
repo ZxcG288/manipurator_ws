@@ -1,0 +1,24 @@
+running develop
+running egg_info
+creating server_controllers.egg-info
+writing server_controllers.egg-info/PKG-INFO
+writing dependency_links to server_controllers.egg-info/dependency_links.txt
+writing entry points to server_controllers.egg-info/entry_points.txt
+writing requirements to server_controllers.egg-info/requires.txt
+writing top-level names to server_controllers.egg-info/top_level.txt
+writing manifest file 'server_controllers.egg-info/SOURCES.txt'
+reading manifest file 'server_controllers.egg-info/SOURCES.txt'
+writing manifest file 'server_controllers.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/golf1234_pc/manipurator_ws/install/server_controllers/lib/python3.12/site-packages/server-controllers.egg-link (link to .)
+Installing node1 script to /home/golf1234_pc/manipurator_ws/install/server_controllers/lib/server_controllers
+Installing node2 script to /home/golf1234_pc/manipurator_ws/install/server_controllers/lib/server_controllers
+Installing node_manager script to /home/golf1234_pc/manipurator_ws/install/server_controllers/lib/server_controllers
+
+Installed /home/golf1234_pc/manipurator_ws/build/server_controllers
+running symlink_data
+creating /home/golf1234_pc/manipurator_ws/install/server_controllers/share/ament_index
+creating /home/golf1234_pc/manipurator_ws/install/server_controllers/share/ament_index/resource_index
+creating /home/golf1234_pc/manipurator_ws/install/server_controllers/share/ament_index/resource_index/packages
+symbolically linking /home/golf1234_pc/manipurator_ws/build/server_controllers/resource/server_controllers -> /home/golf1234_pc/manipurator_ws/install/server_controllers/share/ament_index/resource_index/packages
+symbolically linking /home/golf1234_pc/manipurator_ws/build/server_controllers/package.xml -> /home/golf1234_pc/manipurator_ws/install/server_controllers/share/server_controllers

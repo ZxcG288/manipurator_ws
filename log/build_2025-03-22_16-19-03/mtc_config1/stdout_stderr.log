@@ -1,0 +1,19 @@
+[ 25%] Built target mtc_pub
+[ 50%] Built target mtc_node
+[ 75%] Built target mtc_node_test
+[ 87%] [32mBuilding CXX object CMakeFiles/moveit_controller.dir/src/moveit_controller.cpp.o[0m
+[01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/moveit_controller.cpp:[m[K In member function ‘[01m[Kvoid MoveItController::[01;32m[Kexecute_trajectory[m[K()[m[K’:
+[01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/moveit_controller.cpp:16:30:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[Kmoveit_controller_manager::ExecutionStatus[m[K’ and ‘[01m[Kconst char [1][m[K’)
+   16 |     last_execution_status_ = [01;31m[K""[m[K;
+      |                              [01;31m[K^~[m[K
+In file included from [01m[K/home/golf1234_pc/ws_moveit/install/moveit_ros_planning/include/moveit_ros_planning/moveit/trajectory_execution_manager/trajectory_execution_manager.hpp:46[m[K,
+                 from [01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/moveit_controller.cpp:2[m[K:
+[01m[K/home/golf1234_pc/ws_moveit/install/moveit_core/include/moveit_core/moveit/controller_manager/controller_manager.hpp:49:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr moveit_controller_manager::ExecutionStatus& moveit_controller_manager::ExecutionStatus::[01;32m[Koperator=[m[K(const moveit_controller_manager::ExecutionStatus&)[m[K’
+   49 | struct [01;36m[KExecutionStatus[m[K
+      |        [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/golf1234_pc/ws_moveit/install/moveit_core/include/moveit_core/moveit/controller_manager/controller_manager.hpp:49:8:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kconst char [1][m[K’ to ‘[01m[Kconst moveit_controller_manager::ExecutionStatus&[m[K’
+[01m[K/home/golf1234_pc/ws_moveit/install/moveit_core/include/moveit_core/moveit/controller_manager/controller_manager.hpp:49:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr moveit_controller_manager::ExecutionStatus& moveit_controller_manager::ExecutionStatus::[01;32m[Koperator=[m[K(moveit_controller_manager::ExecutionStatus&&)[m[K’
+[01m[K/home/golf1234_pc/ws_moveit/install/moveit_core/include/moveit_core/moveit/controller_manager/controller_manager.hpp:49:8:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kconst char [1][m[K’ to ‘[01m[Kmoveit_controller_manager::ExecutionStatus&&[m[K’
+gmake[2]: *** [CMakeFiles/moveit_controller.dir/build.make:76: CMakeFiles/moveit_controller.dir/src/moveit_controller.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:221: CMakeFiles/moveit_controller.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

@@ -1,0 +1,25 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: urdf1
+    relative_path: urdf/urdf1.urdf
+  srdf:
+    relative_path: config/urdf1.srdf
+  package_settings:
+    author_name: golf
+    author_email: kangval.work@gmail.com
+    generated_timestamp: 1739601606
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
+  modified_urdf:
+    xacros:
+      - control_xacro
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity

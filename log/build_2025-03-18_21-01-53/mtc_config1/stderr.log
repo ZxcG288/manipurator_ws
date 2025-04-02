@@ -1,0 +1,6 @@
+[01m[K/home/golf1234_pc/manipurator_ws/src/mtc_config1/src/mtc_node_test.cpp:32:57:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[KMTCTaskNode::[m[K’ on member ‘[01m[KgetNodeBaseInterface[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+   32 |   rclcpp::node_interfaces::NodeBaseInterface::SharedPtr [01;31m[KMTCTaskNode[m[K::getNodeBaseInterface()
+      |                                                         [01;31m[K^~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/mtc_node_test.dir/build.make:76: CMakeFiles/mtc_node_test.dir/src/mtc_node_test.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/mtc_node_test.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

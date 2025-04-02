@@ -1,0 +1,35 @@
+running develop
+Removing /home/golf1234_pc/manipurator_ws/install/camera2_ros/lib/python3.12/site-packages/camera2-ros.egg-link (link to .)
+running egg_info
+writing ../../build/camera2_ros/camera2_ros.egg-info/PKG-INFO
+writing dependency_links to ../../build/camera2_ros/camera2_ros.egg-info/dependency_links.txt
+writing entry points to ../../build/camera2_ros/camera2_ros.egg-info/entry_points.txt
+writing requirements to ../../build/camera2_ros/camera2_ros.egg-info/requires.txt
+writing top-level names to ../../build/camera2_ros/camera2_ros.egg-info/top_level.txt
+reading manifest file '../../build/camera2_ros/camera2_ros.egg-info/SOURCES.txt'
+writing manifest file '../../build/camera2_ros/camera2_ros.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/golf1234_pc/manipurator_ws/build/camera2_ros/build
+creating /home/golf1234_pc/manipurator_ws/build/camera2_ros/build/lib
+creating /home/golf1234_pc/manipurator_ws/build/camera2_ros/build/lib/camera2_ros
+copying camera2_ros/camera2_ros.py -> /home/golf1234_pc/manipurator_ws/build/camera2_ros/build/lib/camera2_ros
+copying camera2_ros/sub_yolo.py -> /home/golf1234_pc/manipurator_ws/build/camera2_ros/build/lib/camera2_ros
+copying camera2_ros/__init__.py -> /home/golf1234_pc/manipurator_ws/build/camera2_ros/build/lib/camera2_ros
+running install
+running install_lib
+creating /home/golf1234_pc/manipurator_ws/install/camera2_ros/lib/python3.12/site-packages/camera2_ros
+copying /home/golf1234_pc/manipurator_ws/build/camera2_ros/build/lib/camera2_ros/camera2_ros.py -> /home/golf1234_pc/manipurator_ws/install/camera2_ros/lib/python3.12/site-packages/camera2_ros
+copying /home/golf1234_pc/manipurator_ws/build/camera2_ros/build/lib/camera2_ros/sub_yolo.py -> /home/golf1234_pc/manipurator_ws/install/camera2_ros/lib/python3.12/site-packages/camera2_ros
+copying /home/golf1234_pc/manipurator_ws/build/camera2_ros/build/lib/camera2_ros/__init__.py -> /home/golf1234_pc/manipurator_ws/install/camera2_ros/lib/python3.12/site-packages/camera2_ros
+byte-compiling /home/golf1234_pc/manipurator_ws/install/camera2_ros/lib/python3.12/site-packages/camera2_ros/camera2_ros.py to camera2_ros.cpython-312.pyc
+byte-compiling /home/golf1234_pc/manipurator_ws/install/camera2_ros/lib/python3.12/site-packages/camera2_ros/sub_yolo.py to sub_yolo.cpython-312.pyc
+byte-compiling /home/golf1234_pc/manipurator_ws/install/camera2_ros/lib/python3.12/site-packages/camera2_ros/__init__.py to __init__.cpython-312.pyc
+running install_data
+copying resource/camera2_ros -> /home/golf1234_pc/manipurator_ws/install/camera2_ros/share/ament_index/resource_index/packages
+copying package.xml -> /home/golf1234_pc/manipurator_ws/install/camera2_ros/share/camera2_ros
+running install_egg_info
+Copying ../../build/camera2_ros/camera2_ros.egg-info to /home/golf1234_pc/manipurator_ws/install/camera2_ros/lib/python3.12/site-packages/camera2_ros-0.0.0-py3.12.egg-info
+running install_scripts
+Installing camera2_node script to /home/golf1234_pc/manipurator_ws/install/camera2_ros/lib/camera2_ros
+writing list of installed files to '/home/golf1234_pc/manipurator_ws/build/camera2_ros/install.log'

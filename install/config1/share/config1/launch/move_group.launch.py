@@ -1,0 +1,1 @@
+/home/golf1234_pc/manipurator_ws/src/config1/launch/move_group.launch.py

@@ -1,0 +1,39 @@
+[1.650s] Invoking command in '/home/golf1234_pc/manipurator_ws/build/camera2_ros': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/golf1234_pc/manipurator_ws/build/camera2_ros/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/golf1234_pc/manipurator_ws/install/camera2_ros/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/golf1234_pc/manipurator_ws/build/camera2_ros/build
+[1.995s] running develop
+[2.273s] Removing /home/golf1234_pc/manipurator_ws/install/camera2_ros/lib/python3.12/site-packages/camera2-ros.egg-link (link to .)
+[2.315s] Invoked command in '/home/golf1234_pc/manipurator_ws/build/camera2_ros' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/golf1234_pc/manipurator_ws/build/camera2_ros/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/golf1234_pc/manipurator_ws/install/camera2_ros/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/golf1234_pc/manipurator_ws/build/camera2_ros/build
+[2.316s] Invoking command in '/home/golf1234_pc/manipurator_ws/src/camera2_ros': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/golf1234_pc/manipurator_ws/build/camera2_ros/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/golf1234_pc/manipurator_ws/install/camera2_ros/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/camera2_ros build --build-base /home/golf1234_pc/manipurator_ws/build/camera2_ros/build install --record /home/golf1234_pc/manipurator_ws/build/camera2_ros/install.log --single-version-externally-managed install_data --force
+[2.629s] running egg_info
+[2.655s] writing ../../build/camera2_ros/camera2_ros.egg-info/PKG-INFO
+[2.655s] writing dependency_links to ../../build/camera2_ros/camera2_ros.egg-info/dependency_links.txt
+[2.656s] writing entry points to ../../build/camera2_ros/camera2_ros.egg-info/entry_points.txt
+[2.656s] writing requirements to ../../build/camera2_ros/camera2_ros.egg-info/requires.txt
+[2.656s] writing top-level names to ../../build/camera2_ros/camera2_ros.egg-info/top_level.txt
+[2.711s] reading manifest file '../../build/camera2_ros/camera2_ros.egg-info/SOURCES.txt'
+[2.712s] writing manifest file '../../build/camera2_ros/camera2_ros.egg-info/SOURCES.txt'
+[2.712s] running build
+[2.712s] running build_py
+[2.712s] creating /home/golf1234_pc/manipurator_ws/build/camera2_ros/build
+[2.713s] creating /home/golf1234_pc/manipurator_ws/build/camera2_ros/build/lib
+[2.713s] creating /home/golf1234_pc/manipurator_ws/build/camera2_ros/build/lib/camera2_ros
+[2.713s] copying camera2_ros/camera2_ros.py -> /home/golf1234_pc/manipurator_ws/build/camera2_ros/build/lib/camera2_ros
+[2.713s] copying camera2_ros/sub_yolo.py -> /home/golf1234_pc/manipurator_ws/build/camera2_ros/build/lib/camera2_ros
+[2.713s] copying camera2_ros/__init__.py -> /home/golf1234_pc/manipurator_ws/build/camera2_ros/build/lib/camera2_ros
+[2.714s] running install
+[2.719s] running install_lib
+[2.746s] creating /home/golf1234_pc/manipurator_ws/install/camera2_ros/lib/python3.12/site-packages/camera2_ros
+[2.746s] copying /home/golf1234_pc/manipurator_ws/build/camera2_ros/build/lib/camera2_ros/camera2_ros.py -> /home/golf1234_pc/manipurator_ws/install/camera2_ros/lib/python3.12/site-packages/camera2_ros
+[2.747s] copying /home/golf1234_pc/manipurator_ws/build/camera2_ros/build/lib/camera2_ros/sub_yolo.py -> /home/golf1234_pc/manipurator_ws/install/camera2_ros/lib/python3.12/site-packages/camera2_ros
+[2.747s] copying /home/golf1234_pc/manipurator_ws/build/camera2_ros/build/lib/camera2_ros/__init__.py -> /home/golf1234_pc/manipurator_ws/install/camera2_ros/lib/python3.12/site-packages/camera2_ros
+[2.747s] byte-compiling /home/golf1234_pc/manipurator_ws/install/camera2_ros/lib/python3.12/site-packages/camera2_ros/camera2_ros.py to camera2_ros.cpython-312.pyc
+[2.748s] byte-compiling /home/golf1234_pc/manipurator_ws/install/camera2_ros/lib/python3.12/site-packages/camera2_ros/sub_yolo.py to sub_yolo.cpython-312.pyc
+[2.749s] byte-compiling /home/golf1234_pc/manipurator_ws/install/camera2_ros/lib/python3.12/site-packages/camera2_ros/__init__.py to __init__.cpython-312.pyc
+[2.749s] running install_data
+[2.750s] copying resource/camera2_ros -> /home/golf1234_pc/manipurator_ws/install/camera2_ros/share/ament_index/resource_index/packages
+[2.750s] copying package.xml -> /home/golf1234_pc/manipurator_ws/install/camera2_ros/share/camera2_ros
+[2.750s] running install_egg_info
+[2.778s] Copying ../../build/camera2_ros/camera2_ros.egg-info to /home/golf1234_pc/manipurator_ws/install/camera2_ros/lib/python3.12/site-packages/camera2_ros-0.0.0-py3.12.egg-info
+[2.779s] running install_scripts
+[2.947s] Installing camera2_node script to /home/golf1234_pc/manipurator_ws/install/camera2_ros/lib/camera2_ros
+[2.948s] writing list of installed files to '/home/golf1234_pc/manipurator_ws/build/camera2_ros/install.log'
+[2.998s] Invoked command in '/home/golf1234_pc/manipurator_ws/src/camera2_ros' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/golf1234_pc/manipurator_ws/build/camera2_ros/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/golf1234_pc/manipurator_ws/install/camera2_ros/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/camera2_ros build --build-base /home/golf1234_pc/manipurator_ws/build/camera2_ros/build install --record /home/golf1234_pc/manipurator_ws/build/camera2_ros/install.log --single-version-externally-managed install_data --force

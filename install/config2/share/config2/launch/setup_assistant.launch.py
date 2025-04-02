@@ -1,0 +1,1 @@
+/home/golf1234_pc/manipurator_ws/src/config2/launch/setup_assistant.launch.py

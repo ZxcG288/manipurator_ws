@@ -1,0 +1,19 @@
+[1.717s] Invoking command in '/home/golf1234_pc/manipurator_ws/build/server_controllers': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/golf1234_pc/manipurator_ws/build/server_controllers/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/golf1234_pc/manipurator_ws/install/server_controllers/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/golf1234_pc/manipurator_ws/build/server_controllers/build --no-deps symlink_data
+[2.122s] running develop
+[2.426s] running egg_info
+[2.452s] writing server_controllers.egg-info/PKG-INFO
+[2.452s] writing dependency_links to server_controllers.egg-info/dependency_links.txt
+[2.452s] writing entry points to server_controllers.egg-info/entry_points.txt
+[2.453s] writing requirements to server_controllers.egg-info/requires.txt
+[2.453s] writing top-level names to server_controllers.egg-info/top_level.txt
+[2.514s] reading manifest file 'server_controllers.egg-info/SOURCES.txt'
+[2.514s] writing manifest file 'server_controllers.egg-info/SOURCES.txt'
+[2.545s] running build_ext
+[2.545s] Creating /home/golf1234_pc/manipurator_ws/install/server_controllers/lib/python3.12/site-packages/server-controllers.egg-link (link to .)
+[2.546s] Installing node1 script to /home/golf1234_pc/manipurator_ws/install/server_controllers/lib/server_controllers
+[2.546s] Installing node2 script to /home/golf1234_pc/manipurator_ws/install/server_controllers/lib/server_controllers
+[2.546s] Installing node_manager script to /home/golf1234_pc/manipurator_ws/install/server_controllers/lib/server_controllers
+[2.546s] 
+[2.546s] Installed /home/golf1234_pc/manipurator_ws/build/server_controllers
+[2.546s] running symlink_data
+[2.606s] Invoked command in '/home/golf1234_pc/manipurator_ws/build/server_controllers' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/golf1234_pc/manipurator_ws/build/server_controllers/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/golf1234_pc/manipurator_ws/install/server_controllers/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/golf1234_pc/manipurator_ws/build/server_controllers/build --no-deps symlink_data

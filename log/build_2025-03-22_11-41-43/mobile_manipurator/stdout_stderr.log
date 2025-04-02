@@ -1,0 +1,62 @@
+running develop
+Removing /home/golf1234_pc/manipurator_ws/install/mobile_manipurator/lib/python3.12/site-packages/mobile-manipurator.egg-link (link to .)
+running egg_info
+writing ../../build/mobile_manipurator/mobile_manipurator.egg-info/PKG-INFO
+writing dependency_links to ../../build/mobile_manipurator/mobile_manipurator.egg-info/dependency_links.txt
+writing entry points to ../../build/mobile_manipurator/mobile_manipurator.egg-info/entry_points.txt
+writing requirements to ../../build/mobile_manipurator/mobile_manipurator.egg-info/requires.txt
+writing top-level names to ../../build/mobile_manipurator/mobile_manipurator.egg-info/top_level.txt
+reading manifest file '../../build/mobile_manipurator/mobile_manipurator.egg-info/SOURCES.txt'
+writing manifest file '../../build/mobile_manipurator/mobile_manipurator.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/golf1234_pc/manipurator_ws/build/mobile_manipurator/build
+creating /home/golf1234_pc/manipurator_ws/build/mobile_manipurator/build/lib
+creating /home/golf1234_pc/manipurator_ws/build/mobile_manipurator/build/lib/mobile_manipurator
+copying mobile_manipurator/listener1.py -> /home/golf1234_pc/manipurator_ws/build/mobile_manipurator/build/lib/mobile_manipurator
+copying mobile_manipurator/subscriber.py -> /home/golf1234_pc/manipurator_ws/build/mobile_manipurator/build/lib/mobile_manipurator
+copying mobile_manipurator/talker.launch.py -> /home/golf1234_pc/manipurator_ws/build/mobile_manipurator/build/lib/mobile_manipurator
+copying mobile_manipurator/subscriber1.py -> /home/golf1234_pc/manipurator_ws/build/mobile_manipurator/build/lib/mobile_manipurator
+copying mobile_manipurator/project1.py -> /home/golf1234_pc/manipurator_ws/build/mobile_manipurator/build/lib/mobile_manipurator
+copying mobile_manipurator/listener.launch.py -> /home/golf1234_pc/manipurator_ws/build/mobile_manipurator/build/lib/mobile_manipurator
+copying mobile_manipurator/servo_test1.py -> /home/golf1234_pc/manipurator_ws/build/mobile_manipurator/build/lib/mobile_manipurator
+copying mobile_manipurator/web_test1.py -> /home/golf1234_pc/manipurator_ws/build/mobile_manipurator/build/lib/mobile_manipurator
+copying mobile_manipurator/talker1.py -> /home/golf1234_pc/manipurator_ws/build/mobile_manipurator/build/lib/mobile_manipurator
+copying mobile_manipurator/__init__.py -> /home/golf1234_pc/manipurator_ws/build/mobile_manipurator/build/lib/mobile_manipurator
+running install
+running install_lib
+creating /home/golf1234_pc/manipurator_ws/install/mobile_manipurator/lib/python3.12/site-packages/mobile_manipurator
+copying /home/golf1234_pc/manipurator_ws/build/mobile_manipurator/build/lib/mobile_manipurator/listener1.py -> /home/golf1234_pc/manipurator_ws/install/mobile_manipurator/lib/python3.12/site-packages/mobile_manipurator
+copying /home/golf1234_pc/manipurator_ws/build/mobile_manipurator/build/lib/mobile_manipurator/subscriber.py -> /home/golf1234_pc/manipurator_ws/install/mobile_manipurator/lib/python3.12/site-packages/mobile_manipurator
+copying /home/golf1234_pc/manipurator_ws/build/mobile_manipurator/build/lib/mobile_manipurator/talker.launch.py -> /home/golf1234_pc/manipurator_ws/install/mobile_manipurator/lib/python3.12/site-packages/mobile_manipurator
+copying /home/golf1234_pc/manipurator_ws/build/mobile_manipurator/build/lib/mobile_manipurator/subscriber1.py -> /home/golf1234_pc/manipurator_ws/install/mobile_manipurator/lib/python3.12/site-packages/mobile_manipurator
+copying /home/golf1234_pc/manipurator_ws/build/mobile_manipurator/build/lib/mobile_manipurator/project1.py -> /home/golf1234_pc/manipurator_ws/install/mobile_manipurator/lib/python3.12/site-packages/mobile_manipurator
+copying /home/golf1234_pc/manipurator_ws/build/mobile_manipurator/build/lib/mobile_manipurator/listener.launch.py -> /home/golf1234_pc/manipurator_ws/install/mobile_manipurator/lib/python3.12/site-packages/mobile_manipurator
+copying /home/golf1234_pc/manipurator_ws/build/mobile_manipurator/build/lib/mobile_manipurator/servo_test1.py -> /home/golf1234_pc/manipurator_ws/install/mobile_manipurator/lib/python3.12/site-packages/mobile_manipurator
+copying /home/golf1234_pc/manipurator_ws/build/mobile_manipurator/build/lib/mobile_manipurator/web_test1.py -> /home/golf1234_pc/manipurator_ws/install/mobile_manipurator/lib/python3.12/site-packages/mobile_manipurator
+copying /home/golf1234_pc/manipurator_ws/build/mobile_manipurator/build/lib/mobile_manipurator/talker1.py -> /home/golf1234_pc/manipurator_ws/install/mobile_manipurator/lib/python3.12/site-packages/mobile_manipurator
+copying /home/golf1234_pc/manipurator_ws/build/mobile_manipurator/build/lib/mobile_manipurator/__init__.py -> /home/golf1234_pc/manipurator_ws/install/mobile_manipurator/lib/python3.12/site-packages/mobile_manipurator
+byte-compiling /home/golf1234_pc/manipurator_ws/install/mobile_manipurator/lib/python3.12/site-packages/mobile_manipurator/listener1.py to listener1.cpython-312.pyc
+byte-compiling /home/golf1234_pc/manipurator_ws/install/mobile_manipurator/lib/python3.12/site-packages/mobile_manipurator/subscriber.py to subscriber.cpython-312.pyc
+byte-compiling /home/golf1234_pc/manipurator_ws/install/mobile_manipurator/lib/python3.12/site-packages/mobile_manipurator/talker.launch.py to talker.launch.cpython-312.pyc
+byte-compiling /home/golf1234_pc/manipurator_ws/install/mobile_manipurator/lib/python3.12/site-packages/mobile_manipurator/subscriber1.py to subscriber1.cpython-312.pyc
+byte-compiling /home/golf1234_pc/manipurator_ws/install/mobile_manipurator/lib/python3.12/site-packages/mobile_manipurator/project1.py to project1.cpython-312.pyc
+byte-compiling /home/golf1234_pc/manipurator_ws/install/mobile_manipurator/lib/python3.12/site-packages/mobile_manipurator/listener.launch.py to listener.launch.cpython-312.pyc
+byte-compiling /home/golf1234_pc/manipurator_ws/install/mobile_manipurator/lib/python3.12/site-packages/mobile_manipurator/servo_test1.py to servo_test1.cpython-312.pyc
+byte-compiling /home/golf1234_pc/manipurator_ws/install/mobile_manipurator/lib/python3.12/site-packages/mobile_manipurator/web_test1.py to web_test1.cpython-312.pyc
+byte-compiling /home/golf1234_pc/manipurator_ws/install/mobile_manipurator/lib/python3.12/site-packages/mobile_manipurator/talker1.py to talker1.cpython-312.pyc
+byte-compiling /home/golf1234_pc/manipurator_ws/install/mobile_manipurator/lib/python3.12/site-packages/mobile_manipurator/__init__.py to __init__.cpython-312.pyc
+running install_data
+copying resource/mobile_manipurator -> /home/golf1234_pc/manipurator_ws/install/mobile_manipurator/share/ament_index/resource_index/packages
+copying package.xml -> /home/golf1234_pc/manipurator_ws/install/mobile_manipurator/share/mobile_manipurator
+running install_egg_info
+Copying ../../build/mobile_manipurator/mobile_manipurator.egg-info to /home/golf1234_pc/manipurator_ws/install/mobile_manipurator/lib/python3.12/site-packages/mobile_manipurator-0.0.0-py3.12.egg-info
+running install_scripts
+Installing listener script to /home/golf1234_pc/manipurator_ws/install/mobile_manipurator/lib/mobile_manipurator
+Installing project1 script to /home/golf1234_pc/manipurator_ws/install/mobile_manipurator/lib/mobile_manipurator
+Installing servo_test1 script to /home/golf1234_pc/manipurator_ws/install/mobile_manipurator/lib/mobile_manipurator
+Installing subscriber1_node script to /home/golf1234_pc/manipurator_ws/install/mobile_manipurator/lib/mobile_manipurator
+Installing subscriber_node script to /home/golf1234_pc/manipurator_ws/install/mobile_manipurator/lib/mobile_manipurator
+Installing talker script to /home/golf1234_pc/manipurator_ws/install/mobile_manipurator/lib/mobile_manipurator
+Installing web_test1_node script to /home/golf1234_pc/manipurator_ws/install/mobile_manipurator/lib/mobile_manipurator
+writing list of installed files to '/home/golf1234_pc/manipurator_ws/build/mobile_manipurator/install.log'
