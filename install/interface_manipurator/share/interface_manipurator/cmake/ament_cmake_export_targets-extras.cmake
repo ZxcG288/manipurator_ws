@@ -1,0 +1,1 @@
+/home/golf1234_pc/manipurator_ws/build/interface_manipurator/ament_cmake_export_targets/ament_cmake_export_targets-extras.cmake

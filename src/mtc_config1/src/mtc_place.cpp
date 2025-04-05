@@ -1,6 +1,7 @@
 #include <rclcpp/rclcpp.hpp>
 #include <geometry_msgs/msg/pose.hpp>
 #include <cmath>
+#include <random>
 #include <moveit/planning_scene/planning_scene.hpp>
 #include <moveit/planning_scene_interface/planning_scene_interface.hpp>
 #include <moveit/task_constructor/task.h>
@@ -348,7 +349,7 @@ mtc::Task MTCTaskNode::createTask() //this parameter for create Task to pick and
     target_pose_msg.header.frame_id = "world";
     target_pose_msg.pose.position.x = -0.25; //set position for place the object
     target_pose_msg.pose.position.y = 0.05;
-    target_pose_msg.pose.position.z = 0.05;
+    target_pose_msg.pose.position.z = 0.1;
     
     //target_pose_msg.pose.orientation.w = 1.0;
     stage->setPose(target_pose_msg);
@@ -389,24 +390,17 @@ mtc::Task MTCTaskNode::createTask() //this parameter for create Task to pick and
     place->insert(std::move(stage));
   }
 
-  {
-    auto stage = std::make_unique<mtc::stages::MoveRelative>("retreat", cartesian_planner);
-    stage->properties().configureInitFrom(mtc::Stage::PARENT, { "group" });
-    stage->setMinMaxDistance(0.001, 0.3);
-    stage->setIKFrame(hand_frame);
-    stage->properties().set("marker_ns", "retreat");
-    
-    // Set retreat direction
-    geometry_msgs::msg::Vector3Stamped vec;
-    vec.header.frame_id = "world";
-    vec.vector.z = 0.5; //set direction of retreat
-    stage->setDirection(vec);
-    place->insert(std::move(stage));
-  }
+  
   task.add(std::move(place));
 }
 
- //Ready to go 
+ //Ready to go
+  {
+    auto stage = std::make_unique<mtc::stages::MoveTo>("pre place1", interpolation_planner);
+      stage->properties().configureInitFrom(mtc::Stage::PARENT, { "group" });
+      stage->setGoal("pre_place1");
+      task.add(std::move(stage));
+  } 
   {
   auto stage = std::make_unique<mtc::stages::MoveTo>("ready to go", interpolation_planner);
     stage->properties().configureInitFrom(mtc::Stage::PARENT, { "group" });

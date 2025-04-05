@@ -1,0 +1,4 @@
+source;share/interface_manipurator/local_setup.bash
+source;share/interface_manipurator/local_setup.dsv
+source;share/interface_manipurator/local_setup.sh
+source;share/interface_manipurator/local_setup.zsh

@@ -27,6 +27,7 @@ setup(
         "box_dectection_place = camera2_ros.box_dectection_place:main",
         "pub_yolo = camera2_ros.pub_yolo:main",
         "lane_detection = camera2_ros.lane_detection:main",
+        "sub_yolo_place = camera2_ros.sub_yolo_place:main",
         ],
     },
 )

@@ -1,0 +1,7 @@
+{
+  "package_name": "interface_manipurator",
+  "output_dir": "/home/golf1234_pc/manipurator_ws/build/interface_manipurator/rosidl_generator_type_description/interface_manipurator",
+  "idl_tuples": [
+    "/home/golf1234_pc/manipurator_ws/build/interface_manipurator/rosidl_adapter/interface_manipurator:msg/SpeedAngle.idl"
+  ]
+}

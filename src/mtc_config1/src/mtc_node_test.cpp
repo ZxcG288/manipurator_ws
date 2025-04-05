@@ -349,9 +349,9 @@ mtc::Task MTCTaskNode::createTask() //this parameter for create Task to pick and
     //Set position to place 
     geometry_msgs::msg::PoseStamped target_pose_msg;
     target_pose_msg.header.frame_id = "world";
-    target_pose_msg.pose.position.x = -0.02; //set position for place the object
-    target_pose_msg.pose.position.y = 0;
-    target_pose_msg.pose.position.z = 0.21;
+    target_pose_msg.pose.position.x = -0.04; //set position for place the object
+    target_pose_msg.pose.position.y = -0.05;
+    target_pose_msg.pose.position.z = 0.16;
     //target_pose_msg.pose.orientation.w = 1.0;
     stage->setPose(target_pose_msg);
     stage->setMonitoredStage(attach_object_stage);  // Hook into attach_object_stage

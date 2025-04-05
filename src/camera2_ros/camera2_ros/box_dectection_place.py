@@ -21,9 +21,9 @@ class GUI(Node):
         self.fy = 760
         self.cx = 320
         self.cy = 240
-        self.z = 0.27
-        self.init_x = 0
-        self.init_y = 0.22
+        self.z = -0.1
+        self.init_x = -0.03
+        self.init_y = -0.11
         self.published = False  # ตัวแปรสำหรับเช็คว่ามีการ publish แล้วหรือยัง
 
         self.subscription = self.create_subscription(
@@ -50,7 +50,7 @@ class GUI(Node):
             #calculate bolt position 
             target_x = self.z * (middle_point[0] - self.cy) / self.fy + self.init_x
             target_y = -self.z * (middle_point[1] - self.cx) / self.fx + self.init_y
-            target_z = 0.12  #height
+            target_z = 0.09  #height
 
             #calculate angle of object
             dist1 = np.linalg.norm(points[0] - points[1])

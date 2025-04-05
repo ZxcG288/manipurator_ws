@@ -41,7 +41,7 @@ class Camera_subscriber(Node):
             np_arr = np.frombuffer(data.data, np.uint8)
             img = cv2.imdecode(np_arr, cv2.IMREAD_COLOR)
 
-            results = self.model(img, conf=0.90, verbose=False)
+            results = self.model(img, conf=0.70, verbose=False)
 
             self.yolov8_inference.header.frame_id = "inference"
             self.yolov8_inference.header.stamp = self.get_clock().now().to_msg()

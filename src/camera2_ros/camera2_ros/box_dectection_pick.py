@@ -1,10 +1,11 @@
 #! /usr/bin/python3
 # -*- coding: utf-8 -*-
-import sys
+#import sys
+#import rclpy.destroyable
+
 import math
 import numpy as np
 import rclpy
-import rclpy.destroyable
 from rclpy.node import Node
 from sensor_msgs.msg import Image
 from yolov8_msgs.msg import Yolov8Inference
@@ -21,9 +22,9 @@ class GUI(Node):
         self.fy = 760
         self.cx = 320
         self.cy = 240
-        self.z = -0.3
+        self.z = -0.25
         self.init_x = -0.235
-        self.init_y = 0.12
+        self.init_y = 0.125
         self.published = False  # ตัวแปรสำหรับเช็คว่ามีการ publish แล้วหรือยัง
 
         self.subscription = self.create_subscription(
@@ -50,7 +51,7 @@ class GUI(Node):
             # คำนวณตำแหน่ง bolt
             target_x = -self.z * (middle_point[1] - self.cy) / self.fy + self.init_x
             target_y = -self.z * (middle_point[0] - self.cx) / self.fx + self.init_y
-            target_z = 0.06  # ค่าคงที่ หรืออาจเปลี่ยนได้ตามต้องการ
+            target_z = 0.04  # ค่าคงที่ หรืออาจเปลี่ยนได้ตามต้องการ
 
             # คำนวณมุมการวาง
             dist1 = np.linalg.norm(points[0] - points[1])

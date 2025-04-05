@@ -16,6 +16,7 @@ camera2_ros/camera2_ros.py
 camera2_ros/lane_detection.py
 camera2_ros/pub_yolo.py
 camera2_ros/sub_yolo.py
+camera2_ros/sub_yolo_place.py
 camera2_ros.egg-info/PKG-INFO
 camera2_ros.egg-info/SOURCES.txt
 camera2_ros.egg-info/dependency_links.txt

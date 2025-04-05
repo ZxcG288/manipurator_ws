@@ -4,6 +4,7 @@ from launch.actions import ExecuteProcess
 from launch_ros.actions import Node
 from ament_index_python.packages import get_package_share_directory
 from moveit_configs_utils import MoveItConfigsBuilder
+from launch.actions import TimerAction
 
 
 def generate_launch_description():
@@ -102,6 +103,17 @@ def generate_launch_description():
             )
         ]
 
+    real_robot = TimerAction(
+        period=2.0,
+        actions=[
+            Node(
+            package="mobile_manipurator",
+            executable="real_robot",
+            output="screen",
+            ) 
+        ]
+    )
+
     return LaunchDescription(
         [
             rviz_node,
@@ -111,4 +123,7 @@ def generate_launch_description():
             ros2_control_node,
         ]
         + load_controllers
+        +[
+            real_robot,
+        ]
     )

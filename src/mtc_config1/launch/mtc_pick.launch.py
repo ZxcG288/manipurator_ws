@@ -28,62 +28,93 @@ def generate_launch_description():
         output="screen",
         parameters=[moveit_params],  # Pass the dictionary of parameters here
     )
+    shutdown_pre_pick = TimerAction(
+    period=4.0,
+    actions=[
+        ExecuteProcess(
+            cmd=["pkill", "-f", "/home/golf1234_pc/manipurator_ws/install/mtc_config1/lib/mtc_config1/start_mtc"],
+            shell=True,
+            output="screen",
+            ),
+        ],
+    )
+    sub_yolo = TimerAction(
+        period=2.0,
+        actions=[
+            Node(
+            package="camera2_ros",
+            executable="sub_yolo",
+            output="screen",
+            ) 
+        ]
+    )
+    pick = TimerAction(
+        period=5.0,
+        actions=[
+            Node(
+            package="mtc_config1",
+            executable="mtc_node_test",
+            output="screen",
+            parameters=[moveit_params],  # Pass the dictionary of parameters here
+            ) 
+        ]
+    )
+    box_dectection = TimerAction(
+        period=8.0,
+        actions=[
+            Node(
+            package="camera2_ros",
+            executable="box_dectection_pick",
+            output="screen",
+            ) 
+        ]
+    )
 
-    pick = Node(
-        package="mtc_config1",
-        executable="mtc_node_test",
-        output="screen",
-        parameters=[moveit_params],  # Pass the dictionary of parameters here
-    )
-    sub_yolo = Node(
-        package="camera2_ros",
-        executable="sub_yolo",
-        output="screen",
-    )
-    
-    box_dectection = Node(
-        package="camera2_ros",
-        executable="box_dectection_pick",
-        output="screen",
-    )
-    
+    #sub_yolo = Node(
+    #     package="camera2_ros",
+    #     executable="sub_yolo",
+    #     output="screen",
+    # )
+    # pick = Node(
+    #     package="mtc_config1",
+    #     executable="mtc_node_test",
+    #     output="screen",
+    #     parameters=[moveit_params],  # Pass the dictionary of parameters here
+    # )
+    # box_dectection = Node(
+    #     package="camera2_ros",
+    #     executable="box_dectection_pick",
+    #     output="screen",
+    # )
     #Timer to shutdown
-    # shutdown_pre_pick = TimerAction(
-    # period=4.0,
+    
+    # shutdown_object = TimerAction(
+    # period=28.0,
     # actions=[
     #     ExecuteProcess(
-    #         cmd=["pkill", "-f", "/home/golf1234_pc/manipurator_ws/install/mtc_config1/lib/mtc_config1/start_mtc"],
+    #         cmd=["pkill", "-f", "/home/golf1234_pc/manipurator_ws/install/camera2_ros/lib/camera2_ros/sub_yolo"],
     #         shell=True,
     #         output="screen",
     #         ),
     #     ],
     # )
 
-    shutdown_object = TimerAction(
-    period=28.0,
-    actions=[
-        ExecuteProcess(
-            cmd=["pkill", "-f", "/home/golf1234_pc/manipurator_ws/install/camera2_ros/lib/camera2_ros/sub_yolo"],
-            shell=True,
-            output="screen",
-            ),
-        ],
-    )
-
     return LaunchDescription(
         [
             pre_pick,
+            shutdown_pre_pick,
             sub_yolo,
-            TimerAction(
-            period=5.0,  #for delay to start node
-            actions=[pick]
-            ),
-            TimerAction(
-            period=7.0,  
-            actions=[box_dectection]
-            ),
+            pick,
+            box_dectection,
+            # TimerAction(
+            # period=5.0,  #for delay to start node
+            # actions=[pick]
+            # ),
+            # TimerAction(
+            # period=7.0,  
+            # actions=[box_dectection]
+            # ),
             # shutdown_pre_pick,
-            shutdown_object,
-           
+            # shutdown_object,
         ]
     )

@@ -6,3 +6,4 @@ camera2_node = camera2_ros.camera2_ros:main
 lane_detection = camera2_ros.lane_detection:main
 pub_yolo = camera2_ros.pub_yolo:main
 sub_yolo = camera2_ros.sub_yolo:main
+sub_yolo_place = camera2_ros.sub_yolo_place:main
