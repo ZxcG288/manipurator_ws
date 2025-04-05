@@ -1,1 +1,0 @@
-/home/golf1234_pc/manipurator_ws/build/config1/ament_cmake_core/config1Config.cmake

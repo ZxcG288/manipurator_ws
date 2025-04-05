@@ -1,1 +1,0 @@
-/home/golf1234_pc/manipurator_ws/src/car_urdf/launch/display.launch.py

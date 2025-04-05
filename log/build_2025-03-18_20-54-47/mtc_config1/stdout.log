@@ -1,3 +1,0 @@
-[ 50%] Built target mtc_node
-[ 75%] [32mBuilding CXX object CMakeFiles/mtc_node_test.dir/src/mtc_node_test.cpp.o[0m
-[100%] [32m[1mLinking CXX executable mtc_node_test[0m

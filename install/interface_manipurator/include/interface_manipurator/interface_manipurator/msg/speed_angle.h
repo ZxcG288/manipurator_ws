@@ -1,1 +1,0 @@
-/home/golf1234_pc/manipurator_ws/build/interface_manipurator/rosidl_generator_c/interface_manipurator/msg/speed_angle.h

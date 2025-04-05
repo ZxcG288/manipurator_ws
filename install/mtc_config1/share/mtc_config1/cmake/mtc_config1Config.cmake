@@ -1,1 +1,0 @@
-/home/golf1234_pc/manipurator_ws/build/mtc_config1/ament_cmake_core/mtc_config1Config.cmake

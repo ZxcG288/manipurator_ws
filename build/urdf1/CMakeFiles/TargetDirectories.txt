@@ -1,9 +1,0 @@
-/home/golf1234_pc/manipurator_ws/build/urdf1/CMakeFiles/uninstall.dir
-/home/golf1234_pc/manipurator_ws/build/urdf1/CMakeFiles/urdf1_uninstall.dir
-/home/golf1234_pc/manipurator_ws/build/urdf1/CMakeFiles/test.dir
-/home/golf1234_pc/manipurator_ws/build/urdf1/CMakeFiles/edit_cache.dir
-/home/golf1234_pc/manipurator_ws/build/urdf1/CMakeFiles/rebuild_cache.dir
-/home/golf1234_pc/manipurator_ws/build/urdf1/CMakeFiles/list_install_components.dir
-/home/golf1234_pc/manipurator_ws/build/urdf1/CMakeFiles/install.dir
-/home/golf1234_pc/manipurator_ws/build/urdf1/CMakeFiles/install/local.dir
-/home/golf1234_pc/manipurator_ws/build/urdf1/CMakeFiles/install/strip.dir

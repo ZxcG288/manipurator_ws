@@ -1,1 +1,0 @@
-/home/golf1234_pc/manipurator_ws/build/interface_manipurator/ament_cmake_environment_hooks/local_setup.bash

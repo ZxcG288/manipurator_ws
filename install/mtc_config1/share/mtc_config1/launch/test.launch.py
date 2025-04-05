@@ -1,1 +1,0 @@
-/home/golf1234_pc/manipurator_ws/src/mtc_config1/launch/test.launch.py

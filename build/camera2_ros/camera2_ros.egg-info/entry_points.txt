@@ -1,9 +1,0 @@
-[console_scripts]
-arduino_comunication = camera2_ros.arduino_comunication:main
-box_dectection_pick = camera2_ros.box_dectection_pick:main
-box_dectection_place = camera2_ros.box_dectection_place:main
-camera2_node = camera2_ros.camera2_ros:main
-lane_detection = camera2_ros.lane_detection:main
-pub_yolo = camera2_ros.pub_yolo:main
-sub_yolo = camera2_ros.sub_yolo:main
-sub_yolo_place = camera2_ros.sub_yolo_place:main

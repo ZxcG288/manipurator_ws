@@ -1,1 +1,0 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/golf1234_pc/manipurator_ws/build/interface_manipurator/rosidl_generator_py/interface_manipurator/interface_manipurator_s__rosidl_typesupport_introspection_c.so" "TARGETS" "interface_manipurator_s__rosidl_typesupport_introspection_c" "DESTINATION" "lib/python3.12/site-packages/interface_manipurator")

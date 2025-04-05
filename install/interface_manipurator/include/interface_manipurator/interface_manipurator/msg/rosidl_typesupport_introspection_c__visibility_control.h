@@ -1,1 +1,0 @@
-/home/golf1234_pc/manipurator_ws/build/interface_manipurator/rosidl_typesupport_introspection_c/interface_manipurator/msg/rosidl_typesupport_introspection_c__visibility_control.h

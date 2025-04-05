@@ -1,8 +1,0 @@
-setup.py
-interface_manipurator/__init__.py
-interface_manipurator.egg-info/PKG-INFO
-interface_manipurator.egg-info/SOURCES.txt
-interface_manipurator.egg-info/dependency_links.txt
-interface_manipurator.egg-info/top_level.txt
-interface_manipurator/msg/__init__.py
-interface_manipurator/msg/_speed_angle.py

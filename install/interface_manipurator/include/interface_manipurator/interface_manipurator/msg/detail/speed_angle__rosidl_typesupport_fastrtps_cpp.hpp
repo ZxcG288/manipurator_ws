@@ -1,1 +1,0 @@
-/home/golf1234_pc/manipurator_ws/build/interface_manipurator/rosidl_typesupport_fastrtps_cpp/interface_manipurator/msg/detail/speed_angle__rosidl_typesupport_fastrtps_cpp.hpp

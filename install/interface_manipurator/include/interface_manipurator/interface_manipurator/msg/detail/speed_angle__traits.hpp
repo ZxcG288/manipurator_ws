@@ -1,1 +1,0 @@
-/home/golf1234_pc/manipurator_ws/build/interface_manipurator/rosidl_generator_cpp/interface_manipurator/msg/detail/speed_angle__traits.hpp

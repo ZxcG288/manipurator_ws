@@ -1,4 +1,0 @@
-[console_scripts]
-node1 = server_controllers.node1:main
-node2 = server_controllers.node2:main
-node_manager = server_controllers.node_manager:main

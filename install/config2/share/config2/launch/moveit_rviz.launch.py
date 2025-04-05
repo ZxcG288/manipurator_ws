@@ -1,1 +1,0 @@
-/home/golf1234_pc/manipurator_ws/src/config2/launch/moveit_rviz.launch.py

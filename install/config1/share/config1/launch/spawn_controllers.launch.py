@@ -1,1 +1,0 @@
-/home/golf1234_pc/manipurator_ws/src/config1/launch/spawn_controllers.launch.py

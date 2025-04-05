@@ -1,1 +1,0 @@
-/home/golf1234_pc/manipurator_ws/build/car_urdf/ament_cmake_core/car_urdfConfig.cmake

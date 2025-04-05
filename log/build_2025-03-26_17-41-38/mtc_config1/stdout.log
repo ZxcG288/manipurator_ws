@@ -1,5 +1,0 @@
-[ 20%] Built target mtc_pub
-[ 40%] Built target moveit_controller
-[ 80%] Built target mtc_node_test
-[ 80%] Built target mtc_node
-[ 90%] [32mBuilding CXX object CMakeFiles/start_mtc.dir/src/start_mtc.cpp.o[0m
