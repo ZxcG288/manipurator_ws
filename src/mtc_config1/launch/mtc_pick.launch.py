@@ -59,6 +59,16 @@ def generate_launch_description():
             ) 
         ]
     )
+    car_controller = TimerAction(
+        period=7.0,
+        actions=[
+            Node(
+            package="mobile_manipurator",
+            executable="pick_place_controller",
+            output="screen",
+            ) 
+        ]
+    )
     box_dectection = TimerAction(
         period=8.0,
         actions=[
@@ -69,6 +79,7 @@ def generate_launch_description():
             ) 
         ]
     )
+    
 
     #sub_yolo = Node(
     #     package="camera2_ros",
@@ -106,6 +117,7 @@ def generate_launch_description():
             sub_yolo,
             pick,
             box_dectection,
+            car_controller,
             # TimerAction(
             # period=5.0,  #for delay to start node
             # actions=[pick]

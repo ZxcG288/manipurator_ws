@@ -4,9 +4,9 @@ import sys
 import math
 import numpy as np
 import rclpy
-import rclpy.destroyable
+#import rclpy.destroyable
 from rclpy.node import Node
-from sensor_msgs.msg import Image
+#from sensor_msgs.msg import Image
 from yolov8_msgs.msg import Yolov8Inference
 from cv_bridge import CvBridge
 from geometry_msgs.msg import Pose  # ใช้ Pose แทน Float64MultiArray

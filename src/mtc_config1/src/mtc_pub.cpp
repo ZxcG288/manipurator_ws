@@ -24,9 +24,10 @@ private:
     
     // กำหนดตำแหน่ง (Position)
     pose.position.x = -0.25;
-    pose.position.y = 0.05;
-    pose.position.z = 0.07;
-    pose.orientation.z = 0.3;
+    pose.position.y = 0.07;
+    //pose.position.z = 0.07;
+    pose.position.z = 0.57;
+    //pose.orientation.z = 0.3;
     // กำหนด orientation (ทิศทาง)
     // tf2::Quaternion q;
     // q.setRPY(0, 0, 0.3); //tf2::toMsg(q); // Roll, Pitch, Yaw

@@ -47,6 +47,7 @@ private:
   bool position_received_;  // Flag to indicate if position is received
 };
 
+
 MTCTaskNode::MTCTaskNode(const rclcpp::NodeOptions& options)
   : node_{ std::make_shared<rclcpp::Node>("mtc_place", options) },
     position_received_(false) // Set the flag to false initially
@@ -54,7 +55,6 @@ MTCTaskNode::MTCTaskNode(const rclcpp::NodeOptions& options)
   // Subscribe to the position topic
   position_sub_ = node_->create_subscription<geometry_msgs::msg::Pose>(
     "/position_topic", 10, std::bind(&MTCTaskNode::positionCallback, this, std::placeholders::_1)
-    
   );
 }
 
@@ -78,12 +78,6 @@ void MTCTaskNode::positionCallback(const geometry_msgs::msg::Pose::SharedPtr msg
 
 void MTCTaskNode::setupPlanningScene()
 {
-  // RCLCPP_INFO(LOGGER, "Setting up planning scene with object at x=%.2f, y=%.2f, z=%.2f, yaw=%.2f",
-  //             current_position_.position.x,
-  //             current_position_.position.y,
-  //             current_position_.position.z,
-  //             current_position_.orientation.z);
-
   moveit_msgs::msg::CollisionObject object;
   object.id = "object";
   object.header.frame_id = "world";
