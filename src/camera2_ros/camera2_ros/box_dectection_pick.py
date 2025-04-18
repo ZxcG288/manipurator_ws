@@ -22,9 +22,9 @@ class GUI(Node):
         self.fy = 760
         self.cx = 320
         self.cy = 240
-        self.z = -0.25
-        self.init_x = -0.235
-        self.init_y = 0.125
+        self.z = -0.277
+        self.init_x = -0.25
+        self.init_y = 0.135
         self.published = False  # ตัวแปรสำหรับเช็คว่ามีการ publish แล้วหรือยัง
 
         self.subscription = self.create_subscription(
@@ -75,7 +75,7 @@ class GUI(Node):
             # Publish ค่า bolt
             self.publisher.publish(pose_msg)
             self.published = False  # ตั้งค่าให้ publish แค่ครั้งเดียว
-            #self.get_logger().info(f"Published position: x={target_x}, y={target_y}, z={target_z}, yaw={yaw}")
+            #self.get_logger().info(f"Published position: X={target_x}, Y={target_y}, Z={target_z}")
 
 def main(args=None):
     rclpy.init(args=args)

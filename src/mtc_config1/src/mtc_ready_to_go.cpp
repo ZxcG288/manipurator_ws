@@ -1,10 +1,12 @@
 #include <rclcpp/rclcpp.hpp>
+#include <std_msgs/msg/string.hpp>
 #include <cmath>
 #include <moveit/planning_scene/planning_scene.hpp>
 #include <moveit/planning_scene_interface/planning_scene_interface.hpp>
 #include <moveit/task_constructor/task.h>
 #include <moveit/task_constructor/solvers.h>
 #include <moveit/task_constructor/stages.h>
+#include <tf2/LinearMath/Quaternion.h>
 #if __has_include(<tf2_geometry_msgs/tf2_geometry_msgs.hpp>)
 #include <tf2_geometry_msgs/tf2_geometry_msgs.hpp>
 #else
@@ -15,6 +17,8 @@
 #else
 #include <tf2_eigen/tf2_eigen.h>
 #endif
+
+//std
 
 static const rclcpp::Logger LOGGER = rclcpp::get_logger("mtc_config1");
 namespace mtc = moveit::task_constructor;
@@ -28,16 +32,31 @@ public:
 
   void doTask();
 
+  void setupPlanningScene();
+
 private:
-  // Compose an MTC task from a series of stages.
+  rclcpp::Node::SharedPtr node_;
   mtc::Task createTask();
   mtc::Task task_;
-  rclcpp::Node::SharedPtr node_;
+
+  // this use for status_pub of manipurator
+  rclcpp::Publisher<std_msgs::msg::String>::SharedPtr status_pub_;
+
+  void publishStatus(const std::string& msg) {
+    std_msgs::msg::String status_msg;
+    status_msg.data = msg;
+    status_pub_->publish(status_msg);
+  }
+  
 };
 
 MTCTaskNode::MTCTaskNode(const rclcpp::NodeOptions& options)
-  : node_{ std::make_shared<rclcpp::Node>("place_node", options) }
+  : node_{ std::make_shared<rclcpp::Node>("mtc_ready_to_go", options) }
 {
+  // Publisher for status messages
+  status_pub_ = node_->create_publisher<std_msgs::msg::String>(
+    "/manipurator_information", 10
+  );
 }
 
 rclcpp::node_interfaces::NodeBaseInterface::SharedPtr MTCTaskNode::getNodeBaseInterface()
@@ -46,38 +65,43 @@ rclcpp::node_interfaces::NodeBaseInterface::SharedPtr MTCTaskNode::getNodeBaseIn
 }
 
 //set up work
-
-void MTCTaskNode::doTask() //Set task to do pick and place 
+void MTCTaskNode::doTask() 
 {
+  while (true) {
+    
     task_ = createTask();
 
-    try
-    {
-        task_.init();
-    }
-    catch (mtc::InitStageException& e)
-    {
-        RCLCPP_ERROR_STREAM(LOGGER, e);
-        return;
+    try {
+      task_.init();
+    } catch (mtc::InitStageException& e) {
+      RCLCPP_ERROR_STREAM(LOGGER, e);
+      publishStatus("Task initialization failed: " + std::string(e.what()));
+      continue;
     }
 
-    if (!task_.plan(1)) //Set the number of capture simulations
-    {
-        RCLCPP_ERROR_STREAM(LOGGER, "Task planning failed");
-        return;
+    if (!task_.plan(1)) {
+      RCLCPP_ERROR_STREAM(LOGGER, "Task planning failed");
+      publishStatus("Task planning failed"); //if planning failed it will move the car for change the position
+      std::this_thread::sleep_for(std::chrono::seconds(1)); 
+      continue;
     }
+
     task_.introspection().publishSolution(*task_.solutions().front());
 
     auto result = task_.execute(*task_.solutions().front());
-    if (result.val != moveit_msgs::msg::MoveItErrorCodes::SUCCESS)
-    {
-        RCLCPP_ERROR_STREAM(LOGGER, "Task execution failed");
-        return;
+    if (result.val != moveit_msgs::msg::MoveItErrorCodes::SUCCESS) {
+      RCLCPP_ERROR_STREAM(LOGGER, "Task execution failed");
+      publishStatus("Task execution failed");
+      std::this_thread::sleep_for(std::chrono::seconds(1));
+      continue;
     }
 
-    return;
+    //if success it will break the loop
+    RCLCPP_INFO(LOGGER, "The manipulator ready to go");
+    publishStatus("The manipulator ready to go");
+    break;
+  }
 }
-
 //coding for pick and place object
 
 mtc::Task MTCTaskNode::createTask() //this parameter for create Task to pick and place the object
@@ -116,10 +140,10 @@ mtc::Task MTCTaskNode::createTask() //this parameter for create Task to pick and
 
   //for pick item
     {
-    auto stage = std::make_unique<mtc::stages::MoveTo>("ready to go", interpolation_planner);
-        stage->properties().configureInitFrom(mtc::Stage::PARENT, { "group" });
-        stage->setGoal("try_place");
-        task.add(std::move(stage));
+    auto stage = std::make_unique<mtc::stages::MoveTo>("start", interpolation_planner);
+      stage->properties().configureInitFrom(mtc::Stage::PARENT, { "group" });
+      stage->setGoal("ready");
+      task.add(std::move(stage));
     }
                         
   return task;

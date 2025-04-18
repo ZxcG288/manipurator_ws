@@ -105,7 +105,7 @@ void MTCTaskNode::setupPlanningScene()
   // Define shape of the object
   object.primitives.resize(1);
   object.primitives[0].type = shape_msgs::msg::SolidPrimitive::BOX;
-  object.primitives[0].dimensions = { 0.03, 0.03, 0.03 };  // Set dimensions of the object
+  object.primitives[0].dimensions = { 0.04, 0.04, 0.04 };  // Set dimensions of the object
 
   // Use the current position received from the subscriber
   geometry_msgs::msg::Pose pose;
@@ -185,7 +185,7 @@ void MTCTaskNode::doTask() {
     if (!task_.plan(1)) {
       RCLCPP_ERROR_STREAM(LOGGER, "Task planning failed");
       publishStatus("Task planning failed"); //if planning failed it will move the car for change the position
-      std::this_thread::sleep_for(std::chrono::seconds(5)); //for wait 2 seconds
+      std::this_thread::sleep_for(std::chrono::seconds(7)); //for wait in seconds
       continue;
     }
 
@@ -195,7 +195,7 @@ void MTCTaskNode::doTask() {
     if (result.val != moveit_msgs::msg::MoveItErrorCodes::SUCCESS) {
       RCLCPP_ERROR_STREAM(LOGGER, "Task execution failed");
       publishStatus("Task execution failed");
-      std::this_thread::sleep_for(std::chrono::seconds(5)); //for wait 2 seconds
+      std::this_thread::sleep_for(std::chrono::seconds(7)); //for wait in seconds
       continue;
     }
 
@@ -409,7 +409,7 @@ mtc::Task MTCTaskNode::createTask() //this parameter for create Task to pick and
   {
   auto stage = std::make_unique<mtc::stages::MoveTo>("ready to go", interpolation_planner);
     stage->properties().configureInitFrom(mtc::Stage::PARENT, { "group" });
-    stage->setGoal("ready");
+    stage->setGoal("try_place");
     task.add(std::move(stage));
   }
   {

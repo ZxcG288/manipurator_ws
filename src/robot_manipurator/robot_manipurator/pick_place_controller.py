@@ -16,7 +16,6 @@ class PickPlaceController(Node):
             self.status_callback,
             10
         )
-
         self.car_publisher = self.create_publisher(
             SpeedAngle, 
             "/SpeedAngle", 
@@ -29,8 +28,10 @@ class PickPlaceController(Node):
             10,
         )
         self.car_timer = self.create_timer(0.01, self.car_publish)
+
     def sub_position_topic_callback(self, msg):
         self.current_position = msg.position.y
+        
     def status_callback(self, msg):
         self.status_message = msg.data
 
@@ -48,9 +49,9 @@ class PickPlaceController(Node):
                     stop_duration = self.get_clock().now().seconds_nanoseconds()[0] - self.stop_time
                     if stop_duration < 2: #loop for 2 sec
                         if self.current_position > 0.08: #because 0.08 is on the middle of the RC car and 0.00 is almost the front of RC car
-                            speed = -10  # -10 because the object on the backside of RCcar so it has to Reverse the car backwards
+                            speed = -50  # -10 because the object on the backside of RCcar so it has to Reverse the car backwards
                         elif self.current_position < 0.08:
-                            speed = 10 
+                            speed = 50
                     else:
                         self.status_message = ""  # Reset the status message
                         self.stop_time = None  # Reset stop_time to allow future changes

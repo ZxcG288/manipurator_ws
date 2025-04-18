@@ -1,7 +1,7 @@
 #include <rclcpp/rclcpp.hpp>
 #include <geometry_msgs/msg/pose.hpp>
+#include <std_msgs/msg/string.hpp>
 #include <cmath>
-#include <random>
 #include <moveit/planning_scene/planning_scene.hpp>
 #include <moveit/planning_scene_interface/planning_scene_interface.hpp>
 #include <moveit/task_constructor/task.h>
@@ -36,6 +36,16 @@ public:
   void setupPlanningScene();
 
 private:
+
+  // this use for status_pub of manipurator
+  rclcpp::Publisher<std_msgs::msg::String>::SharedPtr status_pub_;
+
+  void publishStatus(const std::string& msg) {
+    std_msgs::msg::String status_msg;
+    status_msg.data = msg;
+    status_pub_->publish(status_msg);
+  }
+  
   // Callback function for position update
   void positionCallback(const geometry_msgs::msg::Pose::SharedPtr msg);
 
@@ -44,17 +54,21 @@ private:
   rclcpp::Node::SharedPtr node_;
   rclcpp::Subscription<geometry_msgs::msg::Pose>::SharedPtr position_sub_;  // Subscriber to position
   geometry_msgs::msg::Pose current_position_;  // To store current position
+
   bool position_received_;  // Flag to indicate if position is received
 };
 
-
 MTCTaskNode::MTCTaskNode(const rclcpp::NodeOptions& options)
-  : node_{ std::make_shared<rclcpp::Node>("mtc_place", options) },
+  : node_{ std::make_shared<rclcpp::Node>("mtc_node_test", options) },
     position_received_(false) // Set the flag to false initially
 {
   // Subscribe to the position topic
   position_sub_ = node_->create_subscription<geometry_msgs::msg::Pose>(
-    "/position_topic", 10, std::bind(&MTCTaskNode::positionCallback, this, std::placeholders::_1)
+    "/position_topic", 10, std::bind(&MTCTaskNode::positionCallback, this, std::placeholders::_1) 
+  );
+  // Publisher for status messages
+  status_pub_ = node_->create_publisher<std_msgs::msg::String>(
+    "/manipurator_information", 10
   );
 }
 
@@ -78,6 +92,12 @@ void MTCTaskNode::positionCallback(const geometry_msgs::msg::Pose::SharedPtr msg
 
 void MTCTaskNode::setupPlanningScene()
 {
+  // RCLCPP_INFO(LOGGER, "Setting up planning scene with object at x=%.2f, y=%.2f, z=%.2f, yaw=%.2f",
+  //             current_position_.position.x,
+  //             current_position_.position.y,
+  //             current_position_.position.z,
+  //             current_position_.orientation.z);
+
   moveit_msgs::msg::CollisionObject object;
   object.id = "object";
   object.header.frame_id = "world";
@@ -85,7 +105,7 @@ void MTCTaskNode::setupPlanningScene()
   // Define shape of the object
   object.primitives.resize(1);
   object.primitives[0].type = shape_msgs::msg::SolidPrimitive::BOX;
-  object.primitives[0].dimensions = { 0.03, 0.03, 0.03 };  // Set dimensions of the object
+  object.primitives[0].dimensions = { 0.04, 0.04, 0.04};  // Set dimensions of the object
 
   // Use the current position received from the subscriber
   geometry_msgs::msg::Pose pose;
@@ -106,45 +126,122 @@ void MTCTaskNode::setupPlanningScene()
   psi.applyCollisionObject(object);
 }
 
-
 //set up work
 
-void MTCTaskNode::doTask()
-{
-  while (!position_received_) {
-    RCLCPP_INFO(LOGGER, "Waiting for position data...");
-    std::this_thread::sleep_for(std::chrono::milliseconds(1000));
-  }
+// void MTCTaskNode::doTask()
+// {
+//   while (!position_received_) {
+//     RCLCPP_INFO(LOGGER, "Waiting for position data...");
+//     std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+//   }
     
+//     setupPlanningScene();
+//     task_ = createTask();
+
+//     try
+//     {
+//       task_.init();
+//     }
+//     catch (mtc::InitStageException& e)
+//     {
+//       RCLCPP_ERROR_STREAM(LOGGER, e);
+//       return;
+//     }
+  
+//     if (!task_.plan(1)) //Set the number of capture simulations
+//     {
+//       RCLCPP_ERROR_STREAM(LOGGER, "Task planning failed");
+//       return;
+//     }
+//     task_.introspection().publishSolution(*task_.solutions().front());
+  
+//     auto result = task_.execute(*task_.solutions().front());
+//     if (result.val != moveit_msgs::msg::MoveItErrorCodes::SUCCESS)
+//     {
+//       RCLCPP_ERROR_STREAM(LOGGER, "Task execution failed");
+//       return;
+//     }
+  
+//     return;
+// }
+void MTCTaskNode::doTask() {
+  while (true) {
+    while (!position_received_) {
+      RCLCPP_INFO(LOGGER, "Waiting for position data...");
+      std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+    }
+    publishStatus("The task has been stated");
     setupPlanningScene();
     task_ = createTask();
 
-    try
-    {
+    try {
       task_.init();
-    }
-    catch (mtc::InitStageException& e)
-    {
+    } catch (mtc::InitStageException& e) {
       RCLCPP_ERROR_STREAM(LOGGER, e);
-      return;
+      publishStatus("Task initialization failed: " + std::string(e.what()));
+      continue;
     }
-  
-    if (!task_.plan(1)) //Set the number of capture simulations
-    {
+
+    if (!task_.plan(1)) {
       RCLCPP_ERROR_STREAM(LOGGER, "Task planning failed");
-      return;
+      publishStatus("Task planning failed"); //if planning failed it will move the car for change the position
+      std::this_thread::sleep_for(std::chrono::seconds(7)); //for wait in seconds
+      continue;
     }
+
     task_.introspection().publishSolution(*task_.solutions().front());
-  
+
     auto result = task_.execute(*task_.solutions().front());
-    if (result.val != moveit_msgs::msg::MoveItErrorCodes::SUCCESS)
-    {
+    if (result.val != moveit_msgs::msg::MoveItErrorCodes::SUCCESS) {
       RCLCPP_ERROR_STREAM(LOGGER, "Task execution failed");
-      return;
+      publishStatus("Task execution failed");
+      std::this_thread::sleep_for(std::chrono::seconds(7)); //for wait in seconds
+      continue;
     }
-  
-    return;
+
+    //if success it will break the loop
+    RCLCPP_INFO(LOGGER, "Task execution succeeded");
+    publishStatus("Task execution succeeded");
+    break;
+  }
 }
+
+// void MTCTaskNode::doTask()
+// {
+//   while (!position_received_) {
+//     RCLCPP_INFO(LOGGER, "Waiting for position data...");
+//     std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+//   }
+    
+//     setupPlanningScene();
+//     task_ = createTask();
+
+//     try
+//     {
+//       task_.init();
+//     }
+//     catch (mtc::InitStageException& e)
+//     {
+//       RCLCPP_ERROR_STREAM(LOGGER, e);
+//       return;
+//     }
+  
+//     if (!task_.plan(1)) //Set the number of capture simulations
+//     {
+//       RCLCPP_ERROR_STREAM(LOGGER, "Task planning failed");
+//       return;
+//     }
+//     task_.introspection().publishSolution(*task_.solutions().front());
+  
+//     auto result = task_.execute(*task_.solutions().front());
+//     if (result.val != moveit_msgs::msg::MoveItErrorCodes::SUCCESS)
+//     {
+//       RCLCPP_ERROR_STREAM(LOGGER, "Task execution failed");
+//       return;
+//     }
+  
+//     return;
+// }
 
 // void MTCTaskNode::doTask()
 // {
@@ -342,7 +439,7 @@ mtc::Task MTCTaskNode::createTask() //this parameter for create Task to pick and
     geometry_msgs::msg::PoseStamped target_pose_msg;
     target_pose_msg.header.frame_id = "world";
     target_pose_msg.pose.position.x = -0.25; //set position for place the object
-    target_pose_msg.pose.position.y = 0.05;
+    target_pose_msg.pose.position.y = 0.07;
     target_pose_msg.pose.position.z = 0.1;
     
     //target_pose_msg.pose.orientation.w = 1.0;
@@ -390,15 +487,9 @@ mtc::Task MTCTaskNode::createTask() //this parameter for create Task to pick and
 
  //Ready to go
   {
-    auto stage = std::make_unique<mtc::stages::MoveTo>("pre place1", interpolation_planner);
-      stage->properties().configureInitFrom(mtc::Stage::PARENT, { "group" });
-      stage->setGoal("pre_place1");
-      task.add(std::move(stage));
-  } 
-  {
   auto stage = std::make_unique<mtc::stages::MoveTo>("ready to go", interpolation_planner);
     stage->properties().configureInitFrom(mtc::Stage::PARENT, { "group" });
-    stage->setGoal("ready");
+    stage->setGoal("try_pick");
     task.add(std::move(stage));
   }
   {

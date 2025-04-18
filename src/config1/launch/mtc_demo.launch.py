@@ -107,7 +107,7 @@ def generate_launch_description():
         period=2.0,
         actions=[
             Node(
-            package="mobile_manipurator",
+            package="robot_manipurator",
             executable="real_robot",
             output="screen",
             ) 

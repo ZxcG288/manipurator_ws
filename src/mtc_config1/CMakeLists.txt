@@ -35,15 +35,16 @@ add_mtc_executable(place_node place_node.cpp)
 add_mtc_executable(moveit_controller moveit_controller.cpp)
 add_mtc_executable(mtc_place mtc_place.cpp)
 add_mtc_executable(place_pub place_pub.cpp)
+add_mtc_executable(mtc_ready_to_go mtc_ready_to_go.cpp)
 
 # Additional dependencies for MoveIt Task Constructor nodes
-foreach(target mtc_node mtc_node_test start_mtc place_node moveit_controller mtc_place place_pub)
+foreach(target mtc_node mtc_node_test start_mtc place_node moveit_controller mtc_place place_pub mtc_ready_to_go)
   ament_target_dependencies(${target} "moveit_task_constructor_core")
 endforeach()
 
 # Install targets
 install(TARGETS
-  mtc_node mtc_node_test mtc_pub start_mtc place_node moveit_controller mtc_place place_pub
+  mtc_node mtc_node_test mtc_pub start_mtc place_node moveit_controller mtc_place place_pub mtc_ready_to_go 
   DESTINATION lib/${PROJECT_NAME})
 
 # Install launch directory

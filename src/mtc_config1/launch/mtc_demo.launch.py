@@ -109,18 +109,18 @@ def generate_launch_description():
             )
         ]
 
-    pick_place_demo = Node(
-        package="mtc_config1",
-        executable="mtc_node_test",
-        output="screen",
-        parameters=[moveit_params],  # Pass the dictionary of parameters here
-    )
+    # pick_place_demo = Node(
+    #     package="mtc_config1",
+    #     executable="mtc_node_test",
+    #     output="screen",
+    #     parameters=[moveit_params],  # Pass the dictionary of parameters here
+    # )
     
-    yolo_pub = Node(
-        package="mtc_config1",
-        executable="mtc_pub",
-        output="screen",
-    )
+    # yolo_pub = Node(
+    #     package="mtc_config1",
+    #     executable="mtc_pub",
+    #     output="screen",
+    # )
     # Timer to shutdown yolo_pub after 15 seconds (5 seconds for delay + 10 seconds for running time)
     # shutdown_yolo_pub = TimerAction(
     #     period=15.0,  # Total 15 seconds to stop yolo_pub (5 for delay + 10 for running)
@@ -138,17 +138,17 @@ def generate_launch_description():
             robot_state_publisher,
             run_move_group_node,
             ros2_control_node,
-            pick_place_demo,
+            # pick_place_demo,
             
 
         ]+load_controllers  
         
-        +[
-            TimerAction(
-            period=5.0,  # หน่วงเวลา 5 วินาทีก่อนเริ่ม node
-            actions=[yolo_pub]
-            ),
-        #     shutdown_yolo_pub,
+        # +[
+        #     TimerAction(
+        #     period=5.0,  # หน่วงเวลา 5 วินาทีก่อนเริ่ม node
+        #     actions=[yolo_pub]
+        #     ),
+        # #     shutdown_yolo_pub,
            
-        ]
+        # ]
     )

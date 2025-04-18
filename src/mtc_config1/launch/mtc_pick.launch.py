@@ -63,7 +63,7 @@ def generate_launch_description():
         period=7.0,
         actions=[
             Node(
-            package="mobile_manipurator",
+            package="robot_manipurator",
             executable="pick_place_controller",
             output="screen",
             ) 
@@ -117,7 +117,7 @@ def generate_launch_description():
             sub_yolo,
             pick,
             box_dectection,
-            car_controller,
+            # car_controller,
             # TimerAction(
             # period=5.0,  #for delay to start node
             # actions=[pick]
