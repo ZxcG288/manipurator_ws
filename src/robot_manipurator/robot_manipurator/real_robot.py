@@ -12,7 +12,6 @@ from rclpy.node import Node
 from sensor_msgs.msg import Image, CompressedImage
 from interface_manipurator.msg import SpeedAngle
 from std_msgs.msg import String
-import threading
 
 from cv_bridge import CvBridge
 from yolov8_msgs.msg import InferenceResult, Yolov8Inference
@@ -96,6 +95,7 @@ class RealRobot(Node):
         self.task_completed_once = False
         self.The_manipurator_ready_to_go = False
         self.ready_to_go = False
+
 
         # self.timer_callback is for check the status of the launch file of the manipulator pick and place
         self.timer = self.create_timer(0.5, self.timer_callback)

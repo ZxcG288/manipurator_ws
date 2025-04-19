@@ -12,16 +12,26 @@ class MySubscriber(Node):
     def __init__(self):
         super().__init__('my_subscriber') 
         self.ser2 = serial.Serial('/dev/ttyUSB0', 9600, timeout=2)
+
+        #Subscribe to the topic from web controller
         self.subscription = self.create_subscription(
             String,
             '/web_topic',
             self.listener_callback,
             10)
-        self.subscription  # ป้องกัน unused variable warning
+        
+        #Create publisher for collecting data from joystick for trainning
+        self.collecting_data_publisher = self.create_publisher(
+            String,
+            '/collecting_data',
+            10
+        )
+
+        self.subscription  #prevent unused variable warning
 
     def listener_callback(self, msg):
         #self.get_logger().info(f'receive: "{msg.data}"')
-        # ใช้ regex เพื่อแยกค่าตัวเลข
+        #ใช้ regex เพื่อแยกค่าตัวเลข
         pattern = r'Joystick X: ([\d\.-]+), Y: ([\d\.-]+), A1: (\d+), A2: (\d+), A3: (\d+), A4: (\d+), A5: (\d+)'
         match = re.search(pattern, msg.data)
 
@@ -39,18 +49,17 @@ class MySubscriber(Node):
 
             def map_value(value, from_low, from_high, to_low, to_high): #It works like map function in Arduino
                 return (value - from_low) * (to_high - to_low) / (from_high - from_low) + to_low
-            speed = int(map_value(y, -1, 1, -300, 300))
+            speed = int(map_value(y, -1, 1, -80, 80)) #300 is the max speed of the car but use 80 for AI trainning model 
 
-           
             angle = 0
             if y == 0:
                 ang = 0  # avoid division by zero error
             else:
                 ang = int(math.degrees(math.atan(x / y)))  # convert values to degrees
             if speed > 0:
-                angle = int(map_value(ang, -75, 75, 40, 140))  # adjust angle for positive speed
+                angle = int(map_value(ang, -75, 75, 45, 135))  # adjust angle for positive speed
             elif speed < 0:
-                angle = int(map_value(ang, -75, 75, 140, 40))  # adjust angle for negative speed
+                angle = int(map_value(ang, -75, 75, 135, 45))  # adjust angle for negative speed
             elif speed == 0:  # set angle 90 because it's the middle of the car
                 angle = 90
 

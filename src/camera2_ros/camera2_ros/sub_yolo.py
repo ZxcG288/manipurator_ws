@@ -25,9 +25,8 @@ class Camera_subscriber(Node):
         self.model = YOLO(os.environ['HOME'] + '/yolov8obb_training/best.pt')
 
         self.yolov8_inference = Yolov8Inference()
-        self.status_message = ""
-        self.task_succeeded = False  # <-- เพิ่ม flag
-
+        
+        #subscribe from image raw camera 
         self.subscription = self.create_subscription(
             CompressedImage,
             'image/compressed',
@@ -59,14 +58,17 @@ class Camera_subscriber(Node):
             String,
             "/check_box_status",
             10)
-
+        
+        #<-- add flag -->
+        self.status_message = ""
+        self.task_succeeded = False
         self.has_published_status = False
         self.box_detected = False  
 
     def status_callback(self, msg):
         self.status_message = msg.data
         if self.status_message == "Task execution succeeded":
-            self.task_succeeded = True  # <-- ตั้ง flag ไว้เมื่อ task สำเร็จ
+            self.task_succeeded = True  # <-- set flag when the task has finished
 
     def camera_callback(self, data):
         try:
@@ -85,7 +87,7 @@ class Camera_subscriber(Node):
             self.yolov8_inference.header.frame_id = "inference"
             self.yolov8_inference.header.stamp = self.get_clock().now().to_msg()
 
-            self.box_detected = False  # reset ก่อน
+            self.box_detected = False  #reset 
 
             for r in results:
                 if r.obb is not None:
@@ -109,13 +111,13 @@ class Camera_subscriber(Node):
             img_msg = bridge.cv2_to_imgmsg(annotated_frame)
             self.img_pub.publish(img_msg)
 
-            # ✅ เช็คเงื่อนไข: task สำเร็จ + เจอกล่อง
+            #Publish the box status if the task succeeded and a box is detected
             if self.task_succeeded and self.box_detected:
                 box_msg = String()
                 box_msg.data = "BOX"
                 self.box_status_publisher.publish(box_msg)
                 self.get_logger().info("Published BOX after task success.")
-                self.task_succeeded = False  # reset หลัง publish
+                self.task_succeeded = False  # reset after publish
                 self.box_detected = False
 
         except Exception as e:

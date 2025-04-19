@@ -19,7 +19,7 @@ def generate_launch_description():
         output="screen",
     )
     # node_listener = Node(
-    #     package="mobile_manipurator",
+    #     package="robot_manipirator",
     #     executable="web_test1_node",
     #     output="screen",
     # )
