@@ -12,6 +12,7 @@ from rclpy.node import Node
 from sensor_msgs.msg import Image, CompressedImage
 from interface_manipurator.msg import SpeedAngle
 from std_msgs.msg import String
+import threading
 
 from cv_bridge import CvBridge
 from yolov8_msgs.msg import InferenceResult, Yolov8Inference
@@ -69,7 +70,7 @@ class RealRobot(Node):
             1
         )
         
-        # This for align the sign and self to tiggle the action in def launch_and_terminate(self, launch_file):
+        # This for align the sign and self to tiggle the action in def launch_subprocess(self, launch_file):
         self.launch_process = None
         self.action_mapping = {
             "parking_sign": self.trigger_parking_sign_action,
@@ -86,9 +87,11 @@ class RealRobot(Node):
         # Check time of the launch file and cross_walk sign timer
         self.sub_yolo_time = None
         self.task_execution_succeeded_time = None
+        self.time_to_ready_to_go = None #Timer for mtc_ready_to_go.launch.py
         self.crosswalk_detected_time = None #For crosswalk sign
         
         # Check thhe status of terms that Check if it has been used before
+        self.stop_and_go = False
         self.launching = False 
         self.task_completed_once = False
         self.The_manipurator_ready_to_go = False
@@ -101,11 +104,11 @@ class RealRobot(Node):
         self.car_timer = self.create_timer(0.02, self.car_publish)
         
     def camera_callback(self, data):
-        if self.status_message != "The sub_yolo is running":
+        if not self.stop_and_go: #to stop the camera callback running when the launch file is running 
             try:
                 np_arr = np.frombuffer(data.data, np.uint8)
                 img = cv2.imdecode(np_arr, cv2.IMREAD_COLOR)
-                results = self.model(img, conf=0.70, verbose=False)
+                results = self.model(img, conf=0.90, verbose=False)
 
                 self.yolov8_inference.header.frame_id = "inference"
                 self.yolov8_inference.header.stamp = self.get_clock().now().to_msg()
@@ -132,7 +135,7 @@ class RealRobot(Node):
                                     self.get_logger().info("Red light detected!")
                                 elif class_name == "crosswalk_sign":    
                                     self.current_sign_status = "cross_walk"
-                                    self.crosswalk_detected_time = time.time() #For set the time of the crosswalk sign
+                                    self.crosswalk_detected_time = time.time() # Set the time of the crosswalk sign
                                     self.get_logger().info("Crosswalk sign detected!")
                                 elif class_name == "parking_sign":
                                     self.current_sign_status = "parking"
@@ -141,7 +144,7 @@ class RealRobot(Node):
                                     self.current_sign_status = "place"
                                     self.get_logger().info("Place sign detected!")
 
-                                # For detect the signs to trigger th launch file
+                                # To detect the signs to trigger th launch file
                                 if class_name in self.action_mapping:
                                     self.get_logger().info(f"{class_name.replace('_', ' ').capitalize()} detected!")
                                     self.action_mapping[class_name]()
@@ -156,7 +159,7 @@ class RealRobot(Node):
                 img_msg = self.bridge.cv2_to_imgmsg(annotated_frame, encoding="bgr8")
                 self.img_pub.publish(img_msg)
 
-                # Update the detected sign for use in car_publish and compute_drive_command
+                # Update the detected sign for use in def car_publish
                 self.detected_classes = detected_classes
                 
 
@@ -166,7 +169,7 @@ class RealRobot(Node):
     def car_publish(self):
         msg = SpeedAngle()
         if self.current_sign_status == "green":
-            msg.speed = 300
+            msg.speed = 100
             msg.angle = 0 
         elif self.current_sign_status == "red":
             msg.speed = 0
@@ -175,7 +178,7 @@ class RealRobot(Node):
             if self.crosswalk_detected_time is not None:
                 elapsed_time_of_crosswalk_detected = time.time() - self.crosswalk_detected_time
                 if elapsed_time_of_crosswalk_detected < 5.0:
-                    msg.speed = 100
+                    msg.speed = 50
                     msg.angle = 0
                 else: 
                     self.current_sign_status = "green"
@@ -234,11 +237,12 @@ class RealRobot(Node):
 
                 if self.launch_process:
                     self.launch_process.send_signal(signal.SIGINT)
+                    self.launch_process.wait() #Wait for the process to terminate completely
                     self.get_logger().info("Terminated existing launch process.")
                     self.launching = False
 
                 if hasattr(self, 'last_launch_file'):
-                    self.launch_and_terminate(self.last_launch_file)
+                    self.launch_subprocess(self.last_launch_file)
 
                 self.sub_yolo_time = None
                 self.task_execution_succeeded_time = None
@@ -251,11 +255,12 @@ class RealRobot(Node):
                 self.get_logger().info("Restarting the launch file due to BOX not in place.")
                 if self.launch_process:
                     self.launch_process.send_signal(signal.SIGINT)
+                    self.launch_process.wait() #Wait for the process to terminate completely
                     self.get_logger().info("Terminated existing launch process.")
                     self.launching = False
 
                 if hasattr(self, 'last_launch_file'):
-                    self.launch_and_terminate(self.last_launch_file)
+                    self.launch_subprocess(self.last_launch_file)
                 self.sub_yolo_time = None
                 self.task_execution_succeeded_time = None
         
@@ -263,6 +268,7 @@ class RealRobot(Node):
         elif self.status_message == "Task execution succeeded" and self.box_status == "BOX" and not self.task_completed_once:
             if self.launch_process:
                 self.launch_process.send_signal(signal.SIGINT)
+                self.launch_process.wait() #Wait for the process to terminate completely
                 self.launching = False
             self.launch_process = subprocess.Popen(['ros2', 'launch', 'mtc_config1', 'mtc_ready_to_go.launch.py'])
             self.get_logger().info("Task execution succeeded and BOX is placed in place.")
@@ -272,42 +278,46 @@ class RealRobot(Node):
             self.time_to_ready_to_go = time.time()
 
         # Check if mtc_ready_to_go.launch.py is running but the lunch file is Cached it will be restart mtc_ready_to_go.launch.py
-        elif self.status_message == "Task execution succeeded" and self.box_status == "BOX" and not self.ready_to_go and self.time_to_ready_to_go is not None:  
+        elif self.status_message == "Task execution succeeded" and not self.ready_to_go and self.time_to_ready_to_go is not None:  
             elapsed_time3 = time.time() - self.time_to_ready_to_go
             if elapsed_time3 > 5.0:
                 if self.launch_process:
                     self.launch_process.send_signal(signal.SIGINT)
+                    self.launch_process.wait() #Wait for the process to terminate completely
                     self.launching = False
                 self.ready_to_go = True
                 self.launch_process = subprocess.Popen(['ros2', 'launch', 'mtc_config1', 'mtc_ready_to_go.launch.py'])
                 self.get_logger().info("The ready to go error and it will be restarted.")
 
-        # For Check the status of the manipulator that it is ready to go
+        # Check the status of the manipulator that it is ready to go
         elif self.status_message == "The manipulator ready to go" and not self.The_manipurator_ready_to_go:
             if self.launch_process:
                 self.launch_process.send_signal(signal.SIGINT)
+                self.launch_process.wait() #Wait for the process to terminate completely
                 self.launching = False
             self.get_logger().info("Manipulator is ready to go.")
             self.task_execution_succeeded_time = None
             self.sub_yolo_time = None
             self.time_to_ready_to_go = None
             self.The_manipurator_ready_to_go = True
+            self.stop_and_go = False
             self.box_status = ""
             self.current_sign_status = "green"
         
     # This function will be called when the parking sign is detected
     def trigger_parking_sign_action(self):
-        self.launch_and_terminate('mtc_pick.launch.py')
+        self.launch_subprocess('mtc_pick.launch.py')
     
     def trigger_place_sign_action(self):
-        self.launch_and_terminate('mtc_place.launch.py')
+        self.launch_subprocess('mtc_place.launch.py')
         
     
-    def launch_and_terminate(self, launch_file):
+    def launch_subprocess(self, launch_file):
         if self.launching:
             self.get_logger().info("Launch already in progress, skipping.")
             return
         self.launching = True
+        self.stop_and_go = True # To stop the car when the launch file is running
         self.last_launch_file = launch_file
         self.launch_process = subprocess.Popen(['ros2', 'launch', 'mtc_config1', launch_file])
         self.get_logger().info(f"Launched {launch_file} successfully.")

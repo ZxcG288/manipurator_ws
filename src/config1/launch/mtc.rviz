@@ -42,10 +42,10 @@ Panels:
         - 203
       solutions_view_columns: ~
       tasks_view_columns:
-        - 291
+        - 318
         - 26
         - 26
-        - 48
+        - 35
 Visualization Manager:
   Class: ""
   Displays:
@@ -162,7 +162,7 @@ Visualization Manager:
       State Display Time: 0.05 s
       Task Solution Topic: /solution
       Tasks:
-        demo task: 0
+        {}
       Trail Step Size: 1
       Value: true
     - Class: moveit_rviz_plugin/PlanningScene
@@ -382,25 +382,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 0.48245084285736084
+      Distance: 0.8882796764373779
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: -0.25011494755744934
-        Y: 0.1208181157708168
-        Z: 0.0004361254395917058
+        X: -0.12154054641723633
+        Y: 0.10297831147909164
+        Z: 0.1958070695400238
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 1.5547963380813599
+      Pitch: 0.18479670584201813
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 0.025396250188350677
+      Yaw: 3.733581066131592
     Saved: ~
 Window Geometry:
   Displays:

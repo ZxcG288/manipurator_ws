@@ -24,7 +24,7 @@ class GUI(Node):
         self.cy = 240
         self.z = -0.277
         self.init_x = -0.25
-        self.init_y = 0.135
+        self.init_y = 0.14
         self.published = False  # ตัวแปรสำหรับเช็คว่ามีการ publish แล้วหรือยัง
 
         self.subscription = self.create_subscription(
@@ -51,7 +51,7 @@ class GUI(Node):
             # คำนวณตำแหน่ง bolt
             target_x = -self.z * (middle_point[1] - self.cy) / self.fy + self.init_x
             target_y = -self.z * (middle_point[0] - self.cx) / self.fx + self.init_y
-            target_z = 0.04  # ค่าคงที่ หรืออาจเปลี่ยนได้ตามต้องการ
+            target_z = 0.035  # ค่าคงที่ หรืออาจเปลี่ยนได้ตามต้องการ
 
             # คำนวณมุมการวาง
             dist1 = np.linalg.norm(points[0] - points[1])
