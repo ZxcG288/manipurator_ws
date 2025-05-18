@@ -6,7 +6,7 @@ class talkerMain(Node):
     
     def __init__(self):
         super().__init__("talker")
-        self.talker = self.create_subscription(String, "/chatter", self.lis_callback, 10)
+        self.talker = self.create_subscription(String, "/web_topic", self.lis_callback, 10)
         self.get_logger().info("listener has been started")
         
     

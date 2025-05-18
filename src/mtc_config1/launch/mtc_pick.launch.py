@@ -28,16 +28,16 @@ def generate_launch_description():
         output="screen",
         parameters=[moveit_params],  # Pass the dictionary of parameters here
     )
-    shutdown_pre_pick = TimerAction(
-    period=4.0,
-    actions=[
-        ExecuteProcess(
-            cmd=["pkill", "-f", "/home/golf1234_pc/manipurator_ws/install/mtc_config1/lib/mtc_config1/start_mtc"],
-            shell=True,
-            output="screen",
-            ),
-        ],
-    )
+    # shutdown_pre_pick = TimerAction(
+    # period=4.0,
+    # actions=[
+    #     ExecuteProcess(
+    #         cmd=["pkill", "-f", "/home/golf1234_pc/manipurator_ws/install/mtc_config1/lib/mtc_config1/start_mtc"],
+    #         shell=True,
+    #         output="screen",
+    #         ),
+    #     ],
+    # )
     sub_yolo = TimerAction(
         period=2.0,
         actions=[
@@ -59,18 +59,18 @@ def generate_launch_description():
             ) 
         ]
     )
-    car_controller = TimerAction(
-        period=7.0,
-        actions=[
-            Node(
-            package="robot_manipurator",
-            executable="pick_place_controller",
-            output="screen",
-            ) 
-        ]
-    )
+    # car_controller = TimerAction(
+    #     period=7.0,
+    #     actions=[
+    #         Node(
+    #         package="robot_manipurator",
+    #         executable="pick_place_controller",
+    #         output="screen",
+    #         ) 
+    #     ]
+    # )
     box_dectection = TimerAction(
-        period=8.0,
+        period=5.0,
         actions=[
             Node(
             package="camera2_ros",
@@ -113,7 +113,7 @@ def generate_launch_description():
     return LaunchDescription(
         [
             pre_pick,
-            shutdown_pre_pick,
+            # shutdown_pre_pick,
             sub_yolo,
             pick,
             box_dectection,

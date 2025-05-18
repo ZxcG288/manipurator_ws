@@ -1,22 +1,21 @@
 # Default initial positions for urdf1's ros2_control fake system
 
 # initial_positions:
-#   arm1_joint: 0.523
-#   arm2_joint: 1.047
-#   headbase_joint: 1.57
+#   arm1_joint: -0.6
+#   arm2_joint: 1.57
+#   headbase_joint: 0.785
 #   headrotation_joint: 0
 #   left_gear_joint: 0
 #   right_gear_joint: 0
-#   rotating_base_joint: -3.14
+#   rotating_base_joint: 0
 
 # for real
 initial_positions:
-  arm1_joint: -0.7
+  arm1_joint: -0.6
   arm2_joint: 1.57
   headbase_joint: 1.57
   headrotation_joint: 0
   left_gear_joint: 0
   right_gear_joint: 0
   rotating_base_joint: 0
-  
   

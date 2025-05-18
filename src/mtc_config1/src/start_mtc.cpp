@@ -76,9 +76,11 @@ void MTCTaskNode::doTask()
       RCLCPP_ERROR_STREAM(LOGGER, "Task execution failed");
       continue; //restart loop 
     }
-
+    
     break; //break the loop if it's true
+    
   }
+  rclcpp::shutdown();
 }
 // void MTCTaskNode::doTask() //Set task to do pick and place 
 // {

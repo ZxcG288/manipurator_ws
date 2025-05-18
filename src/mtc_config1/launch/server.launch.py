@@ -19,7 +19,7 @@ def generate_launch_description():
         output="screen",
     )
     # node_listener = Node(
-    #     package="robot_manipirator",
+    #     package="robot_manipurator",
     #     executable="web_test1_node",
     #     output="screen",
     # )
@@ -30,6 +30,6 @@ def generate_launch_description():
             AnyLaunchDescriptionSource(rosbridge_launch_file)
         ),
         start_web,
-        # node_listener,
+        #node_listener,
 
     ])

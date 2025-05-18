@@ -22,8 +22,8 @@ class GUI(Node):
         self.cx = 320
         self.cy = 240
         self.z = -0.1
-        self.init_x = -0.05
-        self.init_y = -0.11
+        self.init_x = -0.03
+        self.init_y = -0.115
         self.published = False  # ตัวแปรสำหรับเช็คว่ามีการ publish แล้วหรือยัง
 
         self.subscription = self.create_subscription(

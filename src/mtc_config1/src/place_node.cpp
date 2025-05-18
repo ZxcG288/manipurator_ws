@@ -46,37 +46,74 @@ rclcpp::node_interfaces::NodeBaseInterface::SharedPtr MTCTaskNode::getNodeBaseIn
 }
 
 //set up work
-
-void MTCTaskNode::doTask() //Set task to do pick and place 
+void MTCTaskNode::doTask()
 {
+  while (true) //using loop if planning failed 
+  {
     task_ = createTask();
-
+    
     try
     {
-        task_.init();
+      task_.init();
     }
     catch (mtc::InitStageException& e)
     {
-        RCLCPP_ERROR_STREAM(LOGGER, e);
-        return;
+      RCLCPP_ERROR_STREAM(LOGGER, e);
+      continue; //restart loop 
     }
 
-    if (!task_.plan(1)) //Set the number of capture simulations
+    if (!task_.plan(1)) // Set the number of capture simulations
     {
-        RCLCPP_ERROR_STREAM(LOGGER, "Task planning failed");
-        return;
+      RCLCPP_ERROR_STREAM(LOGGER, "Task planning failed");
+      continue; //restart loop 
     }
+
     task_.introspection().publishSolution(*task_.solutions().front());
 
     auto result = task_.execute(*task_.solutions().front());
     if (result.val != moveit_msgs::msg::MoveItErrorCodes::SUCCESS)
     {
-        RCLCPP_ERROR_STREAM(LOGGER, "Task execution failed");
-        return;
+      RCLCPP_ERROR_STREAM(LOGGER, "Task execution failed");
+      continue; //restart loop 
     }
-
-    return;
+    
+    break; //break the loop if it's true
+    
+  }
+  rclcpp::shutdown();
 }
+//set up work
+
+// void MTCTaskNode::doTask() //Set task to do pick and place 
+// {
+//     task_ = createTask();
+
+//     try
+//     {
+//         task_.init();
+//     }
+//     catch (mtc::InitStageException& e)
+//     {
+//         RCLCPP_ERROR_STREAM(LOGGER, e);
+//         return;
+//     }
+
+//     if (!task_.plan(1)) //Set the number of capture simulations
+//     {
+//         RCLCPP_ERROR_STREAM(LOGGER, "Task planning failed");
+//         return;
+//     }
+//     task_.introspection().publishSolution(*task_.solutions().front());
+
+//     auto result = task_.execute(*task_.solutions().front());
+//     if (result.val != moveit_msgs::msg::MoveItErrorCodes::SUCCESS)
+//     {
+//         RCLCPP_ERROR_STREAM(LOGGER, "Task execution failed");
+//         return;
+//     }
+
+//     return;
+// }
 
 //coding for pick and place object
 

@@ -59,7 +59,7 @@ private:
 };
 
 MTCTaskNode::MTCTaskNode(const rclcpp::NodeOptions& options)
-  : node_{ std::make_shared<rclcpp::Node>("mtc_node_test", options) },
+  : node_{ std::make_shared<rclcpp::Node>("mtc_place", options) },
     position_received_(false) // Set the flag to false initially
 {
   // Subscribe to the position topic
@@ -438,9 +438,9 @@ mtc::Task MTCTaskNode::createTask() //this parameter for create Task to pick and
     //Set position to place 
     geometry_msgs::msg::PoseStamped target_pose_msg;
     target_pose_msg.header.frame_id = "world";
-    target_pose_msg.pose.position.x = -0.25; //set position for place the object
-    target_pose_msg.pose.position.y = 0.07;
-    target_pose_msg.pose.position.z = 0.1;
+    target_pose_msg.pose.position.x = -0.24; //set position for place the object
+    target_pose_msg.pose.position.y = 0.1;
+    target_pose_msg.pose.position.z = 0.06;
     
     //target_pose_msg.pose.orientation.w = 1.0;
     stage->setPose(target_pose_msg);

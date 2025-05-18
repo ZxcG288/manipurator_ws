@@ -12,6 +12,7 @@ from rclpy.node import Node
 from sensor_msgs.msg import Image, CompressedImage
 from interface_manipurator.msg import SpeedAngle
 from std_msgs.msg import String
+# from tensorflow.keras.models import load_model
 
 from cv_bridge import CvBridge
 from yolov8_msgs.msg import InferenceResult, Yolov8Inference
@@ -21,6 +22,12 @@ class RealRobot(Node):
         super().__init__("real_robot")
         model_path = os.path.join(os.environ['HOME'], 'trained_model', 'sign.pt')
         self.model = YOLO(model_path)
+
+        #   <-- Self driving model -->
+        # self_driving_model_path = os.path.join(os.environ['HOME'], 'trained_model', 'self_driving_3.h5')
+        # self.self_driving_model = load_model(self_driving_model_path, compile=False)
+        #   <-- Self driving model -->
+        
         self.bridge = CvBridge()
         self.yolov8_inference = Yolov8Inference()
 
@@ -102,14 +109,43 @@ class RealRobot(Node):
 
         # self.car_publish for car control
         self.car_timer = self.create_timer(0.02, self.car_publish)
+
+        # Imgage for self driving model
+        self.self_driving_img = None
+        self.angle = 90 # 90 degree mean straight direction
+
+    def denormalize_clamped(self, x, new_min=-1.0, new_max=1.0, old_min=45, old_max=135):
+        # Clamp input to range -1 to 1
+        x = max(min(x, new_max), new_min)
+        denormalized = (x - new_min) / (new_max - new_min) * (old_max - old_min) + old_min
+        return denormalized
+
+    #Preprocess the image for self driving model
+    def preProcess(self, img):
+        img = img[40:105,0:180,:]  # Crop the image
+        img = cv2.cvtColor(img, cv2.COLOR_RGB2YUV)
+        img = cv2.GaussianBlur(img, (3, 3), 0)
+        img = cv2.resize(img, (200, 66))
+        img = img / 255
+        return img
         
     def camera_callback(self, data):
         if not self.stop_and_go: #to stop the camera callback running when the launch file is running 
             try:
                 np_arr = np.frombuffer(data.data, np.uint8)
                 img = cv2.imdecode(np_arr, cv2.IMREAD_COLOR)
-                results = self.model(img, conf=0.90, verbose=False)
+                self.self_driving_img = img
+                results = self.model(img, conf=0.90, verbose=False) #Sign prediction at 90% confidence above
 
+                #   <-- Self driving model -->
+                # self.self_driving_img = self.preProcess(self.self_driving_img)
+                # self.self_driving_img = np.array([self.self_driving_img])
+                # streering = float(self.self_driving_model.predict(self.self_driving_img))
+                # self.angle = self.denormalize_clamped(streering)
+                # self.get_logger().info(f"Steering angle: {self.angle}")
+                #   <-- Self driving model -->
+                
+                #   <-- Sign detection -->
                 self.yolov8_inference.header.frame_id = "inference"
                 self.yolov8_inference.header.stamp = self.get_clock().now().to_msg()
                 detected_classes = []
@@ -161,6 +197,7 @@ class RealRobot(Node):
 
                 # Update the detected sign for use in def car_publish
                 self.detected_classes = detected_classes
+                #   <-- Sign detection -->
                 
 
             except Exception as e:
@@ -168,30 +205,33 @@ class RealRobot(Node):
     
     def car_publish(self):
         msg = SpeedAngle()
-        if self.current_sign_status == "green":
-            msg.speed = 100
-            msg.angle = 0 
+        msg.speed = 0
+        if self.current_sign_status == "green" or self.current_sign_status == "cross_walk":
+            msg.angle = 90#int(self.angle)
+            msg.speed = 50 
+        elif self.current_sign_status == "green":
+            msg.speed = 50
+            msg.angle = 90 
         elif self.current_sign_status == "red":
             msg.speed = 0
-            msg.angle = 0
+            msg.angle = 90
         elif self.current_sign_status == "cross_walk":
             if self.crosswalk_detected_time is not None:
                 elapsed_time_of_crosswalk_detected = time.time() - self.crosswalk_detected_time
                 if elapsed_time_of_crosswalk_detected < 5.0:
-                    msg.speed = 50
-                    msg.angle = 0
+                    msg.speed = 40
                 else: 
                     self.current_sign_status = "green"
                     self.crosswalk_detected_time = None
         elif self.current_sign_status == "parking":
             msg.speed = 0
-            msg.angle = 0
+            msg.angle = 90
         elif self.current_sign_status == "place":
             msg.speed = 0
-            msg.angle = 0
+            msg.angle = 90
         else:
             msg.speed = 0
-            msg.angle = 0
+            msg.angle = 90
         self.car_publisher.publish(msg)
         #self.get_logger().info(f'Published: speed={msg.speed}, angle={msg.angle}')
 
@@ -219,7 +259,6 @@ class RealRobot(Node):
             self.task_execution_succeeded_time = time.time()
             self.get_logger().info("Checking the box status.")
 
-        
             # if self.launch_process:
             #     self.launch_process.send_signal(signal.SIGINT)
             #     self.get_logger().info("Terminated existing launch process.")
@@ -228,7 +267,6 @@ class RealRobot(Node):
             # self.sub_yolo_time = None
     
     def timer_callback(self):
-        
         # Timer for checking the status of the launch file
         if self.status_message == "The sub_yolo is running" and self.sub_yolo_time is not None:
             elapsed_time1 = time.time() - self.sub_yolo_time

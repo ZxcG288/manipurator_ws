@@ -22,7 +22,7 @@ class Camera_subscriber(Node):
     def __init__(self):
         super().__init__('camera_subscriber')
 
-        self.model = YOLO(os.environ['HOME'] + '/yolov8obb_training/best.pt')
+        self.model = YOLO(os.environ['HOME'] + '/trained_model/box.pt')
 
         self.yolov8_inference = Yolov8Inference()
 

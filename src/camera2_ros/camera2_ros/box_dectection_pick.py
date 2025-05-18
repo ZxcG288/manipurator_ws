@@ -23,7 +23,7 @@ class GUI(Node):
         self.cx = 320
         self.cy = 240
         self.z = -0.277
-        self.init_x = -0.25
+        self.init_x = -0.255
         self.init_y = 0.14
         self.published = False  # ตัวแปรสำหรับเช็คว่ามีการ publish แล้วหรือยัง
 

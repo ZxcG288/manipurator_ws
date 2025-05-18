@@ -29,16 +29,16 @@ def generate_launch_description():
         parameters=[moveit_params],  # Pass the dictionary of parameters here
     )
     #Timer to shutdown 
-    shutdown_pre_pick = TimerAction(
-    period=4.0,  
-    actions=[
-        ExecuteProcess(
-            cmd=["pkill", "-f", "/home/golf1234_pc/manipurator_ws/install/mtc_config1/lib/mtc_config1/place_node"],
-            shell=True,
-            output="screen",
-            ),
-        ],
-    )
+    # shutdown_pre_pick = TimerAction(
+    # period=4.0,  
+    # actions=[
+    #     ExecuteProcess(
+    #         cmd=["pkill", "-f", "/home/golf1234_pc/manipurator_ws/install/mtc_config1/lib/mtc_config1/place_node"],
+    #         shell=True,
+    #         output="screen",
+    #         ),
+    #     ],
+    # )
     sub_yolo = TimerAction(
         period=2.0,
         actions=[
@@ -61,7 +61,7 @@ def generate_launch_description():
         ]
     )
     box_dectection = TimerAction(
-        period=8.0,
+        period=5.0,
         actions=[
             Node(
             package="camera2_ros",
@@ -102,7 +102,7 @@ def generate_launch_description():
             sub_yolo,
             pick,
             box_dectection,
-            shutdown_pre_pick,
+            # shutdown_pre_pick,
             # TimerAction(
             # period=5.5,  #for delay to start node
             # actions=[pick]
