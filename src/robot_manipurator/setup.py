@@ -29,6 +29,8 @@ setup(
             "web_test1_node = robot_manipurator.web_test1:main",
             "real_robot = robot_manipurator.real_robot:main",
             "pick_place_controller = robot_manipurator.pick_place_controller:main",
+            "plot = robot_manipurator.plot:main",
+            
         ],
     },
 )

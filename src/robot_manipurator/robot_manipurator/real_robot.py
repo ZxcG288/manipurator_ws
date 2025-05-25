@@ -11,8 +11,9 @@ import numpy as np
 from rclpy.node import Node
 from sensor_msgs.msg import Image, CompressedImage
 from interface_manipurator.msg import SpeedAngle
-from std_msgs.msg import String
-# from tensorflow.keras.models import load_model
+from std_msgs.msg import String, Float32
+from tensorflow.keras.models import load_model
+from collections import deque
 
 from cv_bridge import CvBridge
 from yolov8_msgs.msg import InferenceResult, Yolov8Inference
@@ -24,8 +25,8 @@ class RealRobot(Node):
         self.model = YOLO(model_path)
 
         #   <-- Self driving model -->
-        # self_driving_model_path = os.path.join(os.environ['HOME'], 'trained_model', 'self_driving_3.h5')
-        # self.self_driving_model = load_model(self_driving_model_path, compile=False)
+        self_driving_model_path = os.path.join(os.environ['HOME'], 'neural_network_self_driving_ws/keras', 'advance_33.keras')
+        self.self_driving_model = load_model(self_driving_model_path, compile=False)
         #   <-- Self driving model -->
         
         self.bridge = CvBridge()
@@ -45,6 +46,13 @@ class RealRobot(Node):
             'image/compressed',
             self.camera_callback,
             10
+        )
+
+        # Publishe to Plot grahp
+        self.plot_steering_angle_publisher = self.create_publisher(
+            Float32,
+            '/steering_angle',
+            10,
         )
 
         # Publisher to the car control topic for speed and angle control
@@ -85,10 +93,14 @@ class RealRobot(Node):
             # "green_light": self.trigger_green_light_action,
             # "crosswalk_sign": self.trigger_crosswalk_sign_action
         }
+        self.triggered_actions = set()
+        
         # Set up the values
         self.status_message = ""
         self.box_status = ""
         self.current_sign_status = "red"
+        self.pick_ditected = False
+        self.place_ditected = False
         
         # Check time of the launch file and cross_walk sign timer
         self.sub_yolo_time = None
@@ -108,41 +120,62 @@ class RealRobot(Node):
         self.timer = self.create_timer(0.5, self.timer_callback)
 
         # self.car_publish for car control
-        self.car_timer = self.create_timer(0.02, self.car_publish)
+        self.car_timer = self.create_timer(0.1, self.car_publish)
+
+        # self.plot_steering_angle_publisher for Ploting Grahp
+        self.plot_steering = self.create_timer(0.067, self.plot_steering_angle)
 
         # Imgage for self driving model
         self.self_driving_img = None
-        self.angle = 90 # 90 degree mean straight direction
+        self.steering = 0.0
+        self.angle = 90.0 # 90 degree mean straight direction
+        self.last_smoothed_angle = 90.0
 
+        #### For LSTM self driving model
+        # self.seq_len = 5
+        # self.seq_buffer = deque(maxlen=self.seq_len)
+    
     def denormalize_clamped(self, x, new_min=-1.0, new_max=1.0, old_min=45, old_max=135):
         # Clamp input to range -1 to 1
         x = max(min(x, new_max), new_min)
-        denormalized = (x - new_min) / (new_max - new_min) * (old_max - old_min) + old_min
+        denormalized = ((x - new_min) / (new_max - new_min) * (old_max - old_min) + old_min)
         return denormalized
 
     #Preprocess the image for self driving model
-    def preProcess(self, img):
-        img = img[40:105,0:180,:]  # Crop the image
-        img = cv2.cvtColor(img, cv2.COLOR_RGB2YUV)
+    def preprocess(self, img):
+        img = img[50:, :]
+        img = cv2.cvtColor(img, cv2.COLOR_BGR2YUV)
         img = cv2.GaussianBlur(img, (3, 3), 0)
         img = cv2.resize(img, (200, 66))
-        img = img / 255
+        img = img / 255.0
         return img
-        
+ 
     def camera_callback(self, data):
         if not self.stop_and_go: #to stop the camera callback running when the launch file is running 
             try:
                 np_arr = np.frombuffer(data.data, np.uint8)
                 img = cv2.imdecode(np_arr, cv2.IMREAD_COLOR)
-                self.self_driving_img = img
-                results = self.model(img, conf=0.90, verbose=False) #Sign prediction at 90% confidence above
-
+                results = self.model(img, conf=0.9, verbose=False) #Sign prediction at 90% confidence above
+                
                 #   <-- Self driving model -->
-                # self.self_driving_img = self.preProcess(self.self_driving_img)
-                # self.self_driving_img = np.array([self.self_driving_img])
+                self.self_driving_img = cv2.resize(img, (240, 120))
+                self.self_driving_img = self.preprocess(self.self_driving_img)
+                self.self_driving_img = np.array([self.self_driving_img])
+                self.steering = float(self.self_driving_model.predict(self.self_driving_img)[0][0]) * 1.1
+                alpha = 1.0
+                smoothed_angle = alpha * self.steering + (1 - alpha) * self.last_smoothed_angle
+                self.last_smoothed_angle = smoothed_angle
+                self.angle = self.denormalize_clamped(smoothed_angle)    
+                self.get_logger().info(f"Steering angle: {self.angle}")
+                # self.self_driving_img = self.preProcess(img)
                 # streering = float(self.self_driving_model.predict(self.self_driving_img))
-                # self.angle = self.denormalize_clamped(streering)
-                # self.get_logger().info(f"Steering angle: {self.angle}")
+                # streering = float(self.self_driving_model.predict(self.self_driving_img)[0][0]) * 1.1
+                # alpha = 1.0
+                # smoothed_angle = alpha * streering + (1 - alpha) * self.last_smoothed_angle
+                # self.last_smoothed_angle = smoothed_angle
+                # self.angle = self.denormalize_clamped(smoothed_angle)
+                # self.angle = self.denormalize_clamped(streering) 
+                # self.get_logger().info(f"Input shape: {self.steering}")
                 #   <-- Self driving model -->
                 
                 #   <-- Sign detection -->
@@ -174,16 +207,25 @@ class RealRobot(Node):
                                     self.crosswalk_detected_time = time.time() # Set the time of the crosswalk sign
                                     self.get_logger().info("Crosswalk sign detected!")
                                 elif class_name == "parking_sign":
-                                    self.current_sign_status = "parking"
-                                    self.get_logger().info("Parking sign detected!")
+                                    if not self.pick_ditected:
+                                        self.current_sign_status = "parking"
+                                        self.triggered_actions.discard("place_sign")  # Reset the place sign action
+                                        self.get_logger().info("Parking sign detected!")
+                                        self.pick_ditected = True
+                                        self.place_ditected = False
                                 elif class_name == "place_sign":
-                                    self.current_sign_status = "place"
-                                    self.get_logger().info("Place sign detected!")
+                                    if not self.place_ditected:
+                                        self.current_sign_status = "place"
+                                        self.triggered_actions.discard("parking_sign") # Reset the parking sign action
+                                        self.get_logger().info("Place sign detected!")
+                                        self.place_ditected = True
+                                        self.pick_ditected = False
 
-                                # To detect the signs to trigger th launch file
-                                if class_name in self.action_mapping:
+                                # Trigger action only once per detected sign
+                                if class_name in self.action_mapping and class_name not in self.triggered_actions:
                                     self.get_logger().info(f"{class_name.replace('_', ' ').capitalize()} detected!")
-                                    self.action_mapping[class_name]()
+                                    self.action_mapping[class_name]()  # Trigger the mapped action
+                                    self.triggered_actions.add(class_name)  # Mark as triggered
                                 
                                 
                                 self.yolov8_inference.yolov8_inference.append(inference_result)
@@ -203,15 +245,23 @@ class RealRobot(Node):
             except Exception as e:
                 self.get_logger().error(f"Error in camera_callback: {str(e)}")
     
+    # To Ploting Grahp
+    def plot_steering_angle(self):
+        pass
+        # msg = Float32()
+        # msg.data = self.steering
+        # self.plot_steering_angle_publisher.publish(msg)
+        # self.get_logger().info(f"Plot Value: {msg.data}")
+        
     def car_publish(self):
         msg = SpeedAngle()
         msg.speed = 0
-        if self.current_sign_status == "green" or self.current_sign_status == "cross_walk":
-            msg.angle = 90#int(self.angle)
-            msg.speed = 50 
-        elif self.current_sign_status == "green":
+        # if self.current_sign_status == "green" or self.current_sign_status == "cross_walk":
+        #     msg.angle = int(self.angle)# msg.angle = 90#
+        #     msg.speed = 50 
+        if self.current_sign_status == "green":
             msg.speed = 50
-            msg.angle = 90 
+            msg.angle = int(self.angle)
         elif self.current_sign_status == "red":
             msg.speed = 0
             msg.angle = 90
@@ -219,7 +269,8 @@ class RealRobot(Node):
             if self.crosswalk_detected_time is not None:
                 elapsed_time_of_crosswalk_detected = time.time() - self.crosswalk_detected_time
                 if elapsed_time_of_crosswalk_detected < 5.0:
-                    msg.speed = 40
+                    msg.angle = int(self.angle)
+                    msg.speed = 35
                 else: 
                     self.current_sign_status = "green"
                     self.crosswalk_detected_time = None
@@ -369,6 +420,35 @@ def main(args=None):
 
 if __name__ == '__main__':
     main()
+
+
+
+
+   # def preProcess(self, img):
+    #     # img = img[60:, :]
+    #     img = img[50:, :]
+    #     # img = img[5:105,:,:]                    # Crop the image
+    #     # img = img[30:120,:,:]                    # Crop the image
+    #     # img = img[30:120,0:150,:]                    # Crop the image
+    #     img = cv2.cvtColor(img, cv2.COLOR_RGB2YUV)
+    #     img = cv2.GaussianBlur(img,  (3, 3), 0)
+    #     img = cv2.resize(img, (200, 66))
+    #     img = img/255
+    #     return img
+
+
+    #### For LSTM self driving model
+                # pre_img = self.preprocess(img)
+                # self.seq_buffer.append(pre_img)
+                # if len(self.seq_buffer) == self.seq_len:
+                #     input_tensor = np.expand_dims(np.array(self.seq_buffer), axis=0).astype(np.float32)
+                #     steering = self.self_driving_model.predict(input_tensor, verbose=0)[0][0] 
+                #     # self.get_logger().info(f'Steering predicted: {steering:.2f}')
+                #     alpha = 0.6
+                #     smoothed_angle = alpha * steering + (1 - alpha) * self.last_smoothed_angle
+                #     self.last_smoothed_angle = smoothed_angle
+                #     self.angle = self.denormalize_clamped(smoothed_angle)
+                #     self.get_logger().info(f"Input shape: {self.angle}")
 
 # def trigger_red_light_action(self):
     #     self.get_logger().info("Triggering action for red light!")

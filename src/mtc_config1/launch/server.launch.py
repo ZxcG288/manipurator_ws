@@ -13,7 +13,7 @@ def generate_launch_description():
         'rosbridge_websocket_launch.xml'
     )
     start_web = ExecuteProcess(
-        cmd=["python3", "-m", "http.server", "8080"],
+        cmd=["python3", "-m", "http.server", "8100"],
         cwd=os.path.expanduser("~/Temp/"),
         shell=True,
         output="screen",

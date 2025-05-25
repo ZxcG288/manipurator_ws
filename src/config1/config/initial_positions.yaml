@@ -11,7 +11,7 @@
 
 # for real
 initial_positions:
-  arm1_joint: -0.6
+  arm1_joint: -0.51
   arm2_joint: 1.57
   headbase_joint: 1.57
   headrotation_joint: 0

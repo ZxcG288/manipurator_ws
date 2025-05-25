@@ -34,7 +34,23 @@ def generate_launch_description():
             move_group_capabilities,
         ],
     )
-
+#     run_move_group_node = Node(
+#     package="moveit_ros_move_group",
+#     executable="move_group",
+#     output="screen",
+#     parameters=[
+#         moveit_config.to_dict(),
+#         move_group_capabilities,
+#         {
+#             "occupancy_map_monitor.mapping_plugin": "",  # 🔧 ปิด octomap
+#             # "planning_pipelines": [
+#             #     "ompl",
+#             #     "chomp",
+#             #     "pilz_industrial_motion_planner",
+#             # ],  # 🔧 ให้แน่ใจว่าเป็น list
+#         },
+#     ],
+# )
     # RViz
     rviz_config_file = (
         get_package_share_directory("config1") + "/launch/mtc.rviz"
